@@ -322,7 +322,7 @@ def run_topic(tid,out,offline_mode,budget,counter,trace,seed):
  dump(td/"execution_report.json",execution);dump(td/"provenance.json",{"schema_version":SCHEMA,"algorithm":"sha256","artifacts":{rel(p,td):sha(p.read_bytes()) for p in td.rglob("*") if p.is_file() and p.name!="provenance.json"},"generated_at_utc":now()});return state
 def unified(out, states):
     """Write the unified v4 report from already-recorded topic results."""
-    p = root() / "paper" / "paper.tex"
+    p = out / "paper.tex"
     p.parent.mkdir(parents=True, exist_ok=True)
     summary_rows = []
     sections = []
