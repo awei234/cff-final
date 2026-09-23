@@ -1,0 +1,13 @@
+{
+  "arms": [
+    {"name": "baseline", "underlying_arm": "no-rail"},
+    {"name": "prompt-only", "underlying_arm": "prompt-only"},
+    {"name": "full-rail", "underlying_arm": "full-rail"},
+    {"name": "jit-constrained", "underlying_arm": "full-rail", "requires_harness_manifest": true}
+  ],
+  "seeds": [42, 43, 44],
+  "same_task": true,
+  "same_model": true,
+  "same_tools": true,
+  "same_budget": true
+}
