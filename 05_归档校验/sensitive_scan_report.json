@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-09-22T03:51:21.253888Z",
+  "high_confidence_findings": [],
+  "high_confidence_finding_count": 0,
+  "files_with_generic_template_or_test_terms": 578,
+  "result": "pass",
+  "note": "扫描发现的 private-key/api-key/Bearer 字样均来自公开源码中的测试、模板或文档示例；未发现完整 PEM 私钥、JWT、长 API Key、长 Bearer 值或 DeepSeek 实际密钥。报告不保存任何敏感值。"
+}

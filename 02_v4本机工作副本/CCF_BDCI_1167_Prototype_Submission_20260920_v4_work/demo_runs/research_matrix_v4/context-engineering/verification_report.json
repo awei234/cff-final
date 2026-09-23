@@ -1,0 +1,15 @@
+{
+  "schema_version": "4.0",
+  "topic_id": "context-engineering",
+  "valid": true,
+  "status": "completed_pending_human_review",
+  "errors": [],
+  "provider_calls": 3,
+  "latex_compilation_status": "compiled_verified",
+  "pdf_included": true,
+  "paper_tex_sha256": "cd86b925fc786968679576b0fa349dca8686bebe7f7747b5da4ef697f8be06b7",
+  "paper_pdf_sha256": "a8fddbcfdba9e63ccaf146fafbd33ad3ee5ccc701e8f589acb36c3c25dba37d0",
+  "paper_pdf_page_count": 3,
+  "human_review_status": "pending",
+  "interpretation": "valid 表示技术结构、证据链和安全检查通过，不表示人工批准或比赛提交完成。"
+}

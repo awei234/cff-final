@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.2",
+  "archive_version": "JiuwenSwarm_v4_complete_archive",
+  "generated_at_utc": "2026-09-22T04:14:04.103512Z",
+  "archive_root": "D:\\download\\CCF\\JiuwenSwarm_v4_完整工程归档_20260922",
+  "package_status": "prepared_not_uploaded",
+  "submission_package": {
+    "path": "01_比赛提交包/CCF_BDCI_1167_Prototype_Submission_20260920_v4.zip",
+    "sha256": "F8ED0B78865AFE32D73030633ED9A998EF325D645640F2050631DE2554D257E3",
+    "bytes": 57919723,
+    "zip_entries": 2457,
+    "extracted_copy": "01_比赛提交包/extracted_verified/CCF_BDCI_1167_Prototype_Submission_20260920_v4",
+    "extracted_copy_file_count": 2457,
+    "verifier": {
+      "submission_ready": true,
+      "structure_and_security_passed": true,
+      "matrix_status": "completed_pending_human_review",
+      "latex_compilation_status": "compiled_verified",
+      "verification_note": "Verified after extraction from the v4 ZIP."
+    }
+  },
+  "local_work_copy": {
+    "path": "02_v4本机工作副本",
+    "file_count": 2457,
+    "bytes": 83925368
+  },
+  "server_source_snapshots": {
+    "jiuwenswarm": {
+      "file_count": 2865,
+      "bytes": 193853686
+    },
+    "custom_rails": {
+      "file_count": 12,
+      "bytes": 38135
+    },
+    "git_history_included": false,
+    "runtime_cache_included": false,
+    "runtime_logs_included": false,
+    "source_checksum_file": "05_归档校验/SERVER_SOURCE_CHECKSUMS.sha256"
+  },
+  "server_experiment_workspace": {
+    "path": "04_服务器v4实验工作区/v4_server_workspace",
+    "file_count": 708,
+    "bytes": 2002059
+  },
+  "server": {
+    "host": "10.182.68.242",
+    "user": "vergil",
+    "ssh_alias": "ws",
+    "remote_workspace": "/data/vergil-CCF/ccf/v4_server_workspace",
+    "original_projects_modified": false,
+    "copy_mode": "read_only_scp_snapshot"
+  },
+  "historical_versions": [
+    {
+      "file": "CCF_BDCI_1167_Prototype_Submission_20260916_final.zip",
+      "sha256": "CDC4659DA4DC8340F47BB535363A9B5FE5E7D1481F0A6B8F8FFECCE6ACF17102",
+      "bytes": 64832962
+    },
+    {
+      "file": "CCF_BDCI_1167_Prototype_Submission_20260916_v2.zip",
+      "sha256": "0AFA1B0A9A407CEEB4BB67BAD03C58BCF2D7EE3B63C19EDC2C4431D4575DC77F",
+      "bytes": 57843414
+    },
+    {
+      "file": "CCF_BDCI_1167_Prototype_Submission_20260919_v3.zip",
+      "sha256": "8B607F2A19F78BBAF45B590AB180F1BDF0A258147BACE70AB9CAF40A13BD776A",
+      "bytes": 57739840
+    },
+    {
+      "file": "CCF_BDCI_1167_Prototype_Submission_20260920_v4.zip",
+      "sha256": "F8ED0B78865AFE32D73030633ED9A998EF325D645640F2050631DE2554D257E3",
+      "bytes": 57919723
+    }
+  ],
+  "sensitive_scan": {
+    "path": "05_归档校验/sensitive_scan_report.json",
+    "result": "pass",
+    "high_confidence_finding_count": 0
+  },
+  "checksums": {
+    "archive_checksum_file": "05_归档校验/ARCHIVE_CHECKSUMS.sha256",
+    "server_source_checksum_file": "05_归档校验/SERVER_SOURCE_CHECKSUMS.sha256",
+    "version_checksum_file": "05_归档校验/VERSIONS_SHA256.txt"
+  },
+  "notes": [
+    "The competition ZIP is separate from the server-source archive.",
+    "The extracted_verified copy was rebuilt from the actual v4 ZIP and independently verified.",
+    "Archive checksum generation uses Windows extended-length paths so deep source files are included.",
+    "No provider calls were made during this archive operation.",
+    "Manual citation review and competition submission remain pending."
+  ]
+}

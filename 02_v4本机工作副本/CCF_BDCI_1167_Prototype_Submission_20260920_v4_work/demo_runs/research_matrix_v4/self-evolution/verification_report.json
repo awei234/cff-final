@@ -1,0 +1,15 @@
+{
+  "schema_version": "4.0",
+  "topic_id": "self-evolution",
+  "valid": true,
+  "status": "completed_pending_human_review",
+  "errors": [],
+  "provider_calls": 3,
+  "latex_compilation_status": "compiled_verified",
+  "pdf_included": true,
+  "paper_tex_sha256": "8f656616d6bbce633703f07189b08c5f31efb3e958b5cb8e618ab04386de8b75",
+  "paper_pdf_sha256": "49a60fb34cee40d4342a82bead0dbcf2c9193d72c08b5fedd532a451c5299831",
+  "paper_pdf_page_count": 3,
+  "human_review_status": "pending",
+  "interpretation": "valid 表示技术结构、证据链和安全检查通过，不表示人工批准或比赛提交完成。"
+}

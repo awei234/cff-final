@@ -1,0 +1,47 @@
+{
+  "stage": "S4-02",
+  "audit_date": "2026-09-01",
+  "scope": "provider_aware_cross_topic_gate_and_offline_dry_run",
+  "implementation_commit": "94d604ea8e90b0986546632bdde087e792f94213",
+  "protocol_sha256": "870D3CC01B827B63A70AFA577A287F4244CCC1CB905F762B9DD22EC1223BF0FA",
+  "dry_run_report_sha256": "F6E487B64A9BBE5EBDC8F61BED241B72F70CD420D15AD36ECEEA6E482D2126B5",
+  "independent_checks": {
+    "tasks": 9,
+    "eligible_not_executed": 6,
+    "blocked_budget": 3,
+    "deepseek_eligible": 0,
+    "required_artifacts": 14,
+    "formal_output_directory_created": false
+  },
+  "overwrite_test": {
+    "second_run_exit_code": 2,
+    "evidence_exists_observed": true,
+    "report_unchanged": true
+  },
+  "execution": {
+    "api_key_reads": 0,
+    "model_api_calls": 0,
+    "results_written": 0,
+    "live_execution_enabled": false,
+    "deepseek_api_calls": 0
+  },
+  "verification": {
+    "cross_topic_execution_tests": "6 passed",
+    "competition_runner": "63 passed",
+    "ucr_benchmark": "58 passed",
+    "jiuwenswarm_direct_deterministic": "14 passed, 8 subtests passed",
+    "openjiuwen_0_1_16_native_runtime": "2 passed",
+    "python_compile": "passed",
+    "git_diff_check": "passed",
+    "repository_text_files_scanned": 4662,
+    "exact_glm_key_occurrences": 0,
+    "exact_qwen_key_occurrences": 0,
+    "exact_deepseek_key_occurrences": 0
+  },
+  "interpretation_limits": [
+    "eligible_not_executed is a dry-run classification, not a completed generation.",
+    "No cross-topic paper, PDF, live result, resource measurement, or generalization result was created.",
+    "DeepSeek remains blocked for budget and must not be called.",
+    "A live cross-topic backend and explicit paid-call cap are required before any GLM or Qwen execution."
+  ]
+}

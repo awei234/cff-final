@@ -1,0 +1,37 @@
+\documentclass[UTF8]{ctexart}\usepackage{geometry,booktabs,longtable}\geometry{a4paper,margin=2.2cm}\title{JiuwenSwarm v4：Agent 自我进化}\author{JiuwenSwarm/UCR 可审计科研半流程}\date{}\begin{document}\maketitle
+  \section{重要边界}本文件是 v4 LaTeX 源文件，当前环境不编译最终 PDF。UCR 标签为 \texttt{process\_evidence\_only}，只能证明流程证据能力，不能包装成领域科学结论。检索资料默认等待人工审批。
+  \section{研究问题与计划}\textbf{问题：}带证据的反思循环能否避免把未执行任务写成已完成？\\\textbf{假设：}证据检查可能改善审计表达，但当前基准不证明真实自我进化。
+  \begin{itemize}\item 三种 arm 独立完成
+\item 每个实验 claim 有 JSON Pointer
+\item 失败不写成成功\end{itemize}\section{方法}使用固定 seed=42，分别执行 no-rail、prompt-only 和 full-rail，并保存原始轨迹、决策、命令和哈希。\subsection{实验设置}本地 UCR fixture 基准，标签为 process\_evidence\_only；它验证证据流程，不代表真实模型或领域实验。
+  \begin{center}\begin{tabular}{lrrr}\toprule Arm & 状态 & UCR & Supported\\\\\midrule
+  no-rail & completed & 0.5556 & 4 \\\\
+prompt-only & completed & 0.0 & 4 \\\\
+full-rail & completed & 0.0 & 4 \\\\\bottomrule\end{tabular}\end{center}
+  \section{实验结果}不同 arm 的支持、未执行和阻断状态来自 experiment\_results.json，并可由 claim\_ledger.json 的 JSON Pointer 复核。\section{Claim--Evidence 账本}\begin{center}\begin{tabular}{lll}\toprule Claim ID & 状态 & 类型\\\\\midrule
+  claim-001 & supported & experiment\_observation \\\\
+claim-002 & pending\_human\_review & experiment\_observation \\\\
+claim-003 & pending\_human\_review & experiment\_observation \\\\
+claim-004 & supported & experiment\_observation \\\\
+claim-005 & pending\_human\_review & experiment\_observation \\\\
+claim-006 & supported & experiment\_observation \\\\
+claim-007 & pending\_human\_review & experiment\_observation \\\\
+claim-008 & supported & experiment\_observation \\\\
+claim-009 & pending\_human\_review & experiment\_observation \\\\
+claim-010 & supported & experiment\_observation \\\\
+claim-011 & supported & experiment\_observation \\\\
+claim-012 & supported & experiment\_observation \\\\
+claim-013 & supported & experiment\_observation \\\\
+claim-014 & supported & experiment\_observation \\\\
+claim-015 & supported & experiment\_observation \\\\
+claim-016 & supported & experiment\_observation \\\\
+claim-017 & supported & experiment\_observation \\\\
+claim-018 & pending\_human\_review & background \\\\
+claim-019 & pending\_human\_review & background \\\\
+claim-020 & pending\_human\_review & background \\\\\bottomrule\end{tabular}\end{center}
+  \section{检索资料与人工审批}候选资料数：5。只有人工批准后才允许正式引用。\begin{center}\begin{tabular}{lll}\toprule Source ID & relevance & review\\\\\midrule
+  offline:self-evolution:001 & 0.13 & pending \\\\
+offline:self-evolution:002 & 0.13 & pending \\\\
+offline:self-evolution:003 & 0.13 & pending \\\\
+offline:self-evolution:004 & 0.13 & pending \\\\
+offline:self-evolution:005 & 0.13 & pending \\\\\bottomrule\end{tabular}\end{center}\section{限制}资料尚未完成人工引用审批；当前实验是流程证据基准，不足以证明三个主题的领域效果。\\不支持 Claim：claim-002, claim-003, claim-005, claim-007, claim-009, claim-018, claim-019, claim-020\section{结论}v4 形成可重复、可审计的研究半流程闭环；最终研究结论仍需人工确认。\section{人工确认}研究问题、实验真实性、结论范围和最终提交都需要人工确认。\end{document}

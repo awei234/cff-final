@@ -1,0 +1,23 @@
+{
+  "schema_version": "4.0",
+  "topic_id": "self-evolution",
+  "provider": "deepseek",
+  "benchmark_label": "process_evidence_only",
+  "latex_compilation_status": "compiled_verified",
+  "started_at_utc": "2026-09-20T14:14:21Z",
+  "pdf_included": true,
+  "paper_pdf": {
+    "path": "paper.pdf",
+    "sha256": "49a60fb34cee40d4342a82bead0dbcf2c9193d72c08b5fedd532a451c5299831",
+    "bytes": 81731,
+    "page_count": 3
+  },
+  "latex_checks": {
+    "status": "compiled_verified",
+    "compile_passes": 2,
+    "fatal_errors": [],
+    "overfull_boxes": [],
+    "log_present": true,
+    "pdf_bytes": 81731
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "schema_version": "4.0",
+  "topic_id": "self-evolution",
+  "retrieval_status": "partial_retrieval",
+  "sources": [
+    {
+      "source_id": "crossref:10.1115/detc2025-168710",
+      "provider": "crossref",
+      "title": "Multi-Agent System Based on Bi-Level FBS Self-Closed-Loop Co-Evolution Framework",
+      "authors": [
+        "Cao",
+        "Ming",
+        "Allen",
+        "Mistree"
+      ],
+      "published_at": "2025-8-17",
+      "url": "https://doi.org/10.1115/detc2025-168710",
+      "doi": "10.1115/detc2025-168710",
+      "abstract": "Abstract \n                   Multi-agent systems must operate in increasingly dynamic environments, where sudden changes such as the appearance of moving or unforeseen obstacles pose major challenges to the system’s adaptability. In this paper, we propose a bi-level Function-Behavior-Structure (FBS) self-closed-loop framework to enable both individual agents and clusters of agents to reason adaptively from task requirements and to change their behavior in response to environmental changes. Inspired by the FBS model in product design, this framework introduces self-reasoning at two hierarchical levels: the cluster-level and the individual agent-level. To enhance real-time adaptability, we develop an environment prediction method based on incremental changes in the location of obstacle pixels observed across time steps. This allows for the construction of dynamic prediction maps. Key to this is the introduction of a system event influence value, to quantify environmental disruptions and determine whether the system should perform global re-planning, local re-planning, or continue with the current plan, This helps the researcher establish a balance between responsiveness and computational efficiency. The framework is demonstrated with a collaborative box-pushing scenario involving multiple agents navigating evolving environments with successive levels of complexity. Comparative experiments show that the proposed method outperforms a traditional bi-level planning approach in both success rate and computational resource usage, particularly in high-complexity scenarios. The framework offers a generalizable approach to adaptive design for multi-agent systems and can be applied to domains such as smart manufacturing, logistics, and autonomous operations.",
+      "relevance_score": 0.07,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1115/detc2025-168710",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T14:09:54Z",
+      "content_sha256": "ca947d35874e681d15d4bc65beb043704aeb3a7a79d89cef6ac1bb69d5bf0815"
+    },
+    {
+      "source_id": "openalex:W2508346077",
+      "provider": "openalex",
+      "title": "Dynamic self-organization in holonic multi-agent manufacturing systems: The ADACOR evolution",
+      "authors": [
+        "José Barbosa",
+        "Paulo Leitão",
+        "Emmanuel Adam",
+        "Damien Trentesaux"
+      ],
+      "published_at": "2014-11-20",
+      "url": "https://doi.org/10.1016/j.compind.2014.10.011",
+      "doi": "https://doi.org/10.1016/j.compind.2014.10.011",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1016/j.compind.2014.10.011",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T14:09:54Z",
+      "content_sha256": "0fefe4b387ff253db4b20bde3157e5e79767eb4c0c1ff3cbd4c275d4ed8ce39a"
+    },
+    {
+      "source_id": "openalex:W2903899730",
+      "provider": "openalex",
+      "title": "Origin and evolution of pathogenic coronaviruses",
+      "authors": [
+        "Jie Cui",
+        "Fang Li",
+        "Zheng‐Li Shi"
+      ],
+      "published_at": "2018-12-10",
+      "url": "https://doi.org/10.1038/s41579-018-0118-9",
+      "doi": "https://doi.org/10.1038/s41579-018-0118-9",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1038/s41579-018-0118-9",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T14:09:54Z",
+      "content_sha256": "15f324e3769086c57cc5361b0fed2e92e690b73ac977f8d204064f4011597aa9"
+    },
+    {
+      "source_id": "openalex:W2048701323",
+      "provider": "openalex",
+      "title": "The Embodied Mind: Cognitive Science and Human Experience",
+      "authors": [
+        "Francisco J. Varela",
+        "Eleanor Rosch",
+        "Evan Thompson"
+      ],
+      "published_at": "2017-01-01",
+      "url": "https://muse.jhu.edu/pub/6/monograph/book/46970",
+      "doi": null,
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "title:the embodied mind cognitive science and human experience",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T14:09:54Z",
+      "content_sha256": "1238492cf23d7e5a9d96f1d1b29bb5769adb4859b143b7462f9e47e2b0b1e257"
+    },
+    {
+      "source_id": "openalex:W607740409",
+      "provider": "openalex",
+      "title": "Bodily Natures: Science, Environment, and the Material Self",
+      "authors": [
+        "Stacy Alaimo"
+      ],
+      "published_at": "2010-10-25",
+      "url": "https://muse.jhu.edu/pub/3/monograph/book/1691",
+      "doi": null,
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "title:bodily natures science environment and the material self",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T14:09:54Z",
+      "content_sha256": "1dacaba0de2aed065f8514b8e8d8cb38fd93e4a2b7ab6a98b5620e7f74cc747c"
+    },
+    {
+      "source_id": "openalex:W2153791616",
+      "provider": "openalex",
+      "title": "Whatever next? Predictive brains, situated agents, and the future of cognitive science",
+      "authors": [
+        "Andy Clark"
+      ],
+      "published_at": "2013-05-10",
+      "url": "https://doi.org/10.1017/s0140525x12000477",
+      "doi": "https://doi.org/10.1017/s0140525x12000477",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1017/s0140525x12000477",
+      "version_group": "doi:10.1017/s0140525x12000477",
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T14:09:54Z",
+      "content_sha256": "3e0dfd39186719f4c3949514fbdc6629f797fa90eb7c010c197662b6bed7589f"
+    },
+    {
+      "source_id": "openalex:W2316973238",
+      "provider": "openalex",
+      "title": "THE EVOLUTION OF SELF‐FERTILIZATION AND INBREEDING DEPRESSION IN PLANTS. I. GENETIC MODELS",
+      "authors": [
+        "Russell Lande",
+        "Douglas W. Schemske"
+      ],
+      "published_at": "1985-01-01",
+      "url": "https://doi.org/10.1111/j.1558-5646.1985.tb04077.x",
+      "doi": "https://doi.org/10.1111/j.1558-5646.1985.tb04077.x",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1111/j.1558-5646.1985.tb04077.x",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T14:09:54Z",
+      "content_sha256": "817ea0df2d4508c0d3ff3e385c2bd58793f8794b158283e731e9e5d89d5176bc"
+    },
+    {
+      "source_id": "openalex:W2109120348",
+      "provider": "openalex",
+      "title": "Social Cognitive Theory: An Agentic Perspective",
+      "authors": [
+        "Albert Bandura"
+      ],
+      "published_at": "1999-04-01",
+      "url": "https://doi.org/10.1111/1467-839x.00024",
+      "doi": "https://doi.org/10.1111/1467-839x.00024",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1111/1467-839x.00024",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T14:09:54Z",
+      "content_sha256": "71428bf3d6aeb78d4f5361e7053c698124e69694ae5eb593a8528fe3ea12032c"
+    },
+    {
+      "source_id": "openalex:W1979058254",
+      "provider": "openalex",
+      "title": "Perspective: Complexity Theory and Organization Science",
+      "authors": [
+        "Philip C. Anderson"
+      ],
+      "published_at": "1999-06-01",
+      "url": "https://doi.org/10.1287/orsc.10.3.216",
+      "doi": "https://doi.org/10.1287/orsc.10.3.216",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1287/orsc.10.3.216",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T14:09:54Z",
+      "content_sha256": "db0d5e78eeb77a8d76bda73b47b512900339692f56b83cf3631aa5a667a1311a"
+    },
+    {
+      "source_id": "openalex:W2112351720",
+      "provider": "openalex",
+      "title": "Molecular Evolution of the Histone Deacetylase Family: Functional Implications of Phylogenetic Analysis",
+      "authors": [
+        "IvanV Gregoretti",
+        "Yunmi Lee",
+        "Holly V. Goodson"
+      ],
+      "published_at": "2004-03-10",
+      "url": "https://doi.org/10.1016/j.jmb.2004.02.006",
+      "doi": "https://doi.org/10.1016/j.jmb.2004.02.006",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1016/j.jmb.2004.02.006",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T14:09:54Z",
+      "content_sha256": "873cba8c358ad01bb46f6a931846fe7082f374b581f6a3cd52ed19f9dae6ad60"
+    }
+  ],
+  "deduplication": {
+    "candidate_count": 40,
+    "kept_count": 10,
+    "removed_duplicates": 2
+  },
+  "failures": [
+    {
+      "provider": "arxiv",
+      "query": "agent self evolution",
+      "status": 406,
+      "error": "http_406"
+    },
+    {
+      "provider": "arxiv",
+      "query": "self improving agents",
+      "status": 406,
+      "error": "http_406"
+    },
+    {
+      "provider": "arxiv",
+      "query": "continual agent improvement",
+      "status": 406,
+      "error": "http_406"
+    }
+  ],
+  "retrieved_at_utc": "2026-09-20T14:09:54Z"
+}

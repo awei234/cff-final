@@ -1,0 +1,12 @@
+{
+  "schema_version": "4.0",
+  "topic_id": "self-evolution",
+  "status": "failed",
+  "provider_calls": 1,
+  "errors": [
+    {
+      "type": "RuntimeError",
+      "message": "provider_schema_invalid: plan: missing research_question;plan: missing hypothesis;plan: missing variables;plan: missing experiment_plan;plan: missing success_criteria;plan: missing expected_evidence;plan: missing human_confirmation_items"
+    }
+  ]
+}

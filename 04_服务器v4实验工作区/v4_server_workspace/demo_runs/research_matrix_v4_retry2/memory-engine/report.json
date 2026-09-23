@@ -1,0 +1,19 @@
+{
+  "abstract": "本报告检验结构化记忆记录是否有助于 Agent 保持审计上下文一致。三组已完成运行（no-rail、prompt-only、full-rail）均 return_code=0，task_success_rate=1.0。UCR 仅作为过程证据：no-rail=0.5556（5/9），prompt-only=0.0（0/4），full-rail=0.0（0/4）。CFR 与 NFR 未测量。材料最高 relevance_score=0.32 且 citation_allowed=false，不构成正式引用。",
+  "method": "比较三组已完成运行的 decisions：统计 supported 与 unexecuted 操作，按 supported/(supported+unexecuted) 计算 UCR；记录 rail enabled/attempts/accepted 与 task_success_rate。UCR 仅解释为过程可追溯性证据，不解释为领域效果。",
+  "experiment_setting": "三组：no-rail（rail enabled=false，attempts=0，accepted=true）；prompt-only（rail enabled=false，attempts=0，accepted=true）；full-rail（rail enabled=true，attempts=1，accepted=true）。三组 status=completed，return_code=0。CFR/NFR 在 UCR 场景中未测量。",
+  "results": "no-rail：UCR=0.5556（5/9，supported=4，unexecuted=5），task_success_rate=1.0（claim-001、claim-004、claim-006、claim-008）。prompt-only：UCR=0.0（0/4，supported=4，unexecuted=0），task_success_rate=1.0（claim-010 至 claim-013）。full-rail：UCR=0.0（0/4，supported=4，unexecuted=0），rail enabled=true，attempts=1，accepted=true，task_success_rate=1.0（claim-014 至 claim-017）。",
+  "limitations": "UCR 为 process_evidence_only，不能证明领域效果。CFR 与 NFR 未测量，不纳入结论。材料 relevance_score 最高 0.32 且 citation_allowed=false，不得正式引用（claim-018 至 claim-020 待人工复核）。no-rail 中 run_failed、run_denied、inspect_missing、query_unavailable、validate_failed 为 unexecuted，对应 claim-002、claim-003、claim-005、claim-007、claim-009 待人工复核。citation_coverage=0.0，allow_paper=false，human_intervention_required=true。",
+  "conclusion": "当前基准仅支持过程可追溯性观察：三组任务成功率均为 1.0，但 UCR 在 no-rail 为 0.5556、prompt-only 与 full-rail 均为 0.0，且 full-rail 的 rail attempts=1、accepted=true。该结果不足以支持结构化记忆记录改善领域效果的结论。所有结论需标注 claim_id 与证据来源，citation_allowed=false 来源不得正式引用。",
+  "citation_mapping": [],
+  "unsupported_claims": [
+    "claim-002",
+    "claim-003",
+    "claim-005",
+    "claim-007",
+    "claim-009",
+    "claim-018",
+    "claim-019",
+    "claim-020"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "4.0",
+  "topic_id": "memory-engine",
+  "status": "failed",
+  "provider_calls": 0,
+  "errors": [
+    {
+      "type": "RuntimeError",
+      "message": "provider_JSONDecodeError: Unterminated string starting at: line 60 column 19 (char 6231)"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+\documentclass[UTF8]{ctexart}\usepackage{geometry,booktabs,longtable}\geometry{a4paper,margin=2.2cm}\title{JiuwenSwarm v4：Agent 记忆引擎}\author{JiuwenSwarm/UCR 可审计科研半流程}\date{}\begin{document}\maketitle
+  \section{重要边界}本文件是 v4 LaTeX 源文件，当前环境不编译最终 PDF。UCR 标签为 \texttt{process\_evidence\_only}，只能证明流程证据能力，不能包装成领域科学结论。检索资料默认等待人工审批。
+  \section{研究问题与计划}\textbf{问题：}结构化记忆记录是否有助于 Agent 保持审计上下文一致？\\\textbf{假设：}结构化记录可能改善流程可追溯性，但当前基准不证明领域效果。
+  \begin{itemize}\item 三组运行均 completed 且 return\_code=0。
+\item UCR 按 supported/(supported+unexecuted) 计算并标注 status=measured。
+\item task\_success\_rate 记录为 1.0。
+\item 不将 citation\_allowed=false 的来源作为正式引用。
+\item 结论明确区分过程可追溯性与领域效果。\end{itemize}\section{方法}比较三组已完成运行的 decisions：统计 supported 与 unexecuted 操作，按 supported/(supported+unexecuted) 计算 UCR；记录 rail enabled/attempts/accepted 与 task\_success\_rate。UCR 仅解释为过程可追溯性证据，不解释为领域效果。\subsection{实验设置}三组：no-rail（rail enabled=false，attempts=0，accepted=true）；prompt-only（rail enabled=false，attempts=0，accepted=true）；full-rail（rail enabled=true，attempts=1，accepted=true）。三组 status=completed，return\_code=0。CFR/NFR 在 UCR 场景中未测量。
+  \begin{center}\begin{tabular}{lrrr}\toprule Arm & 状态 & UCR & Supported\\\\\midrule
+  no-rail & completed & 0.5556 & 4 \\\\
+prompt-only & completed & 0.0 & 4 \\\\
+full-rail & completed & 0.0 & 4 \\\\\bottomrule\end{tabular}\end{center}
+  \section{实验结果}no-rail：UCR=0.5556（5/9，supported=4，unexecuted=5），task\_success\_rate=1.0（claim-001、claim-004、claim-006、claim-008）。prompt-only：UCR=0.0（0/4，supported=4，unexecuted=0），task\_success\_rate=1.0（claim-010 至 claim-013）。full-rail：UCR=0.0（0/4，supported=4，unexecuted=0），rail enabled=true，attempts=1，accepted=true，task\_success\_rate=1.0（claim-014 至 claim-017）。\section{Claim--Evidence 账本}\begin{center}\begin{tabular}{lll}\toprule Claim ID & 状态 & 类型\\\\\midrule
+  claim-001 & supported & experiment\_observation \\\\
+claim-002 & pending\_human\_review & experiment\_observation \\\\
+claim-003 & pending\_human\_review & experiment\_observation \\\\
+claim-004 & supported & experiment\_observation \\\\
+claim-005 & pending\_human\_review & experiment\_observation \\\\
+claim-006 & supported & experiment\_observation \\\\
+claim-007 & pending\_human\_review & experiment\_observation \\\\
+claim-008 & supported & experiment\_observation \\\\
+claim-009 & pending\_human\_review & experiment\_observation \\\\
+claim-010 & supported & experiment\_observation \\\\
+claim-011 & supported & experiment\_observation \\\\
+claim-012 & supported & experiment\_observation \\\\
+claim-013 & supported & experiment\_observation \\\\
+claim-014 & supported & experiment\_observation \\\\
+claim-015 & supported & experiment\_observation \\\\
+claim-016 & supported & experiment\_observation \\\\
+claim-017 & supported & experiment\_observation \\\\
+claim-018 & pending\_human\_review & background \\\\
+claim-019 & pending\_human\_review & background \\\\
+claim-020 & pending\_human\_review & background \\\\\bottomrule\end{tabular}\end{center}
+  \section{检索资料与人工审批}候选资料数：10。只有人工批准后才允许正式引用。\begin{center}\begin{tabular}{lll}\toprule Source ID & relevance & review\\\\\midrule
+  crossref:10.2139/ssrn.7160321 & 0.32 & pending \\\\
+crossref:10.2139/ssrn.6273819 & 0.32 & pending \\\\
+crossref:10.59350/xn4yy-3ke56 & 0.32 & pending \\\\
+crossref:10.59350/kyqvq-k4425 & 0.32 & pending \\\\
+openalex:W2104961125 & 0.27 & pending \\\\
+crossref:10.2139/ssrn.7019082 & 0.15 & pending \\\\
+crossref:10.2139/ssrn.6986920 & 0.07 & pending \\\\
+crossref:10.36227/techrxiv.176857932.25697838/v1 & 0.07 & pending \\\\
+openalex:W2126689453 & 0.02 & pending \\\\
+openalex:W2121417064 & 0.02 & pending \\\\\bottomrule\end{tabular}\end{center}\section{限制}UCR 为 process\_evidence\_only，不能证明领域效果。CFR 与 NFR 未测量，不纳入结论。材料 relevance\_score 最高 0.32 且 citation\_allowed=false，不得正式引用（claim-018 至 claim-020 待人工复核）。no-rail 中 run\_failed、run\_denied、inspect\_missing、query\_unavailable、validate\_failed 为 unexecuted，对应 claim-002、claim-003、claim-005、claim-007、claim-009 待人工复核。citation\_coverage=0.0，allow\_paper=false，human\_intervention\_required=true。\\不支持 Claim：claim-002, claim-003, claim-005, claim-007, claim-009, claim-018, claim-019, claim-020\section{结论}当前基准仅支持过程可追溯性观察：三组任务成功率均为 1.0，但 UCR 在 no-rail 为 0.5556、prompt-only 与 full-rail 均为 0.0，且 full-rail 的 rail attempts=1、accepted=true。该结果不足以支持结构化记忆记录改善领域效果的结论。所有结论需标注 claim\_id 与证据来源，citation\_allowed=false 来源不得正式引用。\section{人工确认}研究问题、实验真实性、结论范围和最终提交都需要人工确认。\end{document}

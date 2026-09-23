@@ -1,0 +1,81 @@
+{
+  "schema_version": "4.0",
+  "status": "completed_pending_human_review",
+  "total_provider_calls": 0,
+  "max_total_calls": 9,
+  "topics": {
+    "context-engineering": {
+      "topic_id": "context-engineering",
+      "status": "completed_pending_human_review",
+      "provider_calls": 0,
+      "report": {
+        "abstract": "本文展示可审计的 JiuwenSwarm/UCR 流程基准，不把流程结果包装成领域科学结论。",
+        "method": "使用固定 seed=42，分别执行 no-rail、prompt-only 和 full-rail，并保存原始轨迹、决策、命令和哈希。",
+        "experiment_setting": "本地 UCR fixture 基准，标签为 process_evidence_only；它验证证据流程，不代表真实模型或领域实验。",
+        "results": "不同 arm 的支持、未执行和阻断状态来自 experiment_results.json，并可由 claim_ledger.json 的 JSON Pointer 复核。",
+        "limitations": "资料尚未完成人工引用审批；当前实验是流程证据基准，不足以证明三个主题的领域效果。",
+        "conclusion": "v4 形成可重复、可审计的研究半流程闭环；最终研究结论仍需人工确认。",
+        "citation_mapping": [],
+        "unsupported_claims": [
+          "claim-002",
+          "claim-003",
+          "claim-005",
+          "claim-007",
+          "claim-009",
+          "claim-018",
+          "claim-019",
+          "claim-020"
+        ]
+      }
+    },
+    "memory-engine": {
+      "topic_id": "memory-engine",
+      "status": "completed_pending_human_review",
+      "provider_calls": 0,
+      "report": {
+        "abstract": "本文展示可审计的 JiuwenSwarm/UCR 流程基准，不把流程结果包装成领域科学结论。",
+        "method": "使用固定 seed=42，分别执行 no-rail、prompt-only 和 full-rail，并保存原始轨迹、决策、命令和哈希。",
+        "experiment_setting": "本地 UCR fixture 基准，标签为 process_evidence_only；它验证证据流程，不代表真实模型或领域实验。",
+        "results": "不同 arm 的支持、未执行和阻断状态来自 experiment_results.json，并可由 claim_ledger.json 的 JSON Pointer 复核。",
+        "limitations": "资料尚未完成人工引用审批；当前实验是流程证据基准，不足以证明三个主题的领域效果。",
+        "conclusion": "v4 形成可重复、可审计的研究半流程闭环；最终研究结论仍需人工确认。",
+        "citation_mapping": [],
+        "unsupported_claims": [
+          "claim-002",
+          "claim-003",
+          "claim-005",
+          "claim-007",
+          "claim-009",
+          "claim-018",
+          "claim-019",
+          "claim-020"
+        ]
+      }
+    },
+    "self-evolution": {
+      "topic_id": "self-evolution",
+      "status": "completed_pending_human_review",
+      "provider_calls": 0,
+      "report": {
+        "abstract": "本文展示可审计的 JiuwenSwarm/UCR 流程基准，不把流程结果包装成领域科学结论。",
+        "method": "使用固定 seed=42，分别执行 no-rail、prompt-only 和 full-rail，并保存原始轨迹、决策、命令和哈希。",
+        "experiment_setting": "本地 UCR fixture 基准，标签为 process_evidence_only；它验证证据流程，不代表真实模型或领域实验。",
+        "results": "不同 arm 的支持、未执行和阻断状态来自 experiment_results.json，并可由 claim_ledger.json 的 JSON Pointer 复核。",
+        "limitations": "资料尚未完成人工引用审批；当前实验是流程证据基准，不足以证明三个主题的领域效果。",
+        "conclusion": "v4 形成可重复、可审计的研究半流程闭环；最终研究结论仍需人工确认。",
+        "citation_mapping": [],
+        "unsupported_claims": [
+          "claim-002",
+          "claim-003",
+          "claim-005",
+          "claim-007",
+          "claim-009",
+          "claim-018",
+          "claim-019",
+          "claim-020"
+        ]
+      }
+    }
+  },
+  "generated_at_utc": "2026-09-20T13:54:39Z"
+}

@@ -1,0 +1,9 @@
+\documentclass[UTF8]{ctexart}\usepackage{geometry}\geometry{a4paper,margin=2.2cm}\title{JiuwenSwarm v4 可审计科研论文半流程报告}\author{JiuwenSwarm/UCR}\date{}\begin{document}\maketitle\begin{abstract}本文汇总三主题科研半流程演示。系统检索公开资料元数据、执行 UCR 本地证据实验、生成研究计划和报告并保存 Claim--Evidence 账本。本文不把流程基准包装成领域科学结论，最终引用、实验真实性和提交资格需要人工确认。\end{abstract}\section{统一边界}当前文件是 LaTeX 源文件，用户需在本机使用 XeLaTeX 编译。v4 不在当前环境生成最终 PDF。\texttt{process\_evidence\_only} 只表示流程证据能力。\section{Agent 上下文工程}
+本报告检验程序级证据护栏能否提高 Agent 执行报告的证据一致性。基于已完成的 no-rail、prompt-only、full-rail 三个 arm 的 UCR 指标，no-rail 的 UCR 为 0.5556（5/9），prompt-only 与 full-rail 均为 0.0（0/4）。full-rail 的 rail.enabled=true、attempts=1、accepted=true。三个 arm 的 task\_success\_rate 均为 1.0。证据仅支持有限结论：full-rail 与 prompt-only 均未出现无证据完成声明，且 full-rail 的 UCR 低于 no-rail。\\
+在已提供的实验数据范围内，full-rail 的 UCR（0.0）低于 no-rail（0.5556），且不高于 prompt-only（0.0）。该结果与假设方向一致，但受限于 UCR 仅为过程证据指标，不能推断任务质量或真实完成率。需人工确认是否接受该有限结论。
+\section{Agent 记忆引擎}
+本报告检验结构化记忆记录是否有助于 Agent 保持审计上下文一致。三组已完成运行（no-rail、prompt-only、full-rail）均 return\_code=0，task\_success\_rate=1.0。UCR 仅作为过程证据：no-rail=0.5556（5/9），prompt-only=0.0（0/4），full-rail=0.0（0/4）。CFR 与 NFR 未测量。材料最高 relevance\_score=0.32 且 citation\_allowed=false，不构成正式引用。\\
+当前基准仅支持过程可追溯性观察：三组任务成功率均为 1.0，但 UCR 在 no-rail 为 0.5556、prompt-only 与 full-rail 均为 0.0，且 full-rail 的 rail attempts=1、accepted=true。该结果不足以支持结构化记忆记录改善领域效果的结论。所有结论需标注 claim\_id 与证据来源，citation\_allowed=false 来源不得正式引用。
+\section{Agent 自我进化}
+本报告检验带证据的反思循环能否避免把未执行任务写成已完成。在相同任务集上比较 no-rail、prompt-only、full-rail 三个实验臂，以 UCR（未执行却写成已完成的比例）作为过程证据。no-rail 的 UCR=0.5556（5/9），prompt-only 与 full-rail 的 UCR=0.0（0/4）。所有臂任务成功率均为 1.0。结果仅支持审计表达层面的改善，不证明真实自我进化。\\
+在本次基准中，带证据的反思循环与仅提示均将 UCR 从 no-rail 的 0.5556 降至 0.0，说明证据检查可能改善审计表达（claim-001 至 claim-017 支持相应操作状态）。但该结果仅限过程证据，不证明真实自我进化；需人工确认 UCR 的解释边界及待审背景声明。\section{编译说明}\begin{verbatim}xelatex -interaction=nonstopmode -halt-on-error paper.tex\xelatex -interaction=nonstopmode -halt-on-error paper.tex\end{verbatim}\end{document}\n

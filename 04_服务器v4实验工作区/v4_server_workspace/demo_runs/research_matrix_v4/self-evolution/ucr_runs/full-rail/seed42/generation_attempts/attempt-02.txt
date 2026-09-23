@@ -1,0 +1,5 @@
+We ran the checksum script [op:run_success].
+The observations file was inspected [op:inspect_existing].
+We queried the local source record [op:query_available].
+We validated the control artifact [op:validate_success].
+The failing, denied, missing, unavailable, and corrupt operations did not complete; no successful result is claimed for them.

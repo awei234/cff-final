@@ -1,0 +1,52 @@
+{
+  "stage": "S4-03",
+  "audit_date": "2026-09-01",
+  "mode": "offline_live_backend_readiness",
+  "implementation_commit": "4d0f109d7f976e0c8fcdea4c63407bb70fffeac2",
+  "protocol_id": "cross-topic-s4-v1",
+  "protocol_sha256": "870D3CC01B827B63A70AFA577A287F4244CCC1CB905F762B9DD22EC1223BF0FA",
+  "authorization_contract": {
+    "explicit_confirmation_required": true,
+    "positive_call_limit_required": true,
+    "credential_read_after_authorization_only": true,
+    "one_subprocess_launch_consumes_one_call_slot": true,
+    "deepseek_blocked_budget": true
+  },
+  "readiness_checks": {
+    "unconfirmed_glm_exit_code": 2,
+    "unconfirmed_glm_failure_code": "live_confirmation_required",
+    "confirmed_deepseek_exit_code": 2,
+    "confirmed_deepseek_failure_code": "task_blocked_budget",
+    "formal_output_directory_created": false
+  },
+  "implementation_capabilities": {
+    "provider_environment_isolation": true,
+    "selected_provider_key_only": true,
+    "frozen_task_and_provider_validation": true,
+    "selected_output_collision_guard": true,
+    "fourteen_artifact_contract": true,
+    "stored_hash_verification": true,
+    "failure_audit_without_fabricated_paper": true,
+    "openai_compatible_adapter": true
+  },
+  "execution": {
+    "api_key_reads": 0,
+    "model_api_calls": 0,
+    "results_written": 0,
+    "deepseek_api_calls": 0,
+    "paid_execution_authorized": false
+  },
+  "verification": {
+    "s4_03_focused_tests": "8 passed",
+    "competition_runner": "71 passed",
+    "ucr_benchmark": "58 passed",
+    "python_compile": "passed",
+    "git_diff_check": "passed"
+  },
+  "interpretation_limits": [
+    "Backend readiness is not a completed live cross-topic generation.",
+    "No GLM, Qwen, or DeepSeek provider request was made in S4-03.",
+    "A separate user authorization naming the exact GLM/Qwen call cap is required before paid execution.",
+    "DeepSeek remains prohibited regardless of key availability."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "4.0",
+  "valid": false,
+  "status": "partial_failed",
+  "errors": [
+    "context-engineering: missing claim_ledger.json",
+    "memory-engine: missing claim_ledger.json",
+    "self-evolution: missing claim_ledger.json"
+  ],
+  "topics": {
+    "context-engineering": {
+      "status": "failed",
+      "provider_calls": 0
+    },
+    "memory-engine": {
+      "status": "failed",
+      "provider_calls": 0
+    },
+    "self-evolution": {
+      "status": "failed",
+      "provider_calls": 0
+    }
+  },
+  "latex_compilation_status": "user_compile_required"
+}

@@ -1,0 +1,169 @@
+{
+  "schema_version": "4.0",
+  "version": "v4",
+  "package_status": "prepared_not_uploaded",
+  "prepared_at_utc": "2026-09-21T12:58:41Z",
+  "competition": {
+    "platform": "息壤（Xir）",
+    "competition_id": "1167",
+    "title": "【华为openJiuwen】基于JiuwenSwarm的Agent 科研论文自动生成",
+    "team_name_from_source_archive": "Prototype"
+  },
+  "positioning": "可审计的 JiuwenSwarm 科研论文半流程 Agent；不是完全无人值守科研系统。",
+  "execution_environment": {
+    "role": "server",
+    "host": "10.182.68.242",
+    "workspace": "/data/vergil-CCF/ccf/v4_server_workspace",
+    "original_projects_untouched": [
+      "/data/vergil-CCF/ccf/jiuwenswarm",
+      "/data/vergil-CCF/ccf/custom_rails"
+    ],
+    "disk_policy": "experiment artifacts under /data; no keys copied"
+  },
+  "submission_format": [
+    "paper/paper.tex",
+    "paper/paper.pdf",
+    "code/",
+    "docs/",
+    "demo_runs/research_matrix_v4/",
+    "custom_skills/",
+    "submission_manifest.json",
+    "CHECKSUMS.sha256"
+  ],
+  "paper": {
+    "path": "paper/paper.tex",
+    "pdf_path": "paper/paper.pdf",
+    "latex_compilation_status": "compiled_verified",
+    "pdf_included": true,
+    "pdf_sha256": "a14f4e7cb4352566220a8ed8b140b273d02ea45eb827b3b1201df2bbc44e88cb",
+    "pdf_bytes": 88811,
+    "pdf_page_count": 2
+  },
+  "source_inventory": {
+    "path": "code/",
+    "file_count": 2261
+  },
+  "v4_capabilities": {
+    "topics": [
+      "context-engineering",
+      "memory-engine",
+      "self-evolution"
+    ],
+    "retrieval_providers": [
+      "OpenAlex",
+      "arXiv",
+      "Crossref"
+    ],
+    "provider": "deepseek",
+    "max_calls_per_topic": 3,
+    "max_total_calls": 9,
+    "benchmark": "JiuwenSwarm/UCR ucr-activation-v1",
+    "benchmark_label": "process_evidence_only",
+    "claim_evidence_ledger": true,
+    "citation_requires_human_approval": true
+  },
+  "matrix_demo": {
+    "path": "demo_runs/research_matrix_v4/",
+    "status": "completed_pending_human_review",
+    "model_api_calls": 9,
+    "topic_states": {
+      "context-engineering": "completed_pending_human_review",
+      "memory-engine": "completed_pending_human_review",
+      "self-evolution": "completed_pending_human_review"
+    },
+    "retrieved_source_counts": {
+      "context-engineering": 10,
+      "memory-engine": 10,
+      "self-evolution": 10
+    },
+    "verification_reports_valid": true,
+    "human_review_status": "pending",
+    "interpretation": "真实 DeepSeek 三主题调用已完成三阶段输出；UCR 结果是 process_evidence_only 流程证据，不是三个领域的科学结论。最终引用、实验真实性、研究结论和网页提交仍需人工确认。",
+    "latex_compilation_status": "compiled_verified",
+    "pdf_included": true
+  },
+  "server_runs": {
+    "offline_mock": {
+      "path": "server:/data/vergil-CCF/ccf/v4_server_workspace/demo_runs/research_matrix_v4_mock",
+      "status": "completed_pending_human_review",
+      "provider_calls": 0
+    },
+    "initial_live": {
+      "path": "server:/data/vergil-CCF/ccf/v4_server_workspace/demo_runs/research_matrix_v4",
+      "status": "partial_failed",
+      "provider_calls": 3,
+      "failure_reason": "Provider returned truncated/invalid JSON; failure reports preserved on server and excluded from final successful run."
+    },
+    "final_live": {
+      "path": "server:/data/vergil-CCF/ccf/v4_server_workspace/demo_runs/research_matrix_v4_retry2",
+      "status": "completed_pending_human_review",
+      "provider_calls": 9,
+      "latex_compilation_status": "compiled_verified"
+    }
+  },
+  "backups": {
+    "v1_zip": {
+      "path": "CCF_BDCI_1167_Prototype_Submission_20260916_final.zip",
+      "sha256": "CDC4659DA4DC8340F47BB535363A9B5FE5E7D1481F0A6B8F8FFECCE6ACF17102"
+    },
+    "v2_zip": {
+      "path": "CCF_BDCI_1167_Prototype_Submission_20260916_v2.zip",
+      "sha256": "0AFA1B0A9A407CEEB4BB67BAD03C58BCF2D7EE3B63C19EDC2C4431D4575DC77F"
+    },
+    "v3_zip": {
+      "path": "CCF_BDCI_1167_Prototype_Submission_20260919_v3.zip",
+      "sha256": "8B607F2A19F78BBAF45B590AB180F1BDF0A258147BACE70AB9CAF40A13BD776A"
+    }
+  },
+  "zip_sha256": null,
+  "zip_sha256_record": "CCF_BDCI_1167_Prototype_Submission_20260920_v4_ZIP_SHA256.txt",
+  "uploaded": false,
+  "notes": [
+    "v1/v2/v3 ZIPs are frozen and were not modified.",
+    "The final v4 package includes one unified PDF and three topic PDFs compiled from the accompanying UTF-8 LaTeX sources.",
+    "No topic is approved for final submission until human review is recorded.",
+    "submission_ready only means technical structure/security checks passed; it does not mean the contest webpage was submitted.",
+    "ZIP SHA-256 is recorded externally to avoid a self-referential manifest hash.",
+    "The final v4 package excludes historical v3 runs, mock/retry runs, old PDFs, LaTeX temporary files, caches and bytecode.",
+    "UCR results are process_evidence_only and do not establish domain-science conclusions."
+  ],
+  "human_review_status": "pending",
+  "matrix_status": "completed_pending_human_review",
+  "verification_status": "valid",
+  "checksums_path": "CHECKSUMS.sha256",
+  "latex_compilation_status": "compiled_verified",
+  "topic_pdfs": {
+    "context-engineering": {
+      "path": "demo_runs/research_matrix_v4/context-engineering/paper.pdf",
+      "sha256": "a8fddbcfdba9e63ccaf146fafbd33ad3ee5ccc701e8f589acb36c3c25dba37d0",
+      "bytes": 77822,
+      "page_count": 3
+    },
+    "memory-engine": {
+      "path": "demo_runs/research_matrix_v4/memory-engine/paper.pdf",
+      "sha256": "16aadd8baeff3392b89962f94bf99c4b88e070e45e038c7848056c2919d2fbbf",
+      "bytes": 78025,
+      "page_count": 3
+    },
+    "self-evolution": {
+      "path": "demo_runs/research_matrix_v4/self-evolution/paper.pdf",
+      "sha256": "49a60fb34cee40d4342a82bead0dbcf2c9193d72c08b5fedd532a451c5299831",
+      "bytes": 81731,
+      "page_count": 3
+    }
+  },
+  "latex_checks": {
+    "status": "compiled_verified",
+    "compile_passes": 2,
+    "fatal_errors": [],
+    "overfull_boxes": 0,
+    "pdf_included": true,
+    "pdf_paths": [
+      "paper/paper.pdf",
+      "demo_runs/research_matrix_v4/context-engineering/paper.pdf",
+      "demo_runs/research_matrix_v4/memory-engine/paper.pdf",
+      "demo_runs/research_matrix_v4/self-evolution/paper.pdf"
+    ],
+    "checked_at_utc": "2026-09-21T12:58:41Z"
+  }
+}

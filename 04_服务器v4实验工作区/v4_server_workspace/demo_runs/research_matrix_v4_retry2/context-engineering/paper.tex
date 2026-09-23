@@ -1,0 +1,42 @@
+\documentclass[UTF8]{ctexart}\usepackage{geometry,booktabs,longtable}\geometry{a4paper,margin=2.2cm}\title{JiuwenSwarm v4：Agent 上下文工程}\author{JiuwenSwarm/UCR 可审计科研半流程}\date{}\begin{document}\maketitle
+  \section{重要边界}本文件是 v4 LaTeX 源文件，当前环境不编译最终 PDF。UCR 标签为 \texttt{process\_evidence\_only}，只能证明流程证据能力，不能包装成领域科学结论。检索资料默认等待人工审批。
+  \section{研究问题与计划}\textbf{问题：}程序级证据护栏能否提高 Agent 执行报告的证据一致性？\\\textbf{假设：}full-rail 应比无护栏或仅提示词减少无证据完成声明。
+  \begin{itemize}\item full-rail 的 UCR 低于 no-rail。
+\item full-rail 的 UCR 不高于 prompt-only。
+\item 所有结论仅基于已提供的 experiment\_summary，不引入外部证据。\end{itemize}\section{方法}复用已完成的三个 arm 结果，不新增实验。以 UCR（unsupported completion rate）为主指标，比较 no-rail、prompt-only、full-rail 的 UCR 差异，并记录 rail 启用与接受情况。所有结论仅基于提供的 experiment\_summary。\subsection{实验设置}三个 arm：no-rail（rail.enabled=false，attempts=0，accepted=true）、prompt-only（rail.enabled=false，attempts=0，accepted=true）、full-rail（rail.enabled=true，attempts=1，accepted=true）。每个 arm 的 return\_code=0，status=completed。UCR 为 process\_evidence\_only 指标。CFR 与 NFR 在 UCR 场景中未测量。
+  \begin{center}\begin{tabular}{lrrr}\toprule Arm & 状态 & UCR & Supported\\\\\midrule
+  no-rail & completed & 0.5556 & 4 \\\\
+prompt-only & completed & 0.0 & 4 \\\\
+full-rail & completed & 0.0 & 4 \\\\\bottomrule\end{tabular}\end{center}
+  \section{实验结果}no-rail：UCR=0.5556（5/9），supported=4，unexecuted=5，task\_success\_rate=1.0。prompt-only：UCR=0.0（0/4），supported=4，unexecuted=0，task\_success\_rate=1.0。full-rail：UCR=0.0（0/4），supported=4，unexecuted=0，task\_success\_rate=1.0，rail.enabled=true，attempts=1，accepted=true。full-rail 的 UCR 低于 no-rail，且不高于 prompt-only。\section{Claim--Evidence 账本}\begin{center}\begin{tabular}{lll}\toprule Claim ID & 状态 & 类型\\\\\midrule
+  claim-001 & supported & experiment\_observation \\\\
+claim-002 & pending\_human\_review & experiment\_observation \\\\
+claim-003 & pending\_human\_review & experiment\_observation \\\\
+claim-004 & supported & experiment\_observation \\\\
+claim-005 & pending\_human\_review & experiment\_observation \\\\
+claim-006 & supported & experiment\_observation \\\\
+claim-007 & pending\_human\_review & experiment\_observation \\\\
+claim-008 & supported & experiment\_observation \\\\
+claim-009 & pending\_human\_review & experiment\_observation \\\\
+claim-010 & supported & experiment\_observation \\\\
+claim-011 & supported & experiment\_observation \\\\
+claim-012 & supported & experiment\_observation \\\\
+claim-013 & supported & experiment\_observation \\\\
+claim-014 & supported & experiment\_observation \\\\
+claim-015 & supported & experiment\_observation \\\\
+claim-016 & supported & experiment\_observation \\\\
+claim-017 & supported & experiment\_observation \\\\
+claim-018 & pending\_human\_review & background \\\\
+claim-019 & pending\_human\_review & background \\\\
+claim-020 & pending\_human\_review & background \\\\\bottomrule\end{tabular}\end{center}
+  \section{检索资料与人工审批}候选资料数：10。只有人工批准后才允许正式引用。\begin{center}\begin{tabular}{lll}\toprule Source ID & relevance & review\\\\\midrule
+  crossref:10.2139/ssrn.6506600 & 0.07 & pending \\\\
+crossref:10.37547/tajet/volume08issue03-12 & 0.07 & pending \\\\
+crossref:10.4018/978-1-60566-618-1.ch002 & 0.07 & pending \\\\
+openalex:W3109746568 & 0.02 & pending \\\\
+openalex:W2165744313 & 0.02 & pending \\\\
+openalex:W2139457077 & 0.02 & pending \\\\
+openalex:W2153791616 & 0.02 & pending \\\\
+openalex:W2167554769 & 0.02 & pending \\\\
+openalex:W2124405605 & 0.02 & pending \\\\
+openalex:W2115421876 & 0.02 & pending \\\\\bottomrule\end{tabular}\end{center}\section{限制}UCR 仅作为 process\_evidence\_only 指标，不能外推为任务质量或真实完成率。CFR 与 NFR 在 UCR 场景中未测量，不应报告为结果。citation\_allowed=false 的材料不得作为正式引用。citation\_coverage=0.0，allow\_paper=false。当前证据仅支持有限结论：full-rail 与 prompt-only 均未出现无证据完成声明。\\不支持 Claim：claim-002, claim-003, claim-005, claim-007, claim-009, claim-018, claim-019, claim-020\section{结论}在已提供的实验数据范围内，full-rail 的 UCR（0.0）低于 no-rail（0.5556），且不高于 prompt-only（0.0）。该结果与假设方向一致，但受限于 UCR 仅为过程证据指标，不能推断任务质量或真实完成率。需人工确认是否接受该有限结论。\section{人工确认}研究问题、实验真实性、结论范围和最终提交都需要人工确认。\end{document}

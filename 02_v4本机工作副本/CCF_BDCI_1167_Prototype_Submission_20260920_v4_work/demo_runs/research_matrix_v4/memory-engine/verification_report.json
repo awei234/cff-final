@@ -1,0 +1,15 @@
+{
+  "schema_version": "4.0",
+  "topic_id": "memory-engine",
+  "valid": true,
+  "status": "completed_pending_human_review",
+  "errors": [],
+  "provider_calls": 3,
+  "latex_compilation_status": "compiled_verified",
+  "pdf_included": true,
+  "paper_tex_sha256": "0398c443f4baabd96b20041fbdf13f5b8c075c6b45f45edac72d60c4fa903fd5",
+  "paper_pdf_sha256": "16aadd8baeff3392b89962f94bf99c4b88e070e45e038c7848056c2919d2fbbf",
+  "paper_pdf_page_count": 3,
+  "human_review_status": "pending",
+  "interpretation": "valid 表示技术结构、证据链和安全检查通过，不表示人工批准或比赛提交完成。"
+}

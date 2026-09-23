@@ -1,0 +1,265 @@
+{
+  "schema_version": "4.0",
+  "topic_id": "memory-engine",
+  "retrieval_status": "retrieved",
+  "sources": [
+    {
+      "source_id": "crossref:10.2139/ssrn.7160321",
+      "provider": "crossref",
+      "title": "Does Memory Credit Travel? Paired Factorial Audits of LLM-Agent Memory",
+      "authors": [
+        "Rocchi"
+      ],
+      "published_at": "2026",
+      "url": "https://doi.org/10.2139/ssrn.7160321",
+      "doi": "10.2139/ssrn.7160321",
+      "abstract": "External memories can alter a language-model agent's behavior without improving its task outcome, and the utility of one memory can depend on the bank and agent that consume it. An outcome recorded after retrieval is not the memory's marginal contribution, even when only one item was retrieved. We formalize three executable quantities: the matched effect of adding a candidate, the change in that effect after adding a non-empty bank, and its change across model-decoder agents. We then apply a capability-first, outcome-hidden protocol on ALFWorld. On a disjoint qualification split, Qwen3-32B succeeds on 34/36 targets and Mistral Small 3.1-24B on 31/36. Both pass a direction-blind observability gate before a six-cell factorial is completed on 48 disjoint target configurations, conditional on 18 fixed source pairs: 576 episodes and 25,956 RunPod requests. The outcome-frozen controller comparison is nevertheless non-informative. CAMEO-TC and a singleton point gate have identical mean regret (0.0521), zero discordant target losses, and a 95% stratified target-cluster replay-bootstrap interval of [-0.0052, 0.0104] for regret reduction. A prespecified diagnostic exposes a different failure. Bank-only success is already 166/192 (86.5%); of 169 joint successes that a retrieval-conditioned ledger would credit to the candidate, only 10 are marginal helps (5.9% precision) and 159 are passenger credit. Seven joint failures hide marginal harm. Bank context changes the candidate effect in 35/192 strata, although no strict sign inversion occurs. A post-primary stress test on a deterministic 12-target subset keeps marginal-help precision at 0-5.3% and passenger credit at 94.7-100% across three decoder seeds, despite low exact action-sequence agreement. Thus we do not establish controller efficacy or general non-transportability. We establish an auditable distinction between outcome after retrieval, fixed-entry contribution, and credit transport, with frozen splits, replay inference, and RunPod-only provenance.",
+      "relevance_score": 0.32,
+      "relevance_reasons": [
+        "标题命中: agent memory"
+      ],
+      "duplicate_group": "doi:10.2139/ssrn.7160321",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T14:09:36Z",
+      "content_sha256": "9740ca0cfe062c9384fb42b8c4acd00f7323809cb09511ede5cd2c124e5254ed"
+    },
+    {
+      "source_id": "crossref:10.2139/ssrn.6273819",
+      "provider": "crossref",
+      "title": "SuperLocalMemory: Privacy-Preserving Multi-Agent Memory with Bayesian Trust Defense Against Memory Poisoning",
+      "authors": [
+        "Bhardwaj"
+      ],
+      "published_at": "2026",
+      "url": "https://doi.org/10.2139/ssrn.6273819",
+      "doi": "10.2139/ssrn.6273819",
+      "abstract": "We present SuperLocalMemory, a local-first memory system for multi-agent AI that defends against OWASP ASI06 memory poisoning through architectural isolation and Bayesian trust scoring, while personalizing retrieval through adaptive learning-to-rank-all without cloud dependencies or LLM inference calls. As AI agents increasingly rely on persistent memory, cloud-based memory systems create centralized attack surfaces where poisoned memories propagate across sessions and users-a threat demonstrated in documented attacks against production systems. Our architecture combines SQLite-backed storage with FTS5 full-text search, Leiden-based knowledge graph clustering, an event-driven coordination layer with per-agent provenance, and an adaptive re-ranking framework that learns user preferences through three-layer behavioral analysis (cross-project technology preferences, project context detection, and workflow pattern mining). Evaluation across seven benchmark dimensions demonstrates 10.6ms median search latency, zero concurrency errors under 10 simultaneous agents, trust separation (gap = 0.90) with 72% trust degradation for sleeper attacks, and 104% improvement in NDCG@5 when adaptive re-ranking is enabled. Behavioral data is isolated in a separate database supporting GDPR Article 17 erasure requests via one-command deletion. SuperLocalMemory is open-source (MIT) and integrates with 17+ development tools via Model Context Protocol.",
+      "relevance_score": 0.32,
+      "relevance_reasons": [
+        "标题命中: agent memory"
+      ],
+      "duplicate_group": "doi:10.2139/ssrn.6273819",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T14:09:36Z",
+      "content_sha256": "9fb33b409d46701cdeb39609af9d09904c1ca85771e5ce9cb1c5e041bee12dfe"
+    },
+    {
+      "source_id": "crossref:10.59350/xn4yy-3ke56",
+      "provider": "crossref",
+      "title": "Hierarchies, Heterarchies, and Agent Memory",
+      "authors": [
+        "Winston"
+      ],
+      "published_at": "2022-4-10",
+      "url": "https://doi.org/10.59350/xn4yy-3ke56",
+      "doi": "10.59350/xn4yy-3ke56",
+      "abstract": "In a hierarchy, each agent only acts on behalf of one other agent: from rdflib import Graph from rdflib.namespace import RDF, PROV def hierarchy(graph): return all( len(set(graph.objects(agent, PROV.actedOnBehalfOf))) &amp;lt;= 1 for agent in graph.subjects(RDF.type, PROV.Agent) ) hierarchy(Graph().parse(data=\"\"\" @prefix prov: . @prefix : . :doc a prov:Agent; . :sleepy a prov:Agent;",
+      "relevance_score": 0.32,
+      "relevance_reasons": [
+        "标题命中: agent memory"
+      ],
+      "duplicate_group": "doi:10.59350/xn4yy-3ke56",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T14:09:36Z",
+      "content_sha256": "e6bbef597558033749ec4a063c870e627c1a5ced415fba161119d8a6cbf26075"
+    },
+    {
+      "source_id": "crossref:10.59350/kyqvq-k4425",
+      "provider": "crossref",
+      "title": "Hierarchies, Heterarchies, and Agent Memory",
+      "authors": [
+        "Winston"
+      ],
+      "published_at": "2022-4-10",
+      "url": "https://doi.org/10.59350/kyqvq-k4425",
+      "doi": "10.59350/kyqvq-k4425",
+      "abstract": "In a hierarchy, each agent only acts on behalf of one other agent: from rdflib import Graph from rdflib.namespace import RDF, PROV def hierarchy(graph): return all( len(set(graph.objects(agent, PROV.actedOnBehalfOf))) &amp;lt;= 1 for agent in graph.subjects(RDF.type, PROV.Agent) ) hierarchy(Graph().parse(data=\"\"\" @prefix prov: . @prefix : . :doc a prov:Agent; . :sleepy a prov:Agent;",
+      "relevance_score": 0.32,
+      "relevance_reasons": [
+        "标题命中: agent memory"
+      ],
+      "duplicate_group": "doi:10.59350/kyqvq-k4425",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T14:09:36Z",
+      "content_sha256": "1f29750af95db11c225bb016b05fefbc10b602552e1a0f56581836a602a55f7c"
+    },
+    {
+      "source_id": "openalex:W2104961125",
+      "provider": "openalex",
+      "title": "Agent memory and adaptation in multi-agent systems",
+      "authors": [
+        "Kristina Lerman",
+        "Aram Galstyan"
+      ],
+      "published_at": "2003-07-14",
+      "url": "https://doi.org/10.1145/860575.860703",
+      "doi": "https://doi.org/10.1145/860575.860703",
+      "abstract": "",
+      "relevance_score": 0.27,
+      "relevance_reasons": [
+        "标题命中: agent memory"
+      ],
+      "duplicate_group": "doi:10.1145/860575.860703",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T14:09:36Z",
+      "content_sha256": "05ef810a6a6a41656977f9cfea9e071ca24a1b8c7629a1a2426331a24cbb66cf"
+    },
+    {
+      "source_id": "crossref:10.2139/ssrn.7019082",
+      "provider": "crossref",
+      "title": "Beyond Retrieval: Layered Epistemic Agent Protocol for Memory Coherence",
+      "authors": [
+        "Khimani"
+      ],
+      "published_at": "2026",
+      "url": "https://doi.org/10.2139/ssrn.7019082",
+      "doi": "10.2139/ssrn.7019082",
+      "abstract": "&lt;div&gt;\n Retrieval-Augmented Generation (RAG) treats memory as a retrieval problem: store content, embed it, fetch what is relevant. This suffices for static knowledge bases but breaks down for agents that learn over time, where stored information contradicts itself, beliefs evolve, and corrections must propagate through dependent reasoning. Current architectures commit a category error, applying uniform persistence semantics to information with fundamentally different epistemic status.\n&lt;/div&gt;\n&lt;div&gt;\n &lt;br&gt;\n&lt;/div&gt;\n&lt;div&gt;\n We introduce Layered Epistemic Agent Protocol (LeAP), a framework that treats agent memory as an epistemology problem. LeAP formalizes stratified epistemic types with distinct evidence requirements: observations require no justification, claims require single sources, facts require corroboration, and beliefs require derivation chains. The framework defines warrant functions, coherence invariants, and a revision protocol satisfying AGM belief revision postulates. Coherence is decidable for finite stores.\n&lt;/div&gt;\n&lt;div&gt;\n &lt;br&gt;\n&lt;/div&gt;\n&lt;div&gt;\n We present CITE (Context In Tiered Epistemology), a four-layer architecture implementing LeAP. Its layers (Memory, Knowledge, Wisdom, and Intelligence) enforce distinct persistence semantics: decay-based, supersession-based, evidence-gated, and session-scoped respectively. Write-time validations gate every entry by epistemic layer, preventing contradiction accumulation at the source rather than detecting it after retrieval.\n&lt;/div&gt;\n&lt;div&gt;\n &lt;br&gt;\n&lt;/div&gt;\n&lt;div&gt;\n In a design validation on 500 annotated coding-agent sessions, CITE achieves 95% contradiction detection compared to 66% for an embedding-only baseline, and 87% revision propagation compared to 12%.\n&lt;/div&gt;",
+      "relevance_score": 0.15,
+      "relevance_reasons": [
+        "摘要命中: agent memory"
+      ],
+      "duplicate_group": "doi:10.2139/ssrn.7019082",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T14:09:36Z",
+      "content_sha256": "ff5ad95f2ab2b8a3d26730067403b7682d037d63be47d93b3206c4de56755a2e"
+    },
+    {
+      "source_id": "crossref:10.2139/ssrn.6986920",
+      "provider": "crossref",
+      "title": "Disentangling Memory-Induced Anomalies in AI Agent Behavior Triggering Roguishness",
+      "authors": [
+        "Jauhari"
+      ],
+      "published_at": "2026",
+      "url": "https://doi.org/10.2139/ssrn.6986920",
+      "doi": "10.2139/ssrn.6986920",
+      "abstract": "Autonomous AI agents, integrating LLMs with retrieval systems, tools, and persistent memory, are increasingly deployed for complex tasks. However, these systems frequently exhibit anomalous or \"rogue\" behaviors, including inconsistent reasoning, context drift, and incorrect tool usage leading to system failures. Existing explanations, such as hallucinations, bias, or prompt misalignment, remain insufficient for contemporary (and indispensable) memory-augmented architectures. This paper proposes a memory-centric framework that interprets such anomalies as emergent properties of interactions across semantic memory (retrieval-based grounding), working memory (contextual and episodic state), and procedural memory (action policies). We present a taxonomy of memory-induced anomalies, including retrieval inconsistencies, context fragmentation, and crossmemory interference, and identify mechanisms such as retrieval instability and tool-mediated feedback loops. Beyond analysis, we highlight the security implications of controlled anomaly modeling. While most agents are task-oriented, understanding memory-induced deviations enables the design of controlled antagonist agents for resilience testing. Critically, effective rogue behavior manifests stealthily through memory interactions, rather than explicit faults. We further introduce a diagnostic framework for tracing anomalies across memory layers, motivating memory-aware design and observability in AI agent systems.",
+      "relevance_score": 0.07,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.2139/ssrn.6986920",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T14:09:36Z",
+      "content_sha256": "9d00b20c5245eb26d983af4e4de4ce4aa6f70bdcc1a3124fbc1dfecae783af42"
+    },
+    {
+      "source_id": "crossref:10.36227/techrxiv.176857932.25697838/v1",
+      "provider": "crossref",
+      "title": "Agent Skills from the Perspective of Procedural Memory: A Survey",
+      "authors": [
+        "Wu",
+        "Zhang"
+      ],
+      "published_at": "2026-1-16",
+      "url": "https://doi.org/10.36227/techrxiv.176857932.25697838/v1",
+      "doi": "10.36227/techrxiv.176857932.25697838/v1",
+      "abstract": "As large language model (LLM)-powered autonomous agents increasingly demonstrate strong capabilities in complex real-world tasks, recent research has focused on leveraging skills to endow these agents with domain-specific expertise and adaptive competence. In this survey, we present the first systematic overview of LLM-powered Agent Skills from the perspective of procedural memory, conceptualizing skills as a core form of procedural knowledge that enables agents to internalize, retain, and reuse task-solving procedures through interaction and experience. We comprehensively examine what Agent Skills are, why they are essential for agentic intelligence, and how they can be effectively acquired, represented, invoked, and refined within LLM-based systems. Furthermore, we review representative applications across diverse domains and discuss key challenges and future opportunities in developing and generalizing Agent Skills.",
+      "relevance_score": 0.07,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.36227/techrxiv.176857932.25697838/v1",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T14:09:36Z",
+      "content_sha256": "aa4e12a4d8c8b67998f60a2f84675d8bb1d646c9102598a9957ad77e5b3700e6"
+    },
+    {
+      "source_id": "openalex:W2126689453",
+      "provider": "openalex",
+      "title": "The wearable remembrance agent: A system for augmented memory",
+      "authors": [
+        "Bradley J. Rhodes"
+      ],
+      "published_at": "1997-12-01",
+      "url": "https://doi.org/10.1007/bf01682024",
+      "doi": "https://doi.org/10.1007/bf01682024",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1007/bf01682024",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T14:09:36Z",
+      "content_sha256": "8e970c3ca033c649f51d115203d834c0847911c2b04df58605ae053c9c66f173"
+    },
+    {
+      "source_id": "openalex:W2121417064",
+      "provider": "openalex",
+      "title": "DNA methylation patterns and epigenetic memory",
+      "authors": [
+        "Adrian Bird"
+      ],
+      "published_at": "2002-01-01",
+      "url": "https://doi.org/10.1101/gad.947102",
+      "doi": "https://doi.org/10.1101/gad.947102",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1101/gad.947102",
+      "version_group": "doi:10.1101/gad.947102",
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T14:09:36Z",
+      "content_sha256": "735d8236dd5343d2e1a1237aa0bfe7d4aded38bb2320c96939716ab456a0f0ec"
+    }
+  ],
+  "deduplication": {
+    "candidate_count": 40,
+    "kept_count": 10,
+    "removed_duplicates": 2
+  },
+  "failures": [
+    {
+      "provider": "arxiv",
+      "query": "agent memory",
+      "status": 406,
+      "error": "http_406"
+    },
+    {
+      "provider": "arxiv",
+      "query": "long-term memory agents",
+      "status": 406,
+      "error": "http_406"
+    },
+    {
+      "provider": "arxiv",
+      "query": "memory augmented language model",
+      "status": 406,
+      "error": "http_406"
+    }
+  ],
+  "retrieved_at_utc": "2026-09-20T14:09:36Z"
+}

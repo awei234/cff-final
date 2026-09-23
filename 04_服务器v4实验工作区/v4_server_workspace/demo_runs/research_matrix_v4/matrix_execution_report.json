@@ -1,0 +1,30 @@
+{
+  "schema_version": "4.0",
+  "status": "partial_failed",
+  "total_provider_calls": 3,
+  "max_total_calls": 9,
+  "topics": {
+    "context-engineering": {
+      "topic_id": "context-engineering",
+      "status": "failed",
+      "provider_calls": 0,
+      "error_type": "RuntimeError",
+      "error": "provider_JSONDecodeError: Unterminated string starting at: line 94 column 7 (char 8034)"
+    },
+    "memory-engine": {
+      "topic_id": "memory-engine",
+      "status": "failed",
+      "provider_calls": 0,
+      "error_type": "RuntimeError",
+      "error": "provider_JSONDecodeError: Unterminated string starting at: line 60 column 19 (char 6231)"
+    },
+    "self-evolution": {
+      "topic_id": "self-evolution",
+      "status": "failed",
+      "provider_calls": 0,
+      "error_type": "RuntimeError",
+      "error": "provider_JSONDecodeError: Expecting value: line 133 column 19 (char 6593)"
+    }
+  },
+  "generated_at_utc": "2026-09-20T13:57:41Z"
+}

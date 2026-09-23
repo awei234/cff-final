@@ -1,0 +1,30 @@
+{
+  "schema_version": "4.0",
+  "status": "partial_failed",
+  "total_provider_calls": 3,
+  "max_total_calls": 9,
+  "topics": {
+    "context-engineering": {
+      "topic_id": "context-engineering",
+      "status": "failed",
+      "provider_calls": 1,
+      "error_type": "RuntimeError",
+      "error": "provider_schema_invalid: plan: missing research_question;plan: missing hypothesis;plan: missing variables;plan: missing experiment_plan;plan: missing success_criteria;plan: missing expected_evidence;plan: missing human_confirmation_items"
+    },
+    "memory-engine": {
+      "topic_id": "memory-engine",
+      "status": "failed",
+      "provider_calls": 1,
+      "error_type": "RuntimeError",
+      "error": "provider_schema_invalid: plan: missing research_question;plan: missing hypothesis;plan: missing variables;plan: missing experiment_plan;plan: missing success_criteria;plan: missing expected_evidence;plan: missing human_confirmation_items"
+    },
+    "self-evolution": {
+      "topic_id": "self-evolution",
+      "status": "failed",
+      "provider_calls": 1,
+      "error_type": "RuntimeError",
+      "error": "provider_schema_invalid: plan: missing research_question;plan: missing hypothesis;plan: missing variables;plan: missing experiment_plan;plan: missing success_criteria;plan: missing expected_evidence;plan: missing human_confirmation_items"
+    }
+  },
+  "generated_at_utc": "2026-09-20T14:09:59Z"
+}

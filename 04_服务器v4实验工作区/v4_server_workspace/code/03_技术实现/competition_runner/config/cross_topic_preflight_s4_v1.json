@@ -1,0 +1,15 @@
+{
+  "valid": true,
+  "errors": [],
+  "existing_outputs": [],
+  "mode": "offline_preflight",
+  "model_api_calls": 0,
+  "protocol_id": "cross-topic-s4-v1",
+  "protocol_sha256": "870D3CC01B827B63A70AFA577A287F4244CCC1CB905F762B9DD22EC1223BF0FA",
+  "task_counts": {
+    "total": 9,
+    "pending_authorization": 6,
+    "blocked_budget": 3
+  },
+  "output_root": "<USER_HOME>"
+}

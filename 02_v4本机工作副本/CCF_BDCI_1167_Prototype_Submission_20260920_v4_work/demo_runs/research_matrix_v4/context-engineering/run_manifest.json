@@ -1,0 +1,23 @@
+{
+  "schema_version": "4.0",
+  "topic_id": "context-engineering",
+  "provider": "deepseek",
+  "benchmark_label": "process_evidence_only",
+  "latex_compilation_status": "compiled_verified",
+  "started_at_utc": "2026-09-20T14:13:06Z",
+  "pdf_included": true,
+  "paper_pdf": {
+    "path": "paper.pdf",
+    "sha256": "a8fddbcfdba9e63ccaf146fafbd33ad3ee5ccc701e8f589acb36c3c25dba37d0",
+    "bytes": 77822,
+    "page_count": 3
+  },
+  "latex_checks": {
+    "status": "compiled_verified",
+    "compile_passes": 2,
+    "fatal_errors": [],
+    "overfull_boxes": [],
+    "log_present": true,
+    "pdf_bytes": 77822
+  }
+}

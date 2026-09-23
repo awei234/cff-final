@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-09-22T03:51:21.253888Z",
+  "server": {
+    "host": "10.182.68.242",
+    "ssh_alias": "ws",
+    "user": "vergil",
+    "disk_mount": "/data",
+    "source_paths": [
+      "/data/vergil-CCF/ccf/jiuwenswarm",
+      "/data/vergil-CCF/ccf/custom_rails"
+    ],
+    "workspace_path": "/data/vergil-CCF/ccf/v4_server_workspace"
+  },
+  "remote_size_reported_before_copy": {
+    "jiuwenswarm_bytes_approx": 380633088,
+    "custom_rails_bytes_approx": 266240,
+    "v4_server_workspace_bytes_approx": 5662310
+  },
+  "local_snapshot_stats": {
+    "jiuwenswarm": {
+      "path": "D:\\download\\CCF\\JiuwenSwarm_v4_完整工程归档_20260922\\03_服务器源码快照\\jiuwenswarm",
+      "file_count": 2865,
+      "bytes": 193853686
+    },
+    "custom_rails": {
+      "path": "D:\\download\\CCF\\JiuwenSwarm_v4_完整工程归档_20260922\\03_服务器源码快照\\custom_rails",
+      "file_count": 12,
+      "bytes": 38135
+    },
+    "v4_server_workspace": {
+      "path": "D:\\download\\CCF\\JiuwenSwarm_v4_完整工程归档_20260922\\04_服务器v4实验工作区\\v4_server_workspace",
+      "file_count": 708,
+      "bytes": 2002059
+    }
+  },
+  "copy_policy": {
+    "mode": "read_only_scp_snapshot",
+    "git_history_included": false,
+    "caches_included": false,
+    "runtime_logs_included": false,
+    "original_server_modified": false
+  },
+  "workspace_runs": {
+    "research_matrix_v4": "final_candidate",
+    "research_matrix_v4_mock": "offline_mock",
+    "research_matrix_v4_retry": "historical_retry",
+    "research_matrix_v4_retry2": "historical_final_retry"
+  }
+}

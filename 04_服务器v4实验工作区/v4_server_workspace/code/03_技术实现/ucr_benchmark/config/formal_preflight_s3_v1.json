@@ -1,0 +1,15 @@
+{
+  "valid": true,
+  "errors": [],
+  "existing_outputs": [],
+  "mode": "offline_preflight",
+  "model_api_calls": 0,
+  "experiment_id": "ucr-formal-s3-v1",
+  "matrix_sha256": "717061697F0C2204896CC2EE52AB3B4D1BE0FC6604E410577DCE972CD836802D",
+  "task_counts": {
+    "total": 90,
+    "pending": 60,
+    "blocked_budget": 30
+  },
+  "output_root": "<USER_HOME>"
+}

@@ -1,0 +1,128 @@
+{
+  "schema_version": "4.0",
+  "topic_id": "context-engineering",
+  "retrieval_status": "offline_mock",
+  "sources": [
+    {
+      "source_id": "offline:context-engineering:001",
+      "provider": "offline",
+      "title": "Structured context for tool-using agents",
+      "authors": [
+        "offline-fixture"
+      ],
+      "published_at": "2026-01-01",
+      "url": "https://example.invalid/context-engineering/1",
+      "doi": null,
+      "abstract": "Offline evidence about agent context engineering and auditable agent workflows.",
+      "relevance_score": 0.13,
+      "relevance_reasons": [
+        "摘要命中: agent context engineering"
+      ],
+      "duplicate_group": null,
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T13:54:37Z",
+      "content_sha256": "9788656be9d2f2f28322c11b0c5b3028c56796200d4a00bee6bdc30dc3a604ae"
+    },
+    {
+      "source_id": "offline:context-engineering:002",
+      "provider": "offline",
+      "title": "Auditing execution claims in agent systems",
+      "authors": [
+        "offline-fixture"
+      ],
+      "published_at": "2026-01-01",
+      "url": "https://example.invalid/context-engineering/2",
+      "doi": null,
+      "abstract": "Offline evidence about agent context engineering and auditable agent workflows.",
+      "relevance_score": 0.13,
+      "relevance_reasons": [
+        "摘要命中: agent context engineering"
+      ],
+      "duplicate_group": null,
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T13:54:37Z",
+      "content_sha256": "b63dac60b4a19a6824e410242944ce5364bc620f0f41aecd6eebac7749b1c4ee"
+    },
+    {
+      "source_id": "offline:context-engineering:003",
+      "provider": "offline",
+      "title": "Evidence-aware language agent workflows",
+      "authors": [
+        "offline-fixture"
+      ],
+      "published_at": "2026-01-01",
+      "url": "https://example.invalid/context-engineering/3",
+      "doi": null,
+      "abstract": "Offline evidence about agent context engineering and auditable agent workflows.",
+      "relevance_score": 0.13,
+      "relevance_reasons": [
+        "摘要命中: agent context engineering"
+      ],
+      "duplicate_group": null,
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T13:54:37Z",
+      "content_sha256": "ec4ca70ca5d78c8e64a2a36f3479a61f28fb2a26f1c350fc96aafe779e41b58e"
+    },
+    {
+      "source_id": "offline:context-engineering:004",
+      "provider": "offline",
+      "title": "Long-context agent orchestration",
+      "authors": [
+        "offline-fixture"
+      ],
+      "published_at": "2026-01-01",
+      "url": "https://example.invalid/context-engineering/4",
+      "doi": null,
+      "abstract": "Offline evidence about agent context engineering and auditable agent workflows.",
+      "relevance_score": 0.13,
+      "relevance_reasons": [
+        "摘要命中: agent context engineering"
+      ],
+      "duplicate_group": null,
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T13:54:37Z",
+      "content_sha256": "0086887a791f33903f88b7790f3903320d27831000e077f5d97ad0aeeeb5ccd3"
+    },
+    {
+      "source_id": "offline:context-engineering:005",
+      "provider": "offline",
+      "title": "Reproducible research agents",
+      "authors": [
+        "offline-fixture"
+      ],
+      "published_at": "2026-01-01",
+      "url": "https://example.invalid/context-engineering/5",
+      "doi": null,
+      "abstract": "Offline evidence about agent context engineering and auditable agent workflows.",
+      "relevance_score": 0.13,
+      "relevance_reasons": [
+        "摘要命中: agent context engineering"
+      ],
+      "duplicate_group": null,
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-20T13:54:37Z",
+      "content_sha256": "4aa71647bafcb3ec46dbb7d9a48ad7bfe185c76e23249687db6d315b926e0376"
+    }
+  ],
+  "deduplication": {
+    "candidate_count": 5,
+    "kept_count": 5,
+    "removed_duplicates": 0
+  },
+  "retrieved_at_utc": "2026-09-20T13:54:37Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": "4.0",
+  "valid": true,
+  "status": "completed_pending_human_review",
+  "errors": [],
+  "topics": {
+    "context-engineering": {
+      "status": "completed_pending_human_review",
+      "provider_calls": 3
+    },
+    "memory-engine": {
+      "status": "completed_pending_human_review",
+      "provider_calls": 3
+    },
+    "self-evolution": {
+      "status": "completed_pending_human_review",
+      "provider_calls": 3
+    }
+  },
+  "latex_compilation_status": "compiled_verified",
+  "pdf_included": true,
+  "pdf_paths": [
+    "paper/paper.pdf",
+    "demo_runs/research_matrix_v4/context-engineering/paper.pdf",
+    "demo_runs/research_matrix_v4/memory-engine/paper.pdf",
+    "demo_runs/research_matrix_v4/self-evolution/paper.pdf"
+  ],
+  "human_review_status": "pending"
+}

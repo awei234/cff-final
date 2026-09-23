@@ -1,0 +1,23 @@
+{
+  "schema_version": "4.0",
+  "topic_id": "memory-engine",
+  "provider": "deepseek",
+  "benchmark_label": "process_evidence_only",
+  "latex_compilation_status": "compiled_verified",
+  "started_at_utc": "2026-09-20T14:13:39Z",
+  "pdf_included": true,
+  "paper_pdf": {
+    "path": "paper.pdf",
+    "sha256": "16aadd8baeff3392b89962f94bf99c4b88e070e45e038c7848056c2919d2fbbf",
+    "bytes": 78025,
+    "page_count": 3
+  },
+  "latex_checks": {
+    "status": "compiled_verified",
+    "compile_passes": 2,
+    "fatal_errors": [],
+    "overfull_boxes": [],
+    "log_present": true,
+    "pdf_bytes": 78025
+  }
+}

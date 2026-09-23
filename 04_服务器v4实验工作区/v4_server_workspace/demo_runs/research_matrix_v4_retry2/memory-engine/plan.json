@@ -1,0 +1,38 @@
+{
+  "research_question": "结构化记忆记录是否有助于 Agent 保持审计上下文一致？",
+  "hypothesis": "结构化记录可能改善流程可追溯性，但当前基准不证明领域效果。",
+  "variables": [
+    "记忆记录结构（无轨道/仅提示/完整轨道）",
+    "审计上下文一致性（UCR）",
+    "任务成功率",
+    "轨道启用与接受状态"
+  ],
+  "experiment_plan": [
+    "比较 no-rail、prompt-only、full-rail 三组已完成运行。",
+    "从 decisions 中统计 supported 与 unexecuted 操作，计算 UCR。",
+    "记录 rail enabled/attempts/accepted 与 task_success_rate。",
+    "不将 UCR 解释为领域效果，仅作为过程证据。",
+    "所有结论标注 claim_id 与 evidence/source ref。"
+  ],
+  "success_criteria": [
+    "三组运行均 completed 且 return_code=0。",
+    "UCR 按 supported/(supported+unexecuted) 计算并标注 status=measured。",
+    "task_success_rate 记录为 1.0。",
+    "不将 citation_allowed=false 的来源作为正式引用。",
+    "结论明确区分过程可追溯性与领域效果。"
+  ],
+  "expected_evidence": [
+    "no-rail UCR=0.5556（5/9，supported=4，unexecuted=5）。",
+    "prompt-only UCR=0.0（0/4，supported=4，unexecuted=0）。",
+    "full-rail UCR=0.0（0/4，supported=4，unexecuted=0），rail enabled=true，attempts=1，accepted=true。",
+    "CFR 与 NFR 在 UCR 场景中未测量。",
+    "材料 relevance_score 最高 0.32，且 citation_allowed=false。"
+  ],
+  "human_confirmation_items": [
+    "是否接受 UCR 仅作为 process_evidence_only。",
+    "是否确认 citation_allowed=false 的来源不得正式引用。",
+    "是否确认当前基准不足以支持领域效果结论。",
+    "是否确认 full-rail 的 rail attempts=1 与 accepted=true 的解释范围。",
+    "是否确认 CFR/NFR 未测量不纳入本次结论。"
+  ]
+}

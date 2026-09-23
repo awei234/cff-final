@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "protocol_id": "cross-topic-s4-v1",
+  "source_commit": "2e449e989c6dd7d2bed4a9c4c7d089645be38502",
+  "provider_config_sha256": "8CBEDB36840A6428137D4F32600300FB0263C9320B1B2AEA3EA28B443B3F39C2",
+  "topics": [
+    {
+      "topic_id": "context-engineering",
+      "title": "Agent上下文工程"
+    },
+    {
+      "topic_id": "memory-engine",
+      "title": "Agent记忆引擎"
+    },
+    {
+      "topic_id": "self-evolution",
+      "title": "Agent自演进"
+    }
+  ],
+  "providers": [
+    "glm",
+    "qwen",
+    "deepseek"
+  ],
+  "seed": 42,
+  "prompt_template": "Run the unified research pipeline for topic: {topic}. Do not reuse prior paper claims or results; preserve failures as evidence.",
+  "topic_specific_templates": "forbidden",
+  "prior_result_reuse": "forbidden",
+  "required_artifacts": [
+    "run_manifest.json",
+    "prompt.txt",
+    "tool_trace.jsonl",
+    "results.json",
+    "paper.tex",
+    "paper.pdf",
+    "resource.json",
+    "verification_report.json",
+    "provenance.json",
+    "research_materials.json",
+    "plan.json",
+    "execution_report.json",
+    "rail_events.jsonl",
+    "human_interventions.jsonl"
+  ],
+  "failure_policy": "write_failure_report_never_fabricate_paper",
+  "tasks": [
+    {
+      "task_id": "context-engineering-glm-seed42",
+      "topic_id": "context-engineering",
+      "topic": "Agent上下文工程",
+      "provider": "glm",
+      "model_id": "glm-5.2",
+      "api_key_env": "ZHIPUAI_API_KEY",
+      "seed": 42,
+      "status": "pending_authorization",
+      "output_relpath": "context-engineering/glm/seed42",
+      "source_commit": "2e449e989c6dd7d2bed4a9c4c7d089645be38502",
+      "input_sha256": "113082AB6F7406DD0CC0AF4F64CE8EE4E3D9F7B649FABF051DC501F469F8A6DF"
+    },
+    {
+      "task_id": "context-engineering-qwen-seed42",
+      "topic_id": "context-engineering",
+      "topic": "Agent上下文工程",
+      "provider": "qwen",
+      "model_id": "qwen-plus",
+      "api_key_env": "DASHSCOPE_API_KEY",
+      "seed": 42,
+      "status": "pending_authorization",
+      "output_relpath": "context-engineering/qwen/seed42",
+      "source_commit": "2e449e989c6dd7d2bed4a9c4c7d089645be38502",
+      "input_sha256": "E1C658BFFF83C33D97696C2C335827CC260C1C2640F4CF0A7598DDBE1A836E6D"
+    },
+    {
+      "task_id": "context-engineering-deepseek-seed42",
+      "topic_id": "context-engineering",
+      "topic": "Agent上下文工程",
+      "provider": "deepseek",
+      "model_id": "deepseek-v4-flash",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "seed": 42,
+      "status": "blocked_budget",
+      "output_relpath": "context-engineering/deepseek/seed42",
+      "source_commit": "2e449e989c6dd7d2bed4a9c4c7d089645be38502",
+      "input_sha256": "D0AE2A9A552FED50AA8071089F169A90204B0C4D843B98BF1E870610B2F99CCD"
+    },
+    {
+      "task_id": "memory-engine-glm-seed42",
+      "topic_id": "memory-engine",
+      "topic": "Agent记忆引擎",
+      "provider": "glm",
+      "model_id": "glm-5.2",
+      "api_key_env": "ZHIPUAI_API_KEY",
+      "seed": 42,
+      "status": "pending_authorization",
+      "output_relpath": "memory-engine/glm/seed42",
+      "source_commit": "2e449e989c6dd7d2bed4a9c4c7d089645be38502",
+      "input_sha256": "CFCA4BB44F0B58EB9B747EA983C6BAB6CF74FBC6A21C010AA3C6B0AE6CCBE002"
+    },
+    {
+      "task_id": "memory-engine-qwen-seed42",
+      "topic_id": "memory-engine",
+      "topic": "Agent记忆引擎",
+      "provider": "qwen",
+      "model_id": "qwen-plus",
+      "api_key_env": "DASHSCOPE_API_KEY",
+      "seed": 42,
+      "status": "pending_authorization",
+      "output_relpath": "memory-engine/qwen/seed42",
+      "source_commit": "2e449e989c6dd7d2bed4a9c4c7d089645be38502",
+      "input_sha256": "417DEAE2EE6A700531ECF8E936EC76D18208BA8AD21AEC208BA0C28D6E56BC80"
+    },
+    {
+      "task_id": "memory-engine-deepseek-seed42",
+      "topic_id": "memory-engine",
+      "topic": "Agent记忆引擎",
+      "provider": "deepseek",
+      "model_id": "deepseek-v4-flash",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "seed": 42,
+      "status": "blocked_budget",
+      "output_relpath": "memory-engine/deepseek/seed42",
+      "source_commit": "2e449e989c6dd7d2bed4a9c4c7d089645be38502",
+      "input_sha256": "18B0D0655D12B8E483DDFEC0C088D006A558287ADE3D5221E3BCB2161A2D6F82"
+    },
+    {
+      "task_id": "self-evolution-glm-seed42",
+      "topic_id": "self-evolution",
+      "topic": "Agent自演进",
+      "provider": "glm",
+      "model_id": "glm-5.2",
+      "api_key_env": "ZHIPUAI_API_KEY",
+      "seed": 42,
+      "status": "pending_authorization",
+      "output_relpath": "self-evolution/glm/seed42",
+      "source_commit": "2e449e989c6dd7d2bed4a9c4c7d089645be38502",
+      "input_sha256": "F2DD25A445B6A70C78D01F466DA71CC323C689CBF86E7AC220A4F05E1A1B5DE1"
+    },
+    {
+      "task_id": "self-evolution-qwen-seed42",
+      "topic_id": "self-evolution",
+      "topic": "Agent自演进",
+      "provider": "qwen",
+      "model_id": "qwen-plus",
+      "api_key_env": "DASHSCOPE_API_KEY",
+      "seed": 42,
+      "status": "pending_authorization",
+      "output_relpath": "self-evolution/qwen/seed42",
+      "source_commit": "2e449e989c6dd7d2bed4a9c4c7d089645be38502",
+      "input_sha256": "FD72A6B9AF50AD3CA7D6ABC436CB3B5C02D557239102B3A6A0ED9B00C0741022"
+    },
+    {
+      "task_id": "self-evolution-deepseek-seed42",
+      "topic_id": "self-evolution",
+      "topic": "Agent自演进",
+      "provider": "deepseek",
+      "model_id": "deepseek-v4-flash",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "seed": 42,
+      "status": "blocked_budget",
+      "output_relpath": "self-evolution/deepseek/seed42",
+      "source_commit": "2e449e989c6dd7d2bed4a9c4c7d089645be38502",
+      "input_sha256": "55D98DFAC1DF5C99B010BA507638111912B3D1BC417BD63B95E8D9EA9A9D6C31"
+    }
+  ],
+  "tasks_sha256": "9EC95F4316AC16B4432557E0CCD26158F6A44C3A4D61E31FD7836B4042850030",
+  "protocol_sha256": "870D3CC01B827B63A70AFA577A287F4244CCC1CB905F762B9DD22EC1223BF0FA"
+}

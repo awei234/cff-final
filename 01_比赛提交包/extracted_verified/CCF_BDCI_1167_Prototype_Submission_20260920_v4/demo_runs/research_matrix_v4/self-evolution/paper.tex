@@ -1,0 +1,106 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{geometry,booktabs,longtable,array,tabularx,enumitem}
+\geometry{a4paper,margin=2.0cm}
+\setlength{\emergencystretch}{3em}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.08}
+\setlist[itemize]{leftmargin=1.5em,itemsep=0.15em,topsep=0.25em}
+\title{JiuwenSwarm v4：Agent 自我进化}
+\author{JiuwenSwarm/UCR 可审计科研半流程}
+\date{}
+\begin{document}
+\maketitle
+\section{重要边界}
+本文是 v4 LaTeX 源文件；配套正式 PDF 已由用户在本机使用 XeLaTeX 编译。UCR 标签为 \texttt{process\_evidence\_only}，只能证明流程证据能力，不能包装成领域科学结论。检索资料默认等待人工审批，最终研究问题、实验真实性、结论范围和提交资格仍需人工确认。
+\section{研究问题与计划}
+\textbf{问题：}带证据的反思循环能否避免把未执行任务写成已完成？\\
+\textbf{假设：}证据检查可能改善审计表达，但当前基准不证明真实自我进化。
+\begin{itemize}
+\item UCR可测量且分母大于0。
+\item 各臂任务成功率均为1.0。
+\item full-\allowbreak{}rail的UCR不高于no-\allowbreak{}rail。
+\item 结论严格限定在过程证据范围内，不声称真实自我进化。
+\end{itemize}
+\section{方法}
+三个实验臂在相同任务集上运行：no-\allowbreak{}rail（无轨道）、prompt-\allowbreak{}only（仅提示）、full-\allowbreak{}rail（完整轨道，rail 启用并接受 1 次尝试）。对每个操作记录执行证据并标注为 supported、unexecuted 或 indeterminate。UCR 计算为未执行但被写成已完成的比例（numerator / denominator）。CFR 与 NFR 在 UCR 场景中未测量。
+\subsection{实验设置}
+no-\allowbreak{}rail：UCR=0.5556（5 / 9），supported=4，unexecuted=5，rail 未启用。prompt-\allowbreak{}only：UCR=0.0（0 / 4），supported=4，unexecuted=0，rail 未启用。full-\allowbreak{}rail：UCR=0.0（0 / 4），supported=4，unexecuted=0，rail 启用且接受 1 次尝试。所有臂任务成功率=1.0。
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.18\textwidth}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedleft\arraybackslash}p{0.16\textwidth}>{\raggedleft\arraybackslash}p{0.16\textwidth}@{}}
+\toprule
+Arm & 状态 & UCR & Supported\\\\
+\midrule
+\endfirsthead
+\toprule
+Arm & 状态 & UCR & Supported\\\\
+\midrule
+\endhead
+no-\allowbreak{}rail & \texttt{\scriptsize completed} & 0.5556 & 4 \\
+prompt-\allowbreak{}only & \texttt{\scriptsize completed} & 0.0 & 4 \\
+full-\allowbreak{}rail & \texttt{\scriptsize completed} & 0.0 & 4 \\
+\bottomrule
+\end{longtable}
+\section{实验结果}
+no-\allowbreak{}rail 的 9 个操作中 4 个 supported、5 个 unexecuted，UCR=0.5556。prompt-\allowbreak{}only 与 full-\allowbreak{}rail 各 4 个操作全部 supported，UCR=0.0。full-\allowbreak{}rail 的 rail 启用并接受 1 次尝试。三臂任务成功率均为 1.0。CFR 与 NFR 未测量。
+\section{Claim--Evidence 账本}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.18\textwidth}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.30\textwidth}@{}}
+\toprule
+Claim ID & 状态 & 类型\\\\
+\midrule
+\endfirsthead
+\toprule
+Claim ID & 状态 & 类型\\\\
+\midrule
+\endhead
+\texttt{\scriptsize claim-\allowbreak{}001} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}002} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}003} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}004} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}005} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}006} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}007} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}008} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}009} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}010} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}011} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}012} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}013} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}014} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}015} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}016} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}017} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}018} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & background \\
+\texttt{\scriptsize claim-\allowbreak{}019} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & background \\
+\texttt{\scriptsize claim-\allowbreak{}020} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & background \\
+\bottomrule
+\end{longtable}
+\section{检索资料与人工审批}
+候选资料数：10。只有人工批准后才允许正式引用。
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.54\textwidth}>{\raggedleft\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.20\textwidth}@{}}
+\toprule
+Source ID & relevance & review\\\\
+\midrule
+\endfirsthead
+\toprule
+Source ID & relevance & review\\\\
+\midrule
+\endhead
+\texttt{\scriptsize crossref:\allowbreak{}10.1115 / detc2025-\allowbreak{}168710} & 0.07 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize openalex:\allowbreak{}W2508346077} & 0.02 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize openalex:\allowbreak{}W2903899730} & 0.02 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize openalex:\allowbreak{}W2048701323} & 0.02 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize openalex:\allowbreak{}W607740409} & 0.02 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize openalex:\allowbreak{}W2153791616} & 0.02 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize openalex:\allowbreak{}W2316973238} & 0.02 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize openalex:\allowbreak{}W2109120348} & 0.02 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize openalex:\allowbreak{}W1979058254} & 0.02 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize openalex:\allowbreak{}W2112351720} & 0.02 & \texttt{\scriptsize pending} \\
+\bottomrule
+\end{longtable}
+\section{限制}
+UCR 仅为过程证据，不能解释为真实自我进化。CFR 与 NFR 在 UCR 场景中未测量。citation\_\allowbreak{}coverage=0.0，citation\_\allowbreak{}allowed=false 的材料不得作为正式引用。claim-\allowbreak{}002、claim-\allowbreak{}003、claim-\allowbreak{}005、claim-\allowbreak{}007、claim-\allowbreak{}009、claim-\allowbreak{}018、claim-\allowbreak{}019、claim-\allowbreak{}020 仍待人工审查。当前基准不足以证明真实自我进化。\\
+不支持 Claim：claim-\allowbreak{}002, claim-\allowbreak{}003, claim-\allowbreak{}005, claim-\allowbreak{}007, claim-\allowbreak{}009, claim-\allowbreak{}018, claim-\allowbreak{}019, claim-\allowbreak{}020
+\section{结论}
+在本次基准中，带证据的反思循环与仅提示均将 UCR 从 no-\allowbreak{}rail 的 0.5556 降至 0.0，说明证据检查可能改善审计表达（claim-\allowbreak{}001 至 claim-\allowbreak{}017 支持相应操作状态）。但该结果仅限过程证据，不证明真实自我进化；需人工确认 UCR 的解释边界及待审背景声明。
+\section{人工确认}
+研究问题、实验真实性、结论范围和最终提交都需要人工确认。
+\end{document}

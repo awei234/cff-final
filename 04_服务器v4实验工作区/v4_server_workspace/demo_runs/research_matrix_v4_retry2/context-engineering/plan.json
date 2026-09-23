@@ -1,0 +1,36 @@
+{
+  "research_question": "程序级证据护栏能否提高 Agent 执行报告的证据一致性？",
+  "hypothesis": "full-rail 应比无护栏或仅提示词减少无证据完成声明。",
+  "variables": [
+    "arm: no-rail / prompt-only / full-rail",
+    "rail.enabled",
+    "rail.attempts",
+    "rail.accepted",
+    "UCR (unsupported completion rate)",
+    "task_success_rate",
+    "decision status per operation_id"
+  ],
+  "experiment_plan": [
+    "复用已完成的三个 arm 结果：no-rail、prompt-only、full-rail。",
+    "以 UCR 为主指标：no-rail=5/9=0.5556；prompt-only=0/4=0.0；full-rail=0/4=0.0。",
+    "比较 full-rail 与 no-rail、prompt-only 的 UCR 差异，并记录 rail 启用与接受情况。",
+    "不新增实验，不推断 CFR/NFR，因其在 UCR 场景中未测量。"
+  ],
+  "success_criteria": [
+    "full-rail 的 UCR 低于 no-rail。",
+    "full-rail 的 UCR 不高于 prompt-only。",
+    "所有结论仅基于已提供的 experiment_summary，不引入外部证据。"
+  ],
+  "expected_evidence": [
+    "no-rail UCR=0.5556 (5/9)，supported=4，unexecuted=5。",
+    "prompt-only UCR=0.0 (0/4)，supported=4，unexecuted=0。",
+    "full-rail UCR=0.0 (0/4)，supported=4，unexecuted=0，rail.enabled=true，attempts=1，accepted=true。",
+    "三个 arm 的 task_success_rate 均为 1.0。"
+  ],
+  "human_confirmation_items": [
+    "确认 UCR 仅作为 process_evidence_only 指标，不能外推为任务质量或真实完成率。",
+    "确认 citation_allowed=false 的材料不得作为正式引用。",
+    "确认 CFR 与 NFR 在 UCR 场景中未测量，不应报告为结果。",
+    "确认是否接受当前证据仅支持‘full-rail 与 prompt-only 均未出现无证据完成声明’这一有限结论。"
+  ]
+}

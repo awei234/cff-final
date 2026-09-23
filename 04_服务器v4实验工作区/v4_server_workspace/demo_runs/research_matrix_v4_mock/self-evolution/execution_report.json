@@ -1,0 +1,15 @@
+{
+  "schema_version": "4.0",
+  "topic_id": "self-evolution",
+  "status": "completed_pending_human_review",
+  "stages": {
+    "retrieval": "offline_mock",
+    "experiment": "completed",
+    "plan": "completed",
+    "review": "completed",
+    "report": "completed"
+  },
+  "provider_calls": 0,
+  "human_review_required": true,
+  "errors": []
+}

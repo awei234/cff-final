@@ -1,0 +1,11 @@
+{
+  "experiment_id": "ucr-activation-v1",
+  "task": "T4-UCR",
+  "arms": ["no-rail", "prompt-only", "full-rail"],
+  "seeds": [42, 43, 44],
+  "default_mode": "fixture",
+  "live_adapter": {
+    "command_env": "UCR_MODEL_COMMAND_JSON",
+    "model_id_env": "UCR_MODEL_ID"
+  }
+}
