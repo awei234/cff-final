@@ -1,0 +1,9 @@
+{
+  "platform": "Windows",
+  "python": "3.13.9",
+  "pytest_invocation": "pytest --version",
+  "pytest_observed_error": "ImportError: cannot import name 'validate_core_schema' from 'pydantic_core'",
+  "recorded_at": "2026-09-23",
+  "environment_is_reproducible": false,
+  "next_action": "建立隔离测试环境或使用 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 复核项目测试"
+}

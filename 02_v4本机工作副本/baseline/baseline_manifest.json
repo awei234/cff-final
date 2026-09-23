@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-09-23",
+  "git_commit": "a907b3eec1b1d16d868ef96ef36187409d5d4f18",
+  "git_branch": "feature",
+  "protected_roots": [
+    "03_服务器源码快照",
+    "01_比赛提交包/CCF_BDCI_1167_Prototype_Submission_20260920_v4.zip"
+  ],
+  "development_root": "02_v4本机工作副本/CCF_BDCI_1167_Prototype_Submission_20260920_v4_work",
+  "route_spec": "00_归档说明/JIT与基础质量联合升级路线.md",
+  "python": "3.13.9",
+  "test_command": "pytest --version",
+  "test_baseline_status": "blocked_by_environment_plugin_import",
+  "notes": [
+    "本文件只记录基线，不修改服务器源码快照或冻结提交包。",
+    "pytest 当前被全局 langsmith 插件与 pydantic_core 版本不兼容阻塞；后续验证需禁用自动插件或修复独立环境。"
+  ]
+}
