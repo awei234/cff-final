@@ -65,14 +65,15 @@ def find_project_root(anchor: Path) -> Path:
     if candidate.is_file():
         candidate = candidate.parent
     directories = (candidate, *candidate.parents)
-    # Prefer the public-package root when the anchor is inside code/.
-    for directory in directories:
-        if (directory / "README.md").is_file() and (directory / "code" / "03_技术实现").is_dir():
-            return directory
-    # The development workspace keeps the implementation directly under the
-    # project root (03_技术实现/...).
+    # Prefer the nearest direct implementation root.  An extracted public
+    # package has both an outer README/code pair and an inner code/README;
+    # choosing the nearest root keeps paths relative to the actual runner.
     for directory in directories:
         if (directory / "README.md").is_file() and (directory / "03_技术实现").is_dir():
+            return directory
+    # The archive workspace nests the implementation under code/.
+    for directory in directories:
+        if (directory / "README.md").is_file() and (directory / "code" / "03_技术实现").is_dir():
             return directory
     raise PathConfigError("project_root_not_found", "project root was not found from anchor")
 
