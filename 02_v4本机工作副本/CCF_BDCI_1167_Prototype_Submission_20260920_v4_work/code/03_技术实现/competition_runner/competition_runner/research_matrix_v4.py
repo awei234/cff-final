@@ -3,6 +3,14 @@ from __future__ import annotations
 import argparse,hashlib,json,os,re,subprocess,sys,time,urllib.parse,urllib.request,urllib.error,xml.etree.ElementTree as ET
 from datetime import datetime,timezone
 from pathlib import Path
+try:
+ from competition_runner.harness.archive import archive_run
+ from competition_runner.harness.planner import build_harness_manifest
+ from competition_runner.harness.validator import validate_manifest
+except ModuleNotFoundError:
+ from harness.archive import archive_run
+ from harness.planner import build_harness_manifest
+ from harness.validator import validate_manifest
 SCHEMA="4.0"; ARMS=("no-rail","prompt-only","full-rail")
 TOPICS={"context-engineering":{"name":"Agent 上下文工程","keys":["agent context engineering","context management agent","long context agent","tool use context"],"question":"程序级证据护栏能否提高 Agent 执行报告的证据一致性？","hypothesis":"full-rail 应比无护栏或仅提示词减少无证据完成声明。","kind":"real_ucr_closed_loop"},"memory-engine":{"name":"Agent 记忆引擎","keys":["agent memory","long-term memory agents","memory augmented language model","episodic memory agent"],"question":"结构化记忆记录是否有助于 Agent 保持审计上下文一致？","hypothesis":"结构化记录可能改善流程可追溯性，但当前基准不证明领域效果。","kind":"process_benchmark_only"},"self-evolution":{"name":"Agent 自我进化","keys":["agent self evolution","self improving agents","continual agent improvement","reflection agent"],"question":"带证据的反思循环能否避免把未执行任务写成已完成？","hypothesis":"证据检查可能改善审计表达，但当前基准不证明真实自我进化。","kind":"process_benchmark_only"}}
 def now():return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00","Z")
@@ -277,9 +285,17 @@ def run_topic(tid,out,offline_mode,budget,counter,trace,seed):
  td=out/tid
  if td.exists():raise FileExistsError(f"refusing to overwrite {td}")
  td.mkdir(parents=True);mat=retrieve(tid,offline_mode);dump(td/"research_materials.json",mat);(td/"human_interventions.jsonl").write_text("".join(json.dumps({"event":"source_review_required","topic_id":tid,"source_id":s.get("source_id"),"actor":"human","decision":"pending","source_sha256":s.get("content_sha256"),"timestamp_utc":now()},ensure_ascii=False)+"\n" for s in mat.get("sources",[])),encoding="utf-8")
+ harness_features={"requires_evidence": True, "experiment_required": tid == "context-engineering", "cost_limited": budget <= 1}
+ harness_manifest=build_harness_manifest(harness_features)
+ harness_validation=validate_manifest(harness_manifest)
+ harness_manifest=harness_validation.manifest
+ dump(td/"harness_manifest.json",harness_manifest)
+ dump(td/"harness_validation.json",{"valid":harness_validation.valid,"errors":list(harness_validation.errors),"fallback_reason":harness_validation.fallback_reason})
  dump(td/"run_manifest.json",{"schema_version":SCHEMA,"topic_id":tid,"provider":"deepseek","benchmark_label":"process_evidence_only","latex_compilation_status":"user_compile_required","started_at_utc":now()});state={"topic_id":tid,"status":"running","provider_calls":0}
  try:
-  ex=run_ucr(tid,td,seed);plan0=mock_plan(tid) if offline_mode else None
+  ex=run_ucr(tid,td,seed)
+  archive_run(td/"harness",manifest=harness_manifest,validation={"valid":harness_validation.valid,"errors":list(harness_validation.errors),"fallback_reason":harness_validation.fallback_reason},metrics={"seed":seed,"arm_count":len(ex.get("arms",[])),"cost":None,"latency_seconds":sum(float(a.get("duration_seconds",0)) for a in ex.get("arms",[]))},evidence=[{"artifact":"experiment_results.json","sha256":sha((td/"experiment_results.json").read_bytes())}])
+  plan0=mock_plan(tid) if offline_mode else None
   if not offline_mode:
    if counter[0]>=budget:raise RuntimeError("provider call budget exhausted")
    counter[0]+=1;state["provider_calls"]+=1;plan0,tr=provider("plan",prompt("plan",tid,mat,ex,None,None,{"claims":[]}),counter[0]);trace.append(json.dumps({"topic_id":tid,**tr},ensure_ascii=False))
