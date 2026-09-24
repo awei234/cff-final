@@ -1,0 +1,51 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{geometry,booktabs,longtable,array,tabularx}
+\geometry{a4paper,margin=2.0cm}
+\setlength{\emergencystretch}{3em}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\title{JiuwenSwarm v4 可审计科研论文半流程报告}
+\author{JiuwenSwarm/UCR}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+本文汇总三个主题的科研半流程演示。系统检索公开资料元数据，执行 JiuwenSwarm/UCR 本地证据实验，生成研究计划和报告，并保存 Claim--Evidence 账本。本文不把流程基准包装成领域科学结论；正式引用、实验真实性、研究结论和最终提交资格仍需人工确认。
+\end{abstract}
+\section{统一边界}
+UCR 的标签是 \texttt{process\_evidence\_only}，它表示系统的流程证据和审计能力，不等于上下文工程、记忆引擎或自我进化的领域效果。所有来源默认处于待审核状态。当前 PDF 是由本机 XeLaTeX 编译生成的正式查看产物，源文件和实验记录同时保留在提交包中。
+\section{矩阵概览}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.42\textwidth}>{\raggedleft\arraybackslash}p{0.14\textwidth}@{}}
+\toprule
+主题 & 状态 & Provider 调用\\\\
+\midrule
+\endfirsthead
+\toprule
+主题 & 状态 & Provider 调用\\\\
+\midrule
+\endhead
+context-\allowbreak{}engineering & \texttt{\scriptsize completed\_\allowbreak{}pending\_\allowbreak{}human\_\allowbreak{}review} & 3 \\
+memory-\allowbreak{}engine & \texttt{\scriptsize completed\_\allowbreak{}pending\_\allowbreak{}human\_\allowbreak{}review} & 3 \\
+self-\allowbreak{}evolution & \texttt{\scriptsize completed\_\allowbreak{}pending\_\allowbreak{}human\_\allowbreak{}review} & 3 \\
+\bottomrule
+\end{longtable}
+\section{Agent 上下文工程}
+\textbf{摘要：}本报告检验程序级证据护栏能否提高 Agent 执行报告的证据一致性。三个 arm 均完成且 return\_\allowbreak{}code=0，task\_\allowbreak{}success\_\allowbreak{}rate 均为 1.0。no-\allowbreak{}rail 的 UCR=0.5556（5 / 9），prompt-\allowbreak{}only 与 full-\allowbreak{}rail 的 UCR=0.0（0 / 4）。full-\allowbreak{}rail 的 rail.enabled=true、attempts=1、accepted=true。UCR 仅为 process\_\allowbreak{}evidence\_\allowbreak{}only 指标，不解释为任务质量或正确性。\\
+\textbf{结论：}在本次实验记录范围内，full-\allowbreak{}rail 的 UCR=0.0 低于 no-\allowbreak{}rail 的 0.5556，与 prompt-\allowbreak{}only 的 0.0 相同；full-\allowbreak{}rail 的 rail.enabled=true 且 accepted=true。该结果与假设方向一致，但因任务集差异与 UCR 指标限制，不能据此断言程序级护栏的因果效果。\\
+\textbf{限制：}UCR 仅为 process\_\allowbreak{}evidence\_\allowbreak{}only 指标，不解释为任务质量或正确性。prompt-\allowbreak{}only 与 full-\allowbreak{}rail 的 UCR=0.0 可能因任务集不同而不可直接比较。no-\allowbreak{}rail 的 5 个 unexecuted 是否应计入无证据完成声明尚待人工确认。CFR 与 NFR 未在 UCR 场景中测量。citation\_\allowbreak{}allowed=false，材料不得作为正式引用。
+\section{Agent 记忆引擎}
+\textbf{摘要：}本报告检验结构化记忆记录是否有助于 Agent 保持审计上下文一致。三个实验臂均完成且 return\_\allowbreak{}code=0，任务成功率均为 1.0。UCR 在 no-\allowbreak{}rail 为 0.5556（5 / 9），在 prompt-\allowbreak{}only 与 full-\allowbreak{}rail 均为 0.0（0 / 4）。UCR 仅作为 process\_\allowbreak{}evidence\_\allowbreak{}only 解读，不外推为领域效果。所有材料 citation\_\allowbreak{}allowed=false，因此不进行正式引用。\\
+\textbf{结论：}在当前基准下，结构化记忆记录与审计上下文一致性之间未显示明确优势：no-\allowbreak{}rail 的 UCR 为 0.5556，而 prompt-\allowbreak{}only 与 full-\allowbreak{}rail 均为 0.0。该结果仅反映流程可追溯性指标，不证明领域效果。结论基于 claim-\allowbreak{}001 至 claim-\allowbreak{}017 的实验观察；背景材料相关声明 claim-\allowbreak{}018 至 claim-\allowbreak{}020 因 citation\_\allowbreak{}allowed=false 且待人工复核，不纳入正式结论。\\
+\textbf{限制：}UCR 仅作为 process\_\allowbreak{}evidence\_\allowbreak{}only 使用，不解释为领域效果。CFR 与 NFR 在 UCR 场景中未测量。所有材料 citation\_\allowbreak{}allowed=false，相关性分数介于 0.07 与 0.32，因此不用于正式引用。no-\allowbreak{}rail 的 unexecuted=5 是否反映预期审计缺口而非执行错误，需人工确认。full-\allowbreak{}rail 的 rail.attempts=1 与 accepted=true 是否满足轨道验收标准，需人工确认。claim-\allowbreak{}002、claim-\allowbreak{}003、claim-\allowbreak{}005、claim-\allowbreak{}007、claim-\allowbreak{}009、claim-\allowbreak{}018、claim-\allowbreak{}019、claim-\allowbreak{}020 仍为 pending\_\allowbreak{}human\_\allowbreak{}review。
+\section{Agent 自我进化}
+\textbf{摘要：}本报告检验带证据的反思循环能否避免把未执行任务写成已完成。三个实验臂（no-\allowbreak{}rail、prompt-\allowbreak{}only、full-\allowbreak{}rail）在相同任务集上运行，任务成功率均为1.0。no-\allowbreak{}rail的UCR为0.5556（5 / 9），prompt-\allowbreak{}only与full-\allowbreak{}rail的UCR均为0.0（0 / 4）。UCR仅作为过程证据指标，不证明真实自我进化。\\
+\textbf{结论：}在本次基准中，prompt-\allowbreak{}only与full-\allowbreak{}rail的UCR均为0.0，no-\allowbreak{}rail为0.5556，提示证据检查可能改善审计表达；但任务成功率三臂均为1.0，且CFR / NFR未测量，因此当前结果不证明真实自我进化。\\
+\textbf{限制：}UCR仅为过程证据指标，不能解释为能力或真实自我进化证据。CFR与NFR未测量。citation\_\allowbreak{}coverage=0.0，citation\_\allowbreak{}allowed=false的文献不得作为正式引用。当前基准是否足以回答研究问题需人工确认。
+\section{编译与审核说明}
+该统一报告和三个主题报告都需要人工阅读。编译命令为：
+\begin{verbatim}
+xelatex -interaction=nonstopmode -halt-on-error paper.tex
+xelatex -interaction=nonstopmode -halt-on-error paper.tex
+\end{verbatim}
+最终状态保持为 \texttt{prepared\_not\_uploaded}。
+\end{document}
