@@ -1,0 +1,29 @@
+{
+  "manifest": {
+    "memory_mode": "structured_evidence",
+    "planning_mode": "experiment_verify",
+    "enabled_tools": [
+      "retrieval",
+      "ucr",
+      "citation_rail"
+    ],
+    "max_provider_calls": 3,
+    "max_retries": 1,
+    "profile": "experiment_first",
+    "selection_reason": "deterministic selection for experiment_first"
+  },
+  "validation": {
+    "valid": true,
+    "errors": []
+  },
+  "metrics": {
+    "seed": 43,
+    "arm": "jit-constrained"
+  },
+  "evidence": [
+    {
+      "artifact": "results.json"
+    }
+  ],
+  "archive_sha256": "620282a9277ea548ba3b3227a3b3a8fd3d03dd0e514ba97e0cd5181b769acd22"
+}

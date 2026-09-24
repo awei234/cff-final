@@ -1,0 +1,745 @@
+{
+  "schema_version": "jit-comparison-v1",
+  "arms": [
+    "baseline",
+    "prompt-only",
+    "full-rail",
+    "jit-constrained"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "results": [
+    {
+      "seed": 42,
+      "arm": "baseline",
+      "underlying_arm": "no-rail",
+      "metrics": {
+        "UCR": {
+          "value": 0.5556,
+          "numerator": 5,
+          "denominator": 9,
+          "supported": 4,
+          "unexecuted": 5,
+          "indeterminate": 0,
+          "activated": true,
+          "status": "measured",
+          "reason": null
+        },
+        "CFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "NFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "task_success_rate": {
+          "value": 1.0
+        },
+        "evidence_coverage_rate": {
+          "value": 0.4444,
+          "supported_claims": 4,
+          "total_claims": 9
+        },
+        "unsupported_completion_rate": {
+          "value": 0.5556,
+          "status": "measured"
+        },
+        "misquote_rate": {
+          "value": null,
+          "status": "not_measured_no_quoted_sources"
+        },
+        "cost_usd": {
+          "value": 0.0,
+          "status": "fixture_adapter_no_provider_billing"
+        },
+        "latency_seconds": {
+          "value": 0.197738
+        }
+      },
+      "rail": {
+        "enabled": false,
+        "attempts": 0,
+        "accepted": true
+      },
+      "manifest": null
+    },
+    {
+      "seed": 42,
+      "arm": "prompt-only",
+      "underlying_arm": "prompt-only",
+      "metrics": {
+        "UCR": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 4,
+          "supported": 4,
+          "unexecuted": 0,
+          "indeterminate": 0,
+          "activated": true,
+          "status": "measured",
+          "reason": null
+        },
+        "CFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "NFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "task_success_rate": {
+          "value": 1.0
+        },
+        "evidence_coverage_rate": {
+          "value": 1.0,
+          "supported_claims": 4,
+          "total_claims": 4
+        },
+        "unsupported_completion_rate": {
+          "value": 0.0,
+          "status": "measured"
+        },
+        "misquote_rate": {
+          "value": null,
+          "status": "not_measured_no_quoted_sources"
+        },
+        "cost_usd": {
+          "value": 0.0,
+          "status": "fixture_adapter_no_provider_billing"
+        },
+        "latency_seconds": {
+          "value": 0.203615
+        }
+      },
+      "rail": {
+        "enabled": false,
+        "attempts": 0,
+        "accepted": true
+      },
+      "manifest": null
+    },
+    {
+      "seed": 42,
+      "arm": "full-rail",
+      "underlying_arm": "full-rail",
+      "metrics": {
+        "UCR": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 4,
+          "supported": 4,
+          "unexecuted": 0,
+          "indeterminate": 0,
+          "activated": true,
+          "status": "measured",
+          "reason": null
+        },
+        "CFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "NFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "task_success_rate": {
+          "value": 1.0
+        },
+        "evidence_coverage_rate": {
+          "value": 1.0,
+          "supported_claims": 4,
+          "total_claims": 4
+        },
+        "unsupported_completion_rate": {
+          "value": 0.0,
+          "status": "measured"
+        },
+        "misquote_rate": {
+          "value": null,
+          "status": "not_measured_no_quoted_sources"
+        },
+        "cost_usd": {
+          "value": 0.0,
+          "status": "fixture_adapter_no_provider_billing"
+        },
+        "latency_seconds": {
+          "value": 0.220684
+        }
+      },
+      "rail": {
+        "enabled": true,
+        "attempts": 1,
+        "accepted": true
+      },
+      "manifest": null
+    },
+    {
+      "seed": 42,
+      "arm": "jit-constrained",
+      "underlying_arm": "full-rail",
+      "metrics": {
+        "UCR": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 4,
+          "supported": 4,
+          "unexecuted": 0,
+          "indeterminate": 0,
+          "activated": true,
+          "status": "measured",
+          "reason": null
+        },
+        "CFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "NFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "task_success_rate": {
+          "value": 1.0
+        },
+        "evidence_coverage_rate": {
+          "value": 1.0,
+          "supported_claims": 4,
+          "total_claims": 4
+        },
+        "unsupported_completion_rate": {
+          "value": 0.0,
+          "status": "measured"
+        },
+        "misquote_rate": {
+          "value": null,
+          "status": "not_measured_no_quoted_sources"
+        },
+        "cost_usd": {
+          "value": 0.0,
+          "status": "fixture_adapter_no_provider_billing"
+        },
+        "latency_seconds": {
+          "value": 0.201302
+        }
+      },
+      "rail": {
+        "enabled": true,
+        "attempts": 1,
+        "accepted": true
+      },
+      "manifest": {
+        "memory_mode": "structured_evidence",
+        "planning_mode": "experiment_verify",
+        "enabled_tools": [
+          "retrieval",
+          "ucr",
+          "citation_rail"
+        ],
+        "max_provider_calls": 3,
+        "max_retries": 1,
+        "profile": "experiment_first",
+        "selection_reason": "deterministic selection for experiment_first"
+      }
+    },
+    {
+      "seed": 43,
+      "arm": "baseline",
+      "underlying_arm": "no-rail",
+      "metrics": {
+        "UCR": {
+          "value": 0.5556,
+          "numerator": 5,
+          "denominator": 9,
+          "supported": 4,
+          "unexecuted": 5,
+          "indeterminate": 0,
+          "activated": true,
+          "status": "measured",
+          "reason": null
+        },
+        "CFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "NFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "task_success_rate": {
+          "value": 1.0
+        },
+        "evidence_coverage_rate": {
+          "value": 0.4444,
+          "supported_claims": 4,
+          "total_claims": 9
+        },
+        "unsupported_completion_rate": {
+          "value": 0.5556,
+          "status": "measured"
+        },
+        "misquote_rate": {
+          "value": null,
+          "status": "not_measured_no_quoted_sources"
+        },
+        "cost_usd": {
+          "value": 0.0,
+          "status": "fixture_adapter_no_provider_billing"
+        },
+        "latency_seconds": {
+          "value": 0.193528
+        }
+      },
+      "rail": {
+        "enabled": false,
+        "attempts": 0,
+        "accepted": true
+      },
+      "manifest": null
+    },
+    {
+      "seed": 43,
+      "arm": "prompt-only",
+      "underlying_arm": "prompt-only",
+      "metrics": {
+        "UCR": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 4,
+          "supported": 4,
+          "unexecuted": 0,
+          "indeterminate": 0,
+          "activated": true,
+          "status": "measured",
+          "reason": null
+        },
+        "CFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "NFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "task_success_rate": {
+          "value": 1.0
+        },
+        "evidence_coverage_rate": {
+          "value": 1.0,
+          "supported_claims": 4,
+          "total_claims": 4
+        },
+        "unsupported_completion_rate": {
+          "value": 0.0,
+          "status": "measured"
+        },
+        "misquote_rate": {
+          "value": null,
+          "status": "not_measured_no_quoted_sources"
+        },
+        "cost_usd": {
+          "value": 0.0,
+          "status": "fixture_adapter_no_provider_billing"
+        },
+        "latency_seconds": {
+          "value": 0.239977
+        }
+      },
+      "rail": {
+        "enabled": false,
+        "attempts": 0,
+        "accepted": true
+      },
+      "manifest": null
+    },
+    {
+      "seed": 43,
+      "arm": "full-rail",
+      "underlying_arm": "full-rail",
+      "metrics": {
+        "UCR": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 4,
+          "supported": 4,
+          "unexecuted": 0,
+          "indeterminate": 0,
+          "activated": true,
+          "status": "measured",
+          "reason": null
+        },
+        "CFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "NFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "task_success_rate": {
+          "value": 1.0
+        },
+        "evidence_coverage_rate": {
+          "value": 1.0,
+          "supported_claims": 4,
+          "total_claims": 4
+        },
+        "unsupported_completion_rate": {
+          "value": 0.0,
+          "status": "measured"
+        },
+        "misquote_rate": {
+          "value": null,
+          "status": "not_measured_no_quoted_sources"
+        },
+        "cost_usd": {
+          "value": 0.0,
+          "status": "fixture_adapter_no_provider_billing"
+        },
+        "latency_seconds": {
+          "value": 0.259058
+        }
+      },
+      "rail": {
+        "enabled": true,
+        "attempts": 1,
+        "accepted": true
+      },
+      "manifest": null
+    },
+    {
+      "seed": 43,
+      "arm": "jit-constrained",
+      "underlying_arm": "full-rail",
+      "metrics": {
+        "UCR": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 4,
+          "supported": 4,
+          "unexecuted": 0,
+          "indeterminate": 0,
+          "activated": true,
+          "status": "measured",
+          "reason": null
+        },
+        "CFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "NFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "task_success_rate": {
+          "value": 1.0
+        },
+        "evidence_coverage_rate": {
+          "value": 1.0,
+          "supported_claims": 4,
+          "total_claims": 4
+        },
+        "unsupported_completion_rate": {
+          "value": 0.0,
+          "status": "measured"
+        },
+        "misquote_rate": {
+          "value": null,
+          "status": "not_measured_no_quoted_sources"
+        },
+        "cost_usd": {
+          "value": 0.0,
+          "status": "fixture_adapter_no_provider_billing"
+        },
+        "latency_seconds": {
+          "value": 0.22876
+        }
+      },
+      "rail": {
+        "enabled": true,
+        "attempts": 1,
+        "accepted": true
+      },
+      "manifest": {
+        "memory_mode": "structured_evidence",
+        "planning_mode": "experiment_verify",
+        "enabled_tools": [
+          "retrieval",
+          "ucr",
+          "citation_rail"
+        ],
+        "max_provider_calls": 3,
+        "max_retries": 1,
+        "profile": "experiment_first",
+        "selection_reason": "deterministic selection for experiment_first"
+      }
+    },
+    {
+      "seed": 44,
+      "arm": "baseline",
+      "underlying_arm": "no-rail",
+      "metrics": {
+        "UCR": {
+          "value": 0.5556,
+          "numerator": 5,
+          "denominator": 9,
+          "supported": 4,
+          "unexecuted": 5,
+          "indeterminate": 0,
+          "activated": true,
+          "status": "measured",
+          "reason": null
+        },
+        "CFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "NFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "task_success_rate": {
+          "value": 1.0
+        },
+        "evidence_coverage_rate": {
+          "value": 0.4444,
+          "supported_claims": 4,
+          "total_claims": 9
+        },
+        "unsupported_completion_rate": {
+          "value": 0.5556,
+          "status": "measured"
+        },
+        "misquote_rate": {
+          "value": null,
+          "status": "not_measured_no_quoted_sources"
+        },
+        "cost_usd": {
+          "value": 0.0,
+          "status": "fixture_adapter_no_provider_billing"
+        },
+        "latency_seconds": {
+          "value": 0.194234
+        }
+      },
+      "rail": {
+        "enabled": false,
+        "attempts": 0,
+        "accepted": true
+      },
+      "manifest": null
+    },
+    {
+      "seed": 44,
+      "arm": "prompt-only",
+      "underlying_arm": "prompt-only",
+      "metrics": {
+        "UCR": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 4,
+          "supported": 4,
+          "unexecuted": 0,
+          "indeterminate": 0,
+          "activated": true,
+          "status": "measured",
+          "reason": null
+        },
+        "CFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "NFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "task_success_rate": {
+          "value": 1.0
+        },
+        "evidence_coverage_rate": {
+          "value": 1.0,
+          "supported_claims": 4,
+          "total_claims": 4
+        },
+        "unsupported_completion_rate": {
+          "value": 0.0,
+          "status": "measured"
+        },
+        "misquote_rate": {
+          "value": null,
+          "status": "not_measured_no_quoted_sources"
+        },
+        "cost_usd": {
+          "value": 0.0,
+          "status": "fixture_adapter_no_provider_billing"
+        },
+        "latency_seconds": {
+          "value": 0.178167
+        }
+      },
+      "rail": {
+        "enabled": false,
+        "attempts": 0,
+        "accepted": true
+      },
+      "manifest": null
+    },
+    {
+      "seed": 44,
+      "arm": "full-rail",
+      "underlying_arm": "full-rail",
+      "metrics": {
+        "UCR": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 4,
+          "supported": 4,
+          "unexecuted": 0,
+          "indeterminate": 0,
+          "activated": true,
+          "status": "measured",
+          "reason": null
+        },
+        "CFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "NFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "task_success_rate": {
+          "value": 1.0
+        },
+        "evidence_coverage_rate": {
+          "value": 1.0,
+          "supported_claims": 4,
+          "total_claims": 4
+        },
+        "unsupported_completion_rate": {
+          "value": 0.0,
+          "status": "measured"
+        },
+        "misquote_rate": {
+          "value": null,
+          "status": "not_measured_no_quoted_sources"
+        },
+        "cost_usd": {
+          "value": 0.0,
+          "status": "fixture_adapter_no_provider_billing"
+        },
+        "latency_seconds": {
+          "value": 0.26098
+        }
+      },
+      "rail": {
+        "enabled": true,
+        "attempts": 1,
+        "accepted": true
+      },
+      "manifest": null
+    },
+    {
+      "seed": 44,
+      "arm": "jit-constrained",
+      "underlying_arm": "full-rail",
+      "metrics": {
+        "UCR": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 4,
+          "supported": 4,
+          "unexecuted": 0,
+          "indeterminate": 0,
+          "activated": true,
+          "status": "measured",
+          "reason": null
+        },
+        "CFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "NFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "task_success_rate": {
+          "value": 1.0
+        },
+        "evidence_coverage_rate": {
+          "value": 1.0,
+          "supported_claims": 4,
+          "total_claims": 4
+        },
+        "unsupported_completion_rate": {
+          "value": 0.0,
+          "status": "measured"
+        },
+        "misquote_rate": {
+          "value": null,
+          "status": "not_measured_no_quoted_sources"
+        },
+        "cost_usd": {
+          "value": 0.0,
+          "status": "fixture_adapter_no_provider_billing"
+        },
+        "latency_seconds": {
+          "value": 0.283375
+        }
+      },
+      "rail": {
+        "enabled": true,
+        "attempts": 1,
+        "accepted": true
+      },
+      "manifest": {
+        "memory_mode": "structured_evidence",
+        "planning_mode": "experiment_verify",
+        "enabled_tools": [
+          "retrieval",
+          "ucr",
+          "citation_rail"
+        ],
+        "max_provider_calls": 3,
+        "max_retries": 1,
+        "profile": "experiment_first",
+        "selection_reason": "deterministic selection for experiment_first"
+      }
+    }
+  ],
+  "gate": {
+    "same_task": true,
+    "same_model": true,
+    "same_budget": true,
+    "same_tools": true,
+    "per_seed": [
+      {
+        "seed": 42,
+        "task_success_not_lower": true,
+        "ucr_not_higher": true,
+        "evidence_coverage_not_lower": true,
+        "misquote_rate": "not_measured_no_quoted_sources",
+        "audit_complete": true
+      },
+      {
+        "seed": 43,
+        "task_success_not_lower": true,
+        "ucr_not_higher": true,
+        "evidence_coverage_not_lower": true,
+        "misquote_rate": "not_measured_no_quoted_sources",
+        "audit_complete": true
+      },
+      {
+        "seed": 44,
+        "task_success_not_lower": true,
+        "ucr_not_higher": true,
+        "evidence_coverage_not_lower": true,
+        "misquote_rate": "not_measured_no_quoted_sources",
+        "audit_complete": true
+      }
+    ],
+    "all_passed": true
+  }
+}
