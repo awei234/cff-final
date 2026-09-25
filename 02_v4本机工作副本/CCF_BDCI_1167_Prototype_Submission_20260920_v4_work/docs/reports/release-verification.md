@@ -15,6 +15,8 @@
 - `demo_runs/research_matrix_live_20260924_authorized/human_review_decisions.json`
 - `demo_runs/jit_comparison_v1_final/`
 - `experiments/jit_comparison_v1/README.md`
+- `verify_authorized_release.py`
+- `docs/reports/context-engineering-real-seeds.md`
 
 ## PDF 验证结果
 
@@ -25,6 +27,10 @@
 ```powershell
 $env:PYTEST_DISABLE_PLUGIN_AUTOLOAD='1'
 pytest -q tests/test_release_verification.py
+pytest -q tests/test_authorized_release.py
+python verify_authorized_release.py
 ```
 
-完整 `verify_submission.py` 还会检查工作副本中既有的缓存、校验清单和快照哈希；这些包级问题须单独清理，不应通过修改 Claim 审核结果绕过。
+`verify_authorized_release.py` 默认校验已审核的 `research_matrix_live_20260924_authorized` 与 `jit_comparison_v1_final`；需要检查其他目录时传入 `--run-dir` 和 `--jit-dir`。它核对审核决策、Claim–Evidence 与来源绑定、Harness 预算和白名单、三主题 provenance 哈希、四份 PDF 哈希，以及 JIT 四臂三 seed 的归档和证据哈希。返回码为 0 才表示这两份发布证据通过。
+
+原 `verify_submission.py` 对应冻结的 `research_matrix_v4` 提交包快照，仍固定要求 `completed_pending_human_review`，并检查其历史 `CHECKSUMS.sha256` 和缓存目录。它不代表本次授权运行的发布状态；如需重新打包旧提交物，应单独修复该包级校验的问题。
