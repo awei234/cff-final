@@ -5,15 +5,12 @@
   "results": "no-rail：UCR=0.5556（5/9），supported=4，unexecuted=5，indeterminate=0，activated=true。prompt-only：UCR=0.0（0/4），supported=4，unexecuted=0，indeterminate=0，activated=true。full-rail：UCR=0.0（0/4），supported=4，unexecuted=0，indeterminate=0，activated=true。no-rail 中 run_success、inspect_existing、query_available、validate_success 为 supported（claim-001、claim-004、claim-006、claim-008）；run_failed、run_denied、inspect_missing、query_unavailable、validate_failed 为 pending_human_review（claim-002、claim-003、claim-005、claim-007、claim-009）。prompt-only 与 full-rail 中 run_success、inspect_existing、query_available、validate_success 均为 supported（claim-010 至 claim-017）。",
   "limitations": "UCR 仅作为 process_evidence_only 使用，不解释为领域效果。CFR 与 NFR 在 UCR 场景中未测量。所有材料 citation_allowed=false，相关性分数介于 0.07 与 0.32，因此不用于正式引用。no-rail 的 unexecuted=5 是否反映预期审计缺口而非执行错误，需人工确认。full-rail 的 rail.attempts=1 与 accepted=true 是否满足轨道验收标准，需人工确认。claim-002、claim-003、claim-005、claim-007、claim-009、claim-018、claim-019、claim-020 仍为 pending_human_review。",
   "conclusion": "在当前基准下，结构化记忆记录与审计上下文一致性之间未显示明确优势：no-rail 的 UCR 为 0.5556，而 prompt-only 与 full-rail 均为 0.0。该结果仅反映流程可追溯性指标，不证明领域效果。结论基于 claim-001 至 claim-017 的实验观察；背景材料相关声明 claim-018 至 claim-020 因 citation_allowed=false 且待人工复核，不纳入正式结论。",
-  "citation_mapping": [],
+  "citation_mapping": [{"claim_id":"claim-018","source_id":"crossref:10.2139/ssrn.7160321"},{"claim_id":"claim-019","source_id":"crossref:10.59350/kyqvq-k4425"},{"claim_id":"claim-020","source_id":"crossref:10.59350/xn4yy-3ke56"}],
   "unsupported_claims": [
     "claim-002",
     "claim-003",
     "claim-005",
     "claim-007",
-    "claim-009",
-    "claim-018",
-    "claim-019",
-    "claim-020"
+    "claim-009"
   ]
 }

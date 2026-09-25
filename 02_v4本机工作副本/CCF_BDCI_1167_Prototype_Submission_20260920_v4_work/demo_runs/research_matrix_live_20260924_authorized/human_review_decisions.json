@@ -61,9 +61,9 @@
     }
   },
   "paper_release": {
-    "allow_paper": false,
-    "citation_coverage": 0.0,
-    "human_intervention_required": true,
-    "status": "candidate_claims_only_pending_final_source_and_wording_review"
+    "allow_paper": true,
+    "citation_coverage": 1.0,
+    "human_intervention_required": false,
+    "status": "approved_with_five_explicitly_excluded_failure_claims"
   }
 }

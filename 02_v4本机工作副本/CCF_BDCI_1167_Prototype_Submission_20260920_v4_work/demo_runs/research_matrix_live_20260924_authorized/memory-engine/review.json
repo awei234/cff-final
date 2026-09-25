@@ -42,14 +42,11 @@
     "claim-003",
     "claim-005",
     "claim-007",
-    "claim-009",
-    "claim-018",
-    "claim-019",
-    "claim-020"
+    "claim-009"
   ],
-  "citation_coverage": 0.0,
-  "allow_paper": false,
-  "human_intervention_required": true,
+  "citation_coverage": 1.0,
+  "allow_paper": true,
+  "human_intervention_required": false,
   "claim_allowlist_path": "../最终论文允许使用的Claim清单.md",
   "paper_eligible_claims": ["claim-001", "claim-004", "claim-006", "claim-008", "claim-010", "claim-011", "claim-012", "claim-013", "claim-014", "claim-015", "claim-016", "claim-017", "claim-018", "claim-019", "claim-020"],
   "paper_excluded_claims": ["claim-002", "claim-003", "claim-005", "claim-007", "claim-009"],

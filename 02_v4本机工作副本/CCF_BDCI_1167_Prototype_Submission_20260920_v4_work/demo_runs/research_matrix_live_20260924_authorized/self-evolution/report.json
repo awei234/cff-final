@@ -5,15 +5,12 @@
   "results": "no-rail：UCR=0.5556（5/9），supported=4，unexecuted=5，任务成功率=1.0。prompt-only：UCR=0.0（0/4），supported=4，unexecuted=0，任务成功率=1.0。full-rail：UCR=0.0（0/4），supported=4，unexecuted=0，任务成功率=1.0，护栏启用1次且被接受。",
   "limitations": "UCR仅为过程证据指标，不能解释为能力或真实自我进化证据。CFR与NFR未测量。citation_coverage=0.0，citation_allowed=false的文献不得作为正式引用。当前基准是否足以回答研究问题需人工确认。",
   "conclusion": "在本次基准中，prompt-only与full-rail的UCR均为0.0，no-rail为0.5556，提示证据检查可能改善审计表达；但任务成功率三臂均为1.0，且CFR/NFR未测量，因此当前结果不证明真实自我进化。",
-  "citation_mapping": [],
+  "citation_mapping": [{"claim_id":"claim-018","source_id":"crossref:10.1115/detc2025-168710"},{"claim_id":"claim-019","source_id":"openalex:W2508346077"},{"claim_id":"claim-020","source_id":"openalex:W2903899730"}],
   "unsupported_claims": [
     "claim-002",
     "claim-003",
     "claim-005",
     "claim-007",
-    "claim-009",
-    "claim-018",
-    "claim-019",
-    "claim-020"
+    "claim-009"
   ]
 }
