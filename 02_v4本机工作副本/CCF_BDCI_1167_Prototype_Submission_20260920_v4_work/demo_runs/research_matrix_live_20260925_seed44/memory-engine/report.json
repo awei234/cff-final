@@ -1,0 +1,19 @@
+{
+  "abstract": "本报告检验结构化记忆记录是否有助于 Agent 保持审计上下文一致。三个 arm（no-rail、prompt-only、full-rail）均完成且 return_code=0，任务成功率均为 1.0。UCR 仅作为 process_evidence_only：no-rail 为 0.5556 (5/9)，prompt-only 与 full-rail 均为 0.0 (0/4)。CFR/NFR 在 UCR 场景中未测量。材料最高 relevance_score 为 0.32 且 citation_allowed=false，故不作正式引用。当前证据不足以支持或拒绝领域效果假设。",
+  "method": "在 no-rail、prompt-only、full-rail 三个 arm 下运行同一审计场景，记录 UCR 分子/分母、supported/unexecuted/indeterminate 计数、rail 启用状态与尝试次数，以及每个 operation_id 的决策状态与原因。UCR 按 supported/denominator 计算并标注为 process_evidence_only。",
+  "experiment_setting": "三个 arm 均 status=completed、return_code=0、task_success_rate=1.0。no-rail：rail enabled=false、attempts=0、accepted=true，UCR=0.5556 (5/9)，supported=4、unexecuted=5、indeterminate=0。prompt-only：rail enabled=false、attempts=0、accepted=true，UCR=0.0 (0/4)，supported=4、unexecuted=0。full-rail：rail enabled=true、attempts=1、accepted=true，UCR=0.0 (0/4)，supported=4、unexecuted=0。CFR/NFR 均为 not_measured_in_ucr_scenario。",
+  "results": "no-rail 中 run_success、inspect_existing、query_available、validate_success 为 supported（claim-001、claim-004、claim-006、claim-008）；run_failed、run_denied、inspect_missing、query_unavailable、validate_failed 为 unexecuted，对应 claim-002、claim-003、claim-005、claim-007、claim-009 处于 pending_human_review。prompt-only 中 run_success、inspect_existing、query_available、validate_success 为 supported（claim-010 至 claim-013）。full-rail 中同样四项为 supported（claim-014 至 claim-017）。材料背景 claim-018、claim-019、claim-020 为 pending_human_review，citation_allowed=false。",
+  "limitations": "UCR 仅为 process_evidence_only，不能解释为领域效果。CFR/NFR 在 UCR 场景中未测量。材料最高 relevance_score 为 0.32 且 citation_allowed=false，citation_coverage=0.0，不能作为正式引用。claim-002、claim-003、claim-005、claim-007、claim-009、claim-018、claim-019、claim-020 未支持，需人工复核。allow_paper=false，human_intervention_required=true。",
+  "conclusion": "三个 arm 均完成且任务成功率均为 1.0，但 UCR 仅反映流程证据：no-rail 为 0.5556 (5/9)，prompt-only 与 full-rail 均为 0.0 (0/4)。当前证据不足以支持或拒绝“结构化记忆记录有助于 Agent 保持审计上下文一致”的领域效果假设，需人工确认 UCR 定位、citation_allowed=false 材料处理、CFR/NFR 后续测量及结构化记忆记录的操作化定义。",
+  "citation_mapping": [],
+  "unsupported_claims": [
+    "claim-002",
+    "claim-003",
+    "claim-005",
+    "claim-007",
+    "claim-009",
+    "claim-018",
+    "claim-019",
+    "claim-020"
+  ]
+}
