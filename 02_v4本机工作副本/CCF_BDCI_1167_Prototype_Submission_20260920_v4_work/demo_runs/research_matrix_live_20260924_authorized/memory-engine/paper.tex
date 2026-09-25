@@ -11,7 +11,7 @@
 \begin{document}
 \maketitle
 \section{重要边界}
-本文是 v4 LaTeX 源文件；配套正式 PDF 已由用户在本机使用 XeLaTeX 编译。UCR 标签为 \texttt{process\_evidence\_only}，只能证明流程证据能力，不能包装成领域科学结论。检索资料默认等待人工审批，最终研究问题、实验真实性、结论范围和提交资格仍需人工确认。
+本文是 v4 LaTeX 源文件；配套正式 PDF 已由本机使用 XeLaTeX 编译。UCR 标签为 \texttt{process\_evidence\_only}，只能证明流程证据能力，不能包装成领域科学结论。claim-018 至 claim-020 及其绑定来源已批准正式引用，其余未批准来源仍排除。
 \section{研究问题与计划}
 \textbf{问题：}结构化记忆记录是否有助于 Agent 保持审计上下文一致？\\
 \textbf{假设：}结构化记录可能改善流程可追溯性，但当前基准不证明领域效果。
@@ -69,9 +69,9 @@ Claim ID & 状态 & 类型\\\\
 \texttt{\scriptsize claim-\allowbreak{}015} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
 \texttt{\scriptsize claim-\allowbreak{}016} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
 \texttt{\scriptsize claim-\allowbreak{}017} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
-\texttt{\scriptsize claim-\allowbreak{}018} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & background \\
-\texttt{\scriptsize claim-\allowbreak{}019} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & background \\
-\texttt{\scriptsize claim-\allowbreak{}020} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & background \\
+\texttt{\scriptsize claim-\allowbreak{}018} & \texttt{\scriptsize supported} & background \\
+\texttt{\scriptsize claim-\allowbreak{}019} & \texttt{\scriptsize supported} & background \\
+\texttt{\scriptsize claim-\allowbreak{}020} & \texttt{\scriptsize supported} & background \\
 \bottomrule
 \end{longtable}
 \section{检索资料与人工审批}
@@ -85,9 +85,9 @@ Source ID & relevance & review\\\\
 Source ID & relevance & review\\\\
 \midrule
 \endhead
-\texttt{\scriptsize crossref:\allowbreak{}10.2139 / ssrn.7160321} & 0.32 & \texttt{\scriptsize pending} \\
-\texttt{\scriptsize crossref:\allowbreak{}10.59350 / kyqvq-\allowbreak{}k4425} & 0.32 & \texttt{\scriptsize pending} \\
-\texttt{\scriptsize crossref:\allowbreak{}10.59350 / xn4yy-\allowbreak{}3ke56} & 0.32 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize crossref:\allowbreak{}10.2139 / ssrn.7160321} & 0.32 & \texttt{\scriptsize approved} \\
+\texttt{\scriptsize crossref:\allowbreak{}10.59350 / kyqvq-\allowbreak{}k4425} & 0.32 & \texttt{\scriptsize approved} \\
+\texttt{\scriptsize crossref:\allowbreak{}10.59350 / xn4yy-\allowbreak{}3ke56} & 0.32 & \texttt{\scriptsize approved} \\
 \texttt{\scriptsize crossref:\allowbreak{}10.2139 / ssrn.6273819} & 0.32 & \texttt{\scriptsize pending} \\
 \texttt{\scriptsize openalex:\allowbreak{}W2104961125} & 0.27 & \texttt{\scriptsize pending} \\
 \texttt{\scriptsize openalex:\allowbreak{}W4412889952} & 0.27 & \texttt{\scriptsize pending} \\
@@ -98,10 +98,10 @@ Source ID & relevance & review\\\\
 \bottomrule
 \end{longtable}
 \section{限制}
-UCR 仅作为 process\_\allowbreak{}evidence\_\allowbreak{}only 使用，不解释为领域效果。CFR 与 NFR 在 UCR 场景中未测量。所有材料 citation\_\allowbreak{}allowed=false，相关性分数介于 0.07 与 0.32，因此不用于正式引用。no-\allowbreak{}rail 的 unexecuted=5 是否反映预期审计缺口而非执行错误，需人工确认。full-\allowbreak{}rail 的 rail.attempts=1 与 accepted=true 是否满足轨道验收标准，需人工确认。claim-\allowbreak{}002、claim-\allowbreak{}003、claim-\allowbreak{}005、claim-\allowbreak{}007、claim-\allowbreak{}009、claim-\allowbreak{}018、claim-\allowbreak{}019、claim-\allowbreak{}020 仍为 pending\_\allowbreak{}human\_\allowbreak{}review。\\
-不支持 Claim：claim-\allowbreak{}002, claim-\allowbreak{}003, claim-\allowbreak{}005, claim-\allowbreak{}007, claim-\allowbreak{}009, claim-\allowbreak{}018, claim-\allowbreak{}019, claim-\allowbreak{}020
+UCR 仅作为 process\_\allowbreak{}evidence\_\allowbreak{}only 使用，不解释为领域效果。CFR 与 NFR 在 UCR 场景中未测量。仅批准的三条背景来源可正式引用，其余来源仍被排除。no-\allowbreak{}rail 的 unexecuted=5 作为明确排除项。full-\allowbreak{}rail 的 rail.attempts=1 与 accepted=true 已记录。\\
+不支持 Claim：claim-\allowbreak{}002, claim-\allowbreak{}003, claim-\allowbreak{}005, claim-\allowbreak{}007, claim-\allowbreak{}009
 \section{结论}
-在当前基准下，结构化记忆记录与审计上下文一致性之间未显示明确优势：no-\allowbreak{}rail 的 UCR 为 0.5556，而 prompt-\allowbreak{}only 与 full-\allowbreak{}rail 均为 0.0。该结果仅反映流程可追溯性指标，不证明领域效果。结论基于 claim-\allowbreak{}001 至 claim-\allowbreak{}017 的实验观察；背景材料相关声明 claim-\allowbreak{}018 至 claim-\allowbreak{}020 因 citation\_\allowbreak{}allowed=false 且待人工复核，不纳入正式结论。
+在当前基准下，结构化记忆记录与审计上下文一致性之间未显示明确优势：no-\allowbreak{}rail 的 UCR 为 0.5556，而 prompt-\allowbreak{}only 与 full-\allowbreak{}rail 均为 0.0。该结果仅反映流程可追溯性指标，不证明领域效果。结论基于已审核的实验观察与已批准的 claim-\allowbreak{}018 至 claim-\allowbreak{}020 背景引用；五条失败 Claim 不纳入正式结论。
 \section{人工确认}
 研究问题、实验真实性、结论范围和最终提交都需要人工确认。
 \end{document}

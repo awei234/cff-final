@@ -3,6 +3,11 @@
   "topic_id": "context-engineering",
   "provider": "deepseek",
   "benchmark_label": "process_evidence_only",
-  "latex_compilation_status": "user_compile_required",
+  "latex_compilation_status": "compiled_verified",
+  "latex_engine": "XeLaTeX MiKTeX 25.12",
+  "latex_command": "xelatex -interaction=nonstopmode -halt-on-error paper.tex",
+  "latex_return_code": 0,
+  "pdf_pages": 3,
+  "pdf_sha256": "1C8EAFC4E67F220CDC7459370B592C2E3409B95E9E4316A3254C3EC94124023F",
   "started_at_utc": "2026-09-24T02:22:09Z"
 }

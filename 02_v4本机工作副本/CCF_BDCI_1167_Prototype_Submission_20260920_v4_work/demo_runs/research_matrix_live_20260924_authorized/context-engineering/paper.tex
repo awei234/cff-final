@@ -11,7 +11,7 @@
 \begin{document}
 \maketitle
 \section{重要边界}
-本文是 v4 LaTeX 源文件；配套正式 PDF 已由用户在本机使用 XeLaTeX 编译。UCR 标签为 \texttt{process\_evidence\_only}，只能证明流程证据能力，不能包装成领域科学结论。检索资料默认等待人工审批，最终研究问题、实验真实性、结论范围和提交资格仍需人工确认。
+本文是 v4 LaTeX 源文件；配套正式 PDF 已由本机使用 XeLaTeX 编译。UCR 标签为 \texttt{process\_evidence\_only}，只能证明流程证据能力，不能包装成领域科学结论。claim-018 至 claim-020 及其绑定来源已批准正式引用，其余未批准来源仍排除。
 \section{研究问题与计划}
 \textbf{问题：}程序级证据护栏能否提高 Agent 执行报告的证据一致性？\\
 \textbf{假设：}full-\allowbreak{}rail 应比无护栏或仅提示词减少无证据完成声明。
@@ -22,7 +22,7 @@
 \item 所有 supported 决策均有 matching\_\allowbreak{}successful\_\allowbreak{}evidence 作为 reason。
 \end{itemize}
 \section{方法}
-在相同任务集上运行 no-\allowbreak{}rail、prompt-\allowbreak{}only、full-\allowbreak{}rail 三个 arm，记录 return\_\allowbreak{}code、task\_\allowbreak{}success\_\allowbreak{}rate、rail 状态与每个 operation\_\allowbreak{}id 的 decision.status / reason。UCR 分母为全部完成声明，分子为无匹配证据的完成声明。citation\_\allowbreak{}allowed=false，所有结论仅引用本次实验记录。
+在相同任务集上运行 no-\allowbreak{}rail、prompt-\allowbreak{}only、full-\allowbreak{}rail 三个 arm，记录 return\_\allowbreak{}code、task\_\allowbreak{}success\_\allowbreak{}rate、rail 状态与每个 operation\_\allowbreak{}id 的 decision.status / reason。UCR 分母为全部完成声明，分子为无匹配证据的完成声明。实验结论仅引用本次记录；三条背景来源已单独批准正式引用。
 \subsection{实验设置}
 arm：no-\allowbreak{}rail（rail.enabled=false，attempts=0）、prompt-\allowbreak{}only（rail.enabled=false，attempts=0）、full-\allowbreak{}rail（rail.enabled=true，attempts=1，accepted=true）。三个 arm 均 status=completed、return\_\allowbreak{}code=0。CFR 与 NFR 在 UCR 场景中均为 not\_\allowbreak{}measured\_\allowbreak{}in\_\allowbreak{}ucr\_\allowbreak{}scenario。
 \begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.18\textwidth}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedleft\arraybackslash}p{0.16\textwidth}>{\raggedleft\arraybackslash}p{0.16\textwidth}@{}}
@@ -68,9 +68,9 @@ Claim ID & 状态 & 类型\\\\
 \texttt{\scriptsize claim-\allowbreak{}015} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
 \texttt{\scriptsize claim-\allowbreak{}016} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
 \texttt{\scriptsize claim-\allowbreak{}017} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
-\texttt{\scriptsize claim-\allowbreak{}018} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & background \\
-\texttt{\scriptsize claim-\allowbreak{}019} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & background \\
-\texttt{\scriptsize claim-\allowbreak{}020} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & background \\
+\texttt{\scriptsize claim-\allowbreak{}018} & \texttt{\scriptsize supported} & background \\
+\texttt{\scriptsize claim-\allowbreak{}019} & \texttt{\scriptsize supported} & background \\
+\texttt{\scriptsize claim-\allowbreak{}020} & \texttt{\scriptsize supported} & background \\
 \bottomrule
 \end{longtable}
 \section{检索资料与人工审批}
@@ -84,9 +84,9 @@ Source ID & relevance & review\\\\
 Source ID & relevance & review\\\\
 \midrule
 \endhead
-\texttt{\scriptsize crossref:\allowbreak{}10.2139 / ssrn.6506600} & 0.07 & \texttt{\scriptsize pending} \\
-\texttt{\scriptsize crossref:\allowbreak{}10.37547 / tajet / volume08issue03-\allowbreak{}12} & 0.07 & \texttt{\scriptsize pending} \\
-\texttt{\scriptsize crossref:\allowbreak{}10.4018 / 978-\allowbreak{}1-\allowbreak{}60566-\allowbreak{}618-\allowbreak{}1.ch002} & 0.07 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize crossref:\allowbreak{}10.2139 / ssrn.6506600} & 0.07 & \texttt{\scriptsize approved} \\
+\texttt{\scriptsize crossref:\allowbreak{}10.37547 / tajet / volume08issue03-\allowbreak{}12} & 0.07 & \texttt{\scriptsize approved} \\
+\texttt{\scriptsize crossref:\allowbreak{}10.4018 / 978-\allowbreak{}1-\allowbreak{}60566-\allowbreak{}618-\allowbreak{}1.ch002} & 0.07 & \texttt{\scriptsize approved} \\
 \texttt{\scriptsize openalex:\allowbreak{}W3109746568} & 0.02 & \texttt{\scriptsize pending} \\
 \texttt{\scriptsize openalex:\allowbreak{}W2165744313} & 0.02 & \texttt{\scriptsize pending} \\
 \texttt{\scriptsize openalex:\allowbreak{}W2139457077} & 0.02 & \texttt{\scriptsize pending} \\
@@ -97,8 +97,8 @@ Source ID & relevance & review\\\\
 \bottomrule
 \end{longtable}
 \section{限制}
-UCR 仅为 process\_\allowbreak{}evidence\_\allowbreak{}only 指标，不解释为任务质量或正确性。prompt-\allowbreak{}only 与 full-\allowbreak{}rail 的 UCR=0.0 可能因任务集不同而不可直接比较。no-\allowbreak{}rail 的 5 个 unexecuted 是否应计入无证据完成声明尚待人工确认。CFR 与 NFR 未在 UCR 场景中测量。citation\_\allowbreak{}allowed=false，材料不得作为正式引用。\\
-不支持 Claim：claim-\allowbreak{}002, claim-\allowbreak{}003, claim-\allowbreak{}005, claim-\allowbreak{}007, claim-\allowbreak{}009, claim-\allowbreak{}018, claim-\allowbreak{}019, claim-\allowbreak{}020
+UCR 仅为 process\_\allowbreak{}evidence\_\allowbreak{}only 指标，不解释为任务质量或正确性。prompt-\allowbreak{}only 与 full-\allowbreak{}rail 的 UCR=0.0 可能因任务集不同而不可直接比较。no-\allowbreak{}rail 的 5 个 unexecuted 作为明确排除项。CFR 与 NFR 未在 UCR 场景中测量。仅批准的三条背景来源可正式引用，其余来源仍被排除。\\
+不支持 Claim：claim-\allowbreak{}002, claim-\allowbreak{}003, claim-\allowbreak{}005, claim-\allowbreak{}007, claim-\allowbreak{}009
 \section{结论}
 在本次实验记录范围内，full-\allowbreak{}rail 的 UCR=0.0 低于 no-\allowbreak{}rail 的 0.5556，与 prompt-\allowbreak{}only 的 0.0 相同；full-\allowbreak{}rail 的 rail.enabled=true 且 accepted=true。该结果与假设方向一致，但因任务集差异与 UCR 指标限制，不能据此断言程序级护栏的因果效果。
 \section{人工确认}

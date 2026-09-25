@@ -45,3 +45,16 @@ def test_harness_archives_exist_for_all_topics():
         assert (RUN / topic / "harness_manifest.json").exists()
         assert (RUN / topic / "harness_validation.json").exists()
         assert (RUN / topic / "harness" / "harness_archive.json").exists()
+
+
+def test_pdf_compile_verification_is_complete():
+    verification = read_json(RUN / "pdf_compile_verification.json")
+    assert verification["status"] == "compiled_verified"
+    assert verification["return_code"] == 0
+    assert verification["text_extraction_check"] == "passed"
+    assert verification["render_check"] == "passed"
+    assert verification["stale_review_text_check"] == "passed"
+    for rel, record in verification["artifacts"].items():
+        pdf = RUN / rel
+        assert pdf.exists()
+        assert len(record["sha256"]) == 64

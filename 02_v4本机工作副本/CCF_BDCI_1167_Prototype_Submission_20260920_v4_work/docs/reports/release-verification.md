@@ -16,9 +16,9 @@
 - `demo_runs/jit_comparison_v1_final/`
 - `experiments/jit_comparison_v1/README.md`
 
-## 发布前最后一步
+## PDF 验证结果
 
-当前 live 运行的 `run_manifest.json` 明确标记 `latex_compilation_status=user_compile_required`。因此发布前必须在目标环境中编译对应 `paper.tex`，记录编译命令、返回码、页数、PDF SHA-256，并更新 provenance；不能仅凭 `allow_paper=true` 宣称 PDF 已验证。
+已使用 MiKTeX 25.12 的 XeLaTeX 编译统一论文和三个主题论文。四个 PDF 均返回码为 0，并完成页数、文本提取、渲染和 SHA-256 检查；详细记录见 `pdf_compile_verification.json`。三个主题的 provenance 已同步更新。
 
 ## 验证命令
 

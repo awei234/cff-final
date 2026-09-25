@@ -11,7 +11,7 @@
 \begin{document}
 \maketitle
 \section{重要边界}
-本文是 v4 LaTeX 源文件；配套正式 PDF 已由用户在本机使用 XeLaTeX 编译。UCR 标签为 \texttt{process\_evidence\_only}，只能证明流程证据能力，不能包装成领域科学结论。检索资料默认等待人工审批，最终研究问题、实验真实性、结论范围和提交资格仍需人工确认。
+本文是 v4 LaTeX 源文件；配套正式 PDF 已由本机使用 XeLaTeX 编译。UCR 标签为 \texttt{process\_evidence\_only}，只能证明流程证据能力，不能包装成领域科学结论。claim-018 至 claim-020 及其绑定来源已批准正式引用，其余未批准来源仍排除。
 \section{研究问题与计划}
 \textbf{问题：}带证据的反思循环能否避免把未执行任务写成已完成？\\
 \textbf{假设：}证据检查可能改善审计表达，但当前基准不证明真实自我进化。
@@ -68,9 +68,9 @@ Claim ID & 状态 & 类型\\\\
 \texttt{\scriptsize claim-\allowbreak{}015} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
 \texttt{\scriptsize claim-\allowbreak{}016} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
 \texttt{\scriptsize claim-\allowbreak{}017} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
-\texttt{\scriptsize claim-\allowbreak{}018} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & background \\
-\texttt{\scriptsize claim-\allowbreak{}019} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & background \\
-\texttt{\scriptsize claim-\allowbreak{}020} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & background \\
+\texttt{\scriptsize claim-\allowbreak{}018} & \texttt{\scriptsize supported} & background \\
+\texttt{\scriptsize claim-\allowbreak{}019} & \texttt{\scriptsize supported} & background \\
+\texttt{\scriptsize claim-\allowbreak{}020} & \texttt{\scriptsize supported} & background \\
 \bottomrule
 \end{longtable}
 \section{检索资料与人工审批}
@@ -84,9 +84,9 @@ Source ID & relevance & review\\\\
 Source ID & relevance & review\\\\
 \midrule
 \endhead
-\texttt{\scriptsize crossref:\allowbreak{}10.1115 / detc2025-\allowbreak{}168710} & 0.07 & \texttt{\scriptsize pending} \\
-\texttt{\scriptsize openalex:\allowbreak{}W2508346077} & 0.02 & \texttt{\scriptsize pending} \\
-\texttt{\scriptsize openalex:\allowbreak{}W2903899730} & 0.02 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize crossref:\allowbreak{}10.1115 / detc2025-\allowbreak{}168710} & 0.07 & \texttt{\scriptsize approved} \\
+\texttt{\scriptsize openalex:\allowbreak{}W2508346077} & 0.02 & \texttt{\scriptsize approved} \\
+\texttt{\scriptsize openalex:\allowbreak{}W2903899730} & 0.02 & \texttt{\scriptsize approved} \\
 \texttt{\scriptsize openalex:\allowbreak{}W2048701323} & 0.02 & \texttt{\scriptsize pending} \\
 \texttt{\scriptsize openalex:\allowbreak{}W607740409} & 0.02 & \texttt{\scriptsize pending} \\
 \texttt{\scriptsize openalex:\allowbreak{}W2153791616} & 0.02 & \texttt{\scriptsize pending} \\
@@ -97,8 +97,8 @@ Source ID & relevance & review\\\\
 \bottomrule
 \end{longtable}
 \section{限制}
-UCR仅为过程证据指标，不能解释为能力或真实自我进化证据。CFR与NFR未测量。citation\_\allowbreak{}coverage=0.0，citation\_\allowbreak{}allowed=false的文献不得作为正式引用。当前基准是否足以回答研究问题需人工确认。\\
-不支持 Claim：claim-\allowbreak{}002, claim-\allowbreak{}003, claim-\allowbreak{}005, claim-\allowbreak{}007, claim-\allowbreak{}009, claim-\allowbreak{}018, claim-\allowbreak{}019, claim-\allowbreak{}020
+UCR仅为过程证据指标，不能解释为能力或真实自我进化证据。CFR与NFR未测量。已批准的三条背景来源可正式引用，其余来源仍被排除。当前基准是否足以回答研究问题需结合五条明确排除的失败 Claim 判断。\\
+不支持 Claim：claim-\allowbreak{}002, claim-\allowbreak{}003, claim-\allowbreak{}005, claim-\allowbreak{}007, claim-\allowbreak{}009
 \section{结论}
 在本次基准中，prompt-\allowbreak{}only与full-\allowbreak{}rail的UCR均为0.0，no-\allowbreak{}rail为0.5556，提示证据检查可能改善审计表达；但任务成功率三臂均为1.0，且CFR / NFR未测量，因此当前结果不证明真实自我进化。
 \section{人工确认}
