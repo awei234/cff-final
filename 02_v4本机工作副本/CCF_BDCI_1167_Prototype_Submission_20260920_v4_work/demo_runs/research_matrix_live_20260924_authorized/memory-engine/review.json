@@ -49,5 +49,13 @@
   ],
   "citation_coverage": 0.0,
   "allow_paper": false,
-  "human_intervention_required": true
+  "human_intervention_required": true,
+  "claim_allowlist_path": "../最终论文允许使用的Claim清单.md",
+  "paper_eligible_claims": ["claim-001", "claim-004", "claim-006", "claim-008", "claim-010", "claim-011", "claim-012", "claim-013", "claim-014", "claim-015", "claim-016", "claim-017"],
+  "paper_excluded_claims": ["claim-002", "claim-003", "claim-005", "claim-007", "claim-009", "claim-018", "claim-019", "claim-020"],
+  "source_review": {
+    "decision": "none_approved_for_formal_citation_in_current_paper_scope",
+    "rationale": "The supplied allowlist excludes claim-018 through claim-020, the only background/source claims."
+  },
+  "review_decision_artifact": "../human_review_decisions.json"
 }

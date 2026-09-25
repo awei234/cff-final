@@ -1,0 +1,71 @@
+{
+  "review_basis": {
+    "type": "user_supplied_final_claim_allowlist",
+    "file": "最终论文允许使用的Claim清单.md",
+    "scope": "research_matrix_live_20260924_authorized"
+  },
+  "claim_policy": {
+    "eligible_status": "candidate_paper_claim",
+    "eligible_claim_ids": [
+      "claim-001",
+      "claim-004",
+      "claim-006",
+      "claim-008",
+      "claim-010",
+      "claim-011",
+      "claim-012",
+      "claim-013",
+      "claim-014",
+      "claim-015",
+      "claim-016",
+      "claim-017"
+    ],
+    "excluded_claim_ids": [
+      "claim-002",
+      "claim-003",
+      "claim-005",
+      "claim-007",
+      "claim-009",
+      "claim-018",
+      "claim-019",
+      "claim-020"
+    ],
+    "excluded_reasons": {
+      "claim-002": "run_failed",
+      "claim-003": "run_denied",
+      "claim-005": "inspect_missing",
+      "claim-007": "query_unavailable",
+      "claim-009": "validate_failed",
+      "claim-018": "background_claim_source_not_approved",
+      "claim-019": "background_claim_source_not_approved",
+      "claim-020": "background_claim_source_not_approved"
+    },
+    "wording_constraint": "Eligible claims may describe only the recorded audit/process observations and must not be rewritten as domain effects, performance improvements, or causal claims."
+  },
+  "source_policy": {
+    "decision": "none_approved_for_formal_citation_in_current_paper_scope",
+    "rationale": "The supplied allowlist excludes claim-018 through claim-020, the only background/source claims. No currently retrieved source is therefore attached to an approved paper claim.",
+    "source_records_preserved": true,
+    "next_step": "Approve specific sources only after an allowed claim is explicitly linked to that source and its wording is reviewed."
+  },
+  "topics": {
+    "context-engineering": {
+      "eligible_claim_ids": ["claim-001", "claim-004", "claim-006", "claim-008", "claim-010", "claim-011", "claim-012", "claim-013", "claim-014", "claim-015", "claim-016", "claim-017"],
+      "excluded_claim_ids": ["claim-002", "claim-003", "claim-005", "claim-007", "claim-009", "claim-018", "claim-019", "claim-020"]
+    },
+    "memory-engine": {
+      "eligible_claim_ids": ["claim-001", "claim-004", "claim-006", "claim-008", "claim-010", "claim-011", "claim-012", "claim-013", "claim-014", "claim-015", "claim-016", "claim-017"],
+      "excluded_claim_ids": ["claim-002", "claim-003", "claim-005", "claim-007", "claim-009", "claim-018", "claim-019", "claim-020"]
+    },
+    "self-evolution": {
+      "eligible_claim_ids": ["claim-001", "claim-004", "claim-006", "claim-008", "claim-010", "claim-011", "claim-012", "claim-013", "claim-014", "claim-015", "claim-016", "claim-017"],
+      "excluded_claim_ids": ["claim-002", "claim-003", "claim-005", "claim-007", "claim-009", "claim-018", "claim-019", "claim-020"]
+    }
+  },
+  "paper_release": {
+    "allow_paper": false,
+    "citation_coverage": 0.0,
+    "human_intervention_required": true,
+    "status": "candidate_claims_only_pending_final_source_and_wording_review"
+  }
+}
