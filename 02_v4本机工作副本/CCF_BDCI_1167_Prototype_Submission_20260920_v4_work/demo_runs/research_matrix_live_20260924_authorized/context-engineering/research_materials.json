@@ -20,8 +20,8 @@
       ],
       "duplicate_group": "doi:10.2139/ssrn.6506600",
       "version_group": null,
-      "citation_allowed": false,
-      "human_review_status": "pending",
+      "citation_allowed": true,
+      "human_review_status": "approved",
       "status": "retrieved",
       "retrieved_at_utc": "2026-09-24T02:22:09Z",
       "content_sha256": "d210f687abd9c2baae641770773c0ef735798398d4e8ebb45a6507ad42ab8b2c"
@@ -43,8 +43,8 @@
       ],
       "duplicate_group": "doi:10.37547/tajet/volume08issue03-12",
       "version_group": null,
-      "citation_allowed": false,
-      "human_review_status": "pending",
+      "citation_allowed": true,
+      "human_review_status": "approved",
       "status": "retrieved",
       "retrieved_at_utc": "2026-09-24T02:22:09Z",
       "content_sha256": "be66430f94ba8a38dfa6dde2879c15a4ffbed63d30cfbb9cb768163978ea4b89"
@@ -68,8 +68,8 @@
       ],
       "duplicate_group": "doi:10.4018/978-1-60566-618-1.ch002",
       "version_group": null,
-      "citation_allowed": false,
-      "human_review_status": "pending",
+      "citation_allowed": true,
+      "human_review_status": "approved",
       "status": "retrieved",
       "retrieved_at_utc": "2026-09-24T02:22:09Z",
       "content_sha256": "1dc41da2fa89ffa2267b15166d68fe91586f106a99bc4f93ead26ab203a2f5b7"

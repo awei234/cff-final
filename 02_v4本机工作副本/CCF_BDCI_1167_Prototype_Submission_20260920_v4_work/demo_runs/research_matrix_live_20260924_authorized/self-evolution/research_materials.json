@@ -23,8 +23,8 @@
       ],
       "duplicate_group": "doi:10.1115/detc2025-168710",
       "version_group": null,
-      "citation_allowed": false,
-      "human_review_status": "pending",
+      "citation_allowed": true,
+      "human_review_status": "approved",
       "status": "retrieved",
       "retrieved_at_utc": "2026-09-24T02:22:57Z",
       "content_sha256": "ca947d35874e681d15d4bc65beb043704aeb3a7a79d89cef6ac1bb69d5bf0815"
@@ -49,8 +49,8 @@
       ],
       "duplicate_group": "doi:10.1016/j.compind.2014.10.011",
       "version_group": null,
-      "citation_allowed": false,
-      "human_review_status": "pending",
+      "citation_allowed": true,
+      "human_review_status": "approved",
       "status": "retrieved",
       "retrieved_at_utc": "2026-09-24T02:22:57Z",
       "content_sha256": "0fefe4b387ff253db4b20bde3157e5e79767eb4c0c1ff3cbd4c275d4ed8ce39a"
@@ -74,8 +74,8 @@
       ],
       "duplicate_group": "doi:10.1038/s41579-018-0118-9",
       "version_group": null,
-      "citation_allowed": false,
-      "human_review_status": "pending",
+      "citation_allowed": true,
+      "human_review_status": "approved",
       "status": "retrieved",
       "retrieved_at_utc": "2026-09-24T02:22:57Z",
       "content_sha256": "15f324e3769086c57cc5361b0fed2e92e690b73ac977f8d204064f4011597aa9"

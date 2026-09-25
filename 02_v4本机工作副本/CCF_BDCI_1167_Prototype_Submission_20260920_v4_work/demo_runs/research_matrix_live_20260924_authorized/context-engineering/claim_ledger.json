@@ -261,7 +261,7 @@
       "claim_id": "claim-018",
       "text": "资料背景：Context Engineering: A Principal-Agent Theory of AI-Augmented Knowledge Work 与主题相关。",
       "claim_type": "background",
-      "status": "pending_human_review",
+      "status": "supported",
       "evidence_refs": [],
       "source_refs": [
         {
@@ -269,13 +269,13 @@
           "sha256": "d210f687abd9c2baae641770773c0ef735798398d4e8ebb45a6507ad42ab8b2c"
         }
       ],
-      "support_reason": "来源已检索，等待人工批准引用。"
+      "support_reason": "用户已批准正式引用；来源与 Claim 绑定已保留。"
     },
     {
       "claim_id": "claim-019",
       "text": "资料背景：Architectural Principles for Multi-Agent Systems Based on The Model Context Protocol 与主题相关。",
       "claim_type": "background",
-      "status": "pending_human_review",
+      "status": "supported",
       "evidence_refs": [],
       "source_refs": [
         {
@@ -283,13 +283,13 @@
           "sha256": "be66430f94ba8a38dfa6dde2879c15a4ffbed63d30cfbb9cb768163978ea4b89"
         }
       ],
-      "support_reason": "来源已检索，等待人工批准引用。"
+      "support_reason": "用户已批准正式引用；来源与 Claim 绑定已保留。"
     },
     {
       "claim_id": "claim-020",
       "text": "资料背景：Context-Aware Service Provisioning in Next-Generation Networks 与主题相关。",
       "claim_type": "background",
-      "status": "pending_human_review",
+      "status": "supported",
       "evidence_refs": [],
       "source_refs": [
         {
@@ -297,7 +297,7 @@
           "sha256": "1dc41da2fa89ffa2267b15166d68fe91586f106a99bc4f93ead26ab203a2f5b7"
         }
       ],
-      "support_reason": "来源已检索，等待人工批准引用。"
+      "support_reason": "用户已批准正式引用；来源与 Claim 绑定已保留。"
     }
   ],
   "rules": {
