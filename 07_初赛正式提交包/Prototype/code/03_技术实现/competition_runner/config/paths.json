@@ -1,0 +1,7 @@
+{
+  "workspace_root": "workspace",
+  "output_root": "runs",
+  "experiment_script": "03_技术实现/ucr_benchmark/run_experiment.py",
+  "jiuwenswarm_command": "jiuwenswarm"
+}
+

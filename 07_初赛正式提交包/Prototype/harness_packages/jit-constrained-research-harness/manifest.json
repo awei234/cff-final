@@ -1,0 +1,9 @@
+{
+  "profile": "full-rail",
+  "memory_mode": "structured_evidence",
+  "planning_mode": "sequential_verify",
+  "enabled_tools": ["retrieval", "ucr", "citation_rail"],
+  "max_provider_calls": 3,
+  "max_retries": 1,
+  "selection_reason": "JIT constrained research package: deterministic full-rail fallback until a task is selected by the project selector."
+}

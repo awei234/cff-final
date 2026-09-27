@@ -1,0 +1,79 @@
+{
+  "schema_version": "5.0-final",
+  "competition": {
+    "competition_id": "1167",
+    "title": "基于 JiuwenSwarm 的 Agent 科研论文自动生成",
+    "team_name": "Prototype"
+  },
+  "package_status": "ready_for_submission",
+  "prepared_date": "2026-09-27",
+  "source": {
+    "repository": "https://github.com/awei234/cff-final.git",
+    "branch": "feature",
+    "head": "57729914dae03136db9c65f575331bd0551b47f5",
+    "integration_branch": "codex/submission-review",
+    "selective_uncommitted_integration": true
+  },
+  "external_artifacts": {
+    "paper/paper.pdf": {
+      "required_for_final": true,
+      "status": "included",
+      "requirements": "English PDF using the ICLR template",
+      "pages": 15,
+      "sha256": "ae42e590da8430c5a3c947b125c4040d460b6d5d60c32a3fefc78d56c3d4681f"
+    },
+    "AgenticReviewer/paperReview-AccessToken.txt": {
+      "required_for_final": true,
+      "status": "included_local_secret",
+      "requirements": "Must correspond to paper/paper.pdf; verified outside the local checker",
+      "integrity_handling": "local_secret_excluded_from_content_scan_and_checksums"
+    }
+  },
+  "canonical_evidence": {
+    "authorized_research": "evidence/research_matrix_authorized",
+    "replication_seeds": [
+      "evidence/context_engineering_seed43",
+      "evidence/context_engineering_seed44"
+    ],
+    "jit_comparison": "evidence/jit_comparison_v2_final",
+    "jit_arms": [
+      "no-rail",
+      "prompt-only",
+      "full-rail",
+      "jit-constrained"
+    ],
+    "seeds": [
+      42,
+      43,
+      44
+    ]
+  },
+  "review": {
+    "allow_paper": true,
+    "approved_claims": [
+      "claim-018",
+      "claim-019",
+      "claim-020"
+    ],
+    "excluded_claims": [
+      "claim-002",
+      "claim-003",
+      "claim-005",
+      "claim-007",
+      "claim-009"
+    ],
+    "seed43_seed44_new_sources_allowed_for_formal_citation": false
+  },
+  "resources": {
+    "report": "resource_report.md",
+    "scope": "English paper generation and delivery",
+    "source_of_truth": "resource_report.md"
+  },
+  "verification": {
+    "authorized_release": "passed",
+    "jit_comparison": "12/12 passed",
+    "package_final_stage": "to_be_verified_after_final_assembly"
+  },
+  "checksums": "CHECKSUMS.sha256",
+  "zip_created": true
+}

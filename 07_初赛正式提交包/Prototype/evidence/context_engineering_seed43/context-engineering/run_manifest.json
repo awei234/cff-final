@@ -1,0 +1,8 @@
+{
+  "schema_version": "4.0",
+  "topic_id": "context-engineering",
+  "provider": "deepseek",
+  "benchmark_label": "process_evidence_only",
+  "latex_compilation_status": "user_compile_required",
+  "started_at_utc": "2026-09-25T13:50:28Z"
+}

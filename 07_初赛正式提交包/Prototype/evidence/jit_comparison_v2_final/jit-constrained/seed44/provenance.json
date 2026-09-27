@@ -1,0 +1,14 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "config.json": "c85a21935e9335aaa9ac943c55bf128e7a8aa04e55d97db1632b620d9c61f7db",
+    "prompt.txt": "a2a3511404b192fb387a0f6aed2dec76b064b1b42c3bdd6567e273adf44adcff",
+    "model_output.txt": "6ccc691afe1a93e801266c183111220afaa91a1750a556550d921c5e1124c9ff",
+    "tool_trace.jsonl": "f6cfa52696d1dbc674dd57992b7519b8ca0cbbf76d1add73a50be0c476b6359b",
+    "runtime_metrics.json": "43ad535552db09f5610022a642faf44d667b124f344241b9026e8825e045594e",
+    "harness_manifest.json": "fcdcbe0bb11e366d26e5ed67bb4836c450393164ef10e1645c47708dc40af65a",
+    "harness_validation.json": "b623eeff458d578640c3f9bb9bdca61168147dde38059c0469c6d4f21cc85aa8",
+    "harness/harness_archive.json": "449e2ac21933831755ca93f844550ee9d6e44bef4411caa0c3b19eef334dafde"
+  },
+  "scenario_manifest_sha256": "39a4d3bdab8dbb4190cc0c6f4da4912440700315d14c8bef562044bbabf722a9"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["profile", "memory_mode", "planning_mode", "enabled_tools", "max_provider_calls", "max_retries", "selection_reason"],
+  "properties": {
+    "profile": {"enum": ["evidence_first", "experiment_first", "repair_first", "cost_limited", "full-rail"]},
+    "memory_mode": {"type": "string"},
+    "planning_mode": {"type": "string"},
+    "enabled_tools": {"type": "array", "items": {"enum": ["retrieval", "ucr", "citation_rail"]}},
+    "max_provider_calls": {"type": "integer", "minimum": 0, "maximum": 3},
+    "max_retries": {"type": "integer", "minimum": 0, "maximum": 1},
+    "selection_reason": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false
+}

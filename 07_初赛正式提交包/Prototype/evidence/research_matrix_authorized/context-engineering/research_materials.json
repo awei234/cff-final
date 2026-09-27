@@ -1,0 +1,277 @@
+{
+  "schema_version": "4.0",
+  "topic_id": "context-engineering",
+  "retrieval_status": "partial_retrieval",
+  "sources": [
+    {
+      "source_id": "crossref:10.2139/ssrn.6506600",
+      "provider": "crossref",
+      "title": "Context Engineering: A Principal-Agent Theory of AI-Augmented Knowledge Work",
+      "authors": [
+        "Savva"
+      ],
+      "published_at": "2026",
+      "url": "https://doi.org/10.2139/ssrn.6506600",
+      "doi": "10.2139/ssrn.6506600",
+      "abstract": "Generative AI can improve knowledge work, but its performance depends on the context a worker providesproblem framing, information selection, constraints, and evaluative judgment. Because supplying this context is costly, imperfectly observable, and expertise-dependent, AI creates new moral hazard and screening problems for firms. We develop a principal-agent model in which an agent allocates effort between direct task execution and context engineering for AI. The model introduces a task-level parameter-the context engineering burden-that captures how much expertise, as opposed to effort alone, is needed to make AI effective on a given task. As AI capability rises, agents reallocate effort from direct execution toward context engineering. Lower-expertise agents shift more because their opportunity cost of direct work is lower, giving them a comparative advantage in AI-mediated production-but their limited expertise constrains the context they provide, producing AI-mediated output of lower expected value than expert output, a phenomenon we call rational AI slop. The context engineering burden then determines whether AI compresses or amplifies skill differences. In low-burden tasks, where effort alone can generate adequate context, AI narrows performance gaps. In high-burden tasks, where expertise is central to context quality, AI widens them. We test this framework through a blinded coding exercise: across task settings drawn from the empirical literature, a burden score built from independent large-language-model ratings correctly orders all 25 of 25 compression-versus-amplification comparisons. Under adverse selection on expertise, AI makes low-type contracts less distorted in low-burden tasks and more distorted in high-burden tasks. The framework also yields implications for process investment and governance. The model reconciles conflicting empirical evidence on AI in knowledge work by showing that its impact depends on the context engineering burden of the task. Firms should invest in tools and workflows that reduce this burden, and recognise that AI is more likely to broaden the effective talent pool in low-burden tasks than in high-burden tasks, where expertise remains central to performance.",
+      "relevance_score": 0.07,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.2139/ssrn.6506600",
+      "version_group": null,
+      "citation_allowed": true,
+      "human_review_status": "approved",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-24T02:22:09Z",
+      "content_sha256": "d210f687abd9c2baae641770773c0ef735798398d4e8ebb45a6507ad42ab8b2c"
+    },
+    {
+      "source_id": "crossref:10.37547/tajet/volume08issue03-12",
+      "provider": "crossref",
+      "title": "Architectural Principles for Multi-Agent Systems Based on The Model Context Protocol",
+      "authors": [
+        "Zuykov"
+      ],
+      "published_at": "2026-3-31",
+      "url": "https://doi.org/10.37547/tajet/volume08issue03-12",
+      "doi": "10.37547/tajet/volume08issue03-12",
+      "abstract": "The article examines the architectural role of the Model Context Protocol in the design of multi-agent systems intended to support robust coordination between cognitive and infrastructural components. The relevance of the study is determined by the rapid transition from isolated LLM interactions to distributed agentic environments, in which direct coupling between agents and external APIs, data sources, and tools increases system interdependence, complicates maintenance, and weakens governability. The purpose of the article is to provide a conceptual substantiation of the architectural principles of multi-agent systems based on MCP and to identify their significance for scalability, interoperability, security, and maintainability. The scientific novelty of the study lies in interpreting MCP not merely as an auxiliary integration protocol, but as an autonomous architectural layer that establishes a formalized topology of interaction among hosts, clients, and servers. The principal findings demonstrate that the use of MCP ensures a strict separation of concerns, declarative context management, modular composability, and governance-by-design in capability access. The article concludes that such an approach enhances observability, reduces integration fragility, and creates the foundation for the evolutionary development of multi-agent solutions while preserving control and auditability. The article will be useful for researchers, AI system architects, developers of agentic platforms, and specialists in enterprise digital infrastructure.",
+      "relevance_score": 0.07,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.37547/tajet/volume08issue03-12",
+      "version_group": null,
+      "citation_allowed": true,
+      "human_review_status": "approved",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-24T02:22:09Z",
+      "content_sha256": "be66430f94ba8a38dfa6dde2879c15a4ffbed63d30cfbb9cb768163978ea4b89"
+    },
+    {
+      "source_id": "crossref:10.4018/978-1-60566-618-1.ch002",
+      "provider": "crossref",
+      "title": "Context-Aware Service Provisioning in Next-Generation Networks",
+      "authors": [
+        "Podobnik",
+        "Trzec",
+        "Jezic"
+      ],
+      "published_at": "2009",
+      "url": "https://doi.org/10.4018/978-1-60566-618-1.ch002",
+      "doi": "10.4018/978-1-60566-618-1.ch002",
+      "abstract": "This paper presents an application of multi-agent system in ubiquitous computing scenarios characteristic of next-generation networks. Next-generation networks will create environments populated with a vast number of consumers, which will possess diverse types of context-aware devices. In such environments the consumer should be able to access all the available services anytime, from any place, and by using any of its communication-enabled devices. Consequently, next-generation networks will require efficient mechanisms which can match consumers’ demands (requested services) to network-operators’ supplies (available services). The authors propose an agent approach for enabling autonomous coordination between all the entities across the telecom value chain, thus enabling automated context-aware service provisioning for the consumers. Furthermore, the authors hope that the proposed service discovery model will not only be interesting from a scientific point of view, but also amenable to real-world applications.",
+      "relevance_score": 0.07,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.4018/978-1-60566-618-1.ch002",
+      "version_group": null,
+      "citation_allowed": true,
+      "human_review_status": "approved",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-24T02:22:09Z",
+      "content_sha256": "1dc41da2fa89ffa2267b15166d68fe91586f106a99bc4f93ead26ab203a2f5b7"
+    },
+    {
+      "source_id": "openalex:W3109746568",
+      "provider": "openalex",
+      "title": "Engineering precision nanoparticles for drug delivery",
+      "authors": [
+        "Michael J. Mitchell",
+        "Margaret M. Billingsley",
+        "Rebecca M. Haley",
+        "Marissa E. Wechsler",
+        "Nicholas A. Peppas",
+        "Róbert Langer"
+      ],
+      "published_at": "2020-12-04",
+      "url": "https://doi.org/10.1038/s41573-020-0090-8",
+      "doi": "https://doi.org/10.1038/s41573-020-0090-8",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1038/s41573-020-0090-8",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-24T02:22:09Z",
+      "content_sha256": "f5801bcff642e2f7bc7ed5279e18b6129d9589394d316bb07823b9c90f89fc2c"
+    },
+    {
+      "source_id": "openalex:W2165744313",
+      "provider": "openalex",
+      "title": "Coordination of groups of mobile autonomous agents using nearest neighbor rules",
+      "authors": [
+        "Ali Jadbabaie",
+        "Jie Lin",
+        "A. Stephen Morse"
+      ],
+      "published_at": "2003-06-01",
+      "url": "https://doi.org/10.1109/tac.2003.812781",
+      "doi": "https://doi.org/10.1109/tac.2003.812781",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1109/tac.2003.812781",
+      "version_group": "doi:10.1109/tac.2003.812781",
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-24T02:22:09Z",
+      "content_sha256": "de3d683fe4d594f2bd7998b8b9d47786f2d9c722f57fc9b151b240868f472467"
+    },
+    {
+      "source_id": "openalex:W2139457077",
+      "provider": "openalex",
+      "title": "Bone Tissue Engineering: State of the Art and Future Trends",
+      "authors": [
+        "António José Salgado",
+        "O. P. Coutinho",
+        "Rui Luís Reis"
+      ],
+      "published_at": "2004-08-03",
+      "url": "https://doi.org/10.1002/mabi.200400026",
+      "doi": "https://doi.org/10.1002/mabi.200400026",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1002/mabi.200400026",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-24T02:22:09Z",
+      "content_sha256": "5fa3c15bb06788bc686a829cfc89fbf6bb61519817a99f706a0c5f0f4c8acdcd"
+    },
+    {
+      "source_id": "openalex:W2153791616",
+      "provider": "openalex",
+      "title": "Whatever next? Predictive brains, situated agents, and the future of cognitive science",
+      "authors": [
+        "Andy Clark"
+      ],
+      "published_at": "2013-05-10",
+      "url": "https://doi.org/10.1017/s0140525x12000477",
+      "doi": "https://doi.org/10.1017/s0140525x12000477",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1017/s0140525x12000477",
+      "version_group": "doi:10.1017/s0140525x12000477",
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-24T02:22:09Z",
+      "content_sha256": "3e0dfd39186719f4c3949514fbdc6629f797fa90eb7c010c197662b6bed7589f"
+    },
+    {
+      "source_id": "openalex:W2167554769",
+      "provider": "openalex",
+      "title": "Engineering mobile agent applications via context-dependent coordination",
+      "authors": [
+        "Giacomo Cabri",
+        "Letizia Leonardi",
+        "Franco Zambonelli"
+      ],
+      "published_at": "2002-11-01",
+      "url": "https://doi.org/10.1109/tse.2002.1049403",
+      "doi": "https://doi.org/10.1109/tse.2002.1049403",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1109/tse.2002.1049403",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-24T02:22:09Z",
+      "content_sha256": "566dce673ea88e1d430a06b988c03d9198eb100c4e9ee688e97a0a294f9f5a5b"
+    },
+    {
+      "source_id": "openalex:W2124405605",
+      "provider": "openalex",
+      "title": "Requirements engineering",
+      "authors": [
+        "Bashar Nuseibeh",
+        "Steve Easterbrook"
+      ],
+      "published_at": "2000-05-01",
+      "url": "https://doi.org/10.1145/336512.336523",
+      "doi": "https://doi.org/10.1145/336512.336523",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1145/336512.336523",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-24T02:22:09Z",
+      "content_sha256": "5d0e60ed478ec2ba5aa3188f5e67e8087c1ab541ba6dd19deb790bc649d2d8e7"
+    },
+    {
+      "source_id": "openalex:W2115421876",
+      "provider": "openalex",
+      "title": "Engineering Executable Agents using Multi-context Systems",
+      "authors": [
+        "Jordi Sabater"
+      ],
+      "published_at": "2002-06-01",
+      "url": "https://doi.org/10.1093/logcom/12.3.413",
+      "doi": "https://doi.org/10.1093/logcom/12.3.413",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1093/logcom/12.3.413",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-24T02:22:09Z",
+      "content_sha256": "5d70cb966169f628de3e2070887c3594e999100aa39eed6b35833717d8dc5904"
+    }
+  ],
+  "deduplication": {
+    "candidate_count": 40,
+    "kept_count": 10,
+    "removed_duplicates": 4
+  },
+  "failures": [
+    {
+      "provider": "arxiv",
+      "query": "agent context engineering",
+      "status": 406,
+      "error": "http_406"
+    },
+    {
+      "provider": "arxiv",
+      "query": "context management agent",
+      "status": 406,
+      "error": "http_406"
+    },
+    {
+      "provider": "arxiv",
+      "query": "long context agent",
+      "status": 406,
+      "error": "http_406"
+    }
+  ],
+  "retrieved_at_utc": "2026-09-24T02:22:09Z"
+}

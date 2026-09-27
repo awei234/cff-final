@@ -18,6 +18,8 @@ env/
 *.pem
 *.key
 06_初赛提交包_待审核/Prototype/AgenticReviewer/paperReview-AccessToken.txt
+07_初赛正式提交包/Prototype/AgenticReviewer/paperReview-AccessToken.txt
+07_初赛正式提交包/Prototype.zip
 
 # Temporary LaTeX/build artifacts
 *.aux
