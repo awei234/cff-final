@@ -5,7 +5,7 @@
     "title": "基于 JiuwenSwarm 的 Agent 科研论文自动生成",
     "team_name": "Prototype"
   },
-  "package_status": "ready_for_final_verification",
+  "package_status": "final_verified_pending_manual_submission",
   "prepared_date": "2026-09-27",
   "source": {
     "repository": "https://github.com/awei234/cff-final.git",
@@ -76,7 +76,7 @@
     "authorized_release": "passed",
     "jit_comparison": "12/12 passed",
     "package_review_stage": "passed_structure_scan_and_checksums",
-    "package_final_stage": "pending_fresh_final_verification"
+    "package_final_stage": "passed_structure_checksum_pdf_page_validation_pending_human_review"
   },
   "checksums": "CHECKSUMS.sha256",
   "zip_created": false
