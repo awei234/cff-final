@@ -17,6 +17,7 @@ env/
 !.env.template
 *.pem
 *.key
+06_初赛提交包_待审核/Prototype/AgenticReviewer/paperReview-AccessToken.txt
 
 # Temporary LaTeX/build artifacts
 *.aux

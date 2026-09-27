@@ -23,6 +23,7 @@ EXCLUDED_NAMES = {
 }
 EXCLUDED_SUFFIXES = {".pyc", ".pyo", ".zip"}
 EVIDENCE_LOGS = {"compile.final.log", "paper.log"}
+LOCAL_SECRET_ARTIFACTS = {"AgenticReviewer/paperReview-AccessToken.txt"}
 
 
 def _ignore(directory: str, names: list[str]) -> set[str]:
@@ -112,6 +113,8 @@ def write_checksums(package_root: Path) -> Path:
         if path == checksum_file:
             continue
         relative = path.relative_to(package_root).as_posix()
+        if relative in LOCAL_SECRET_ARTIFACTS:
+            continue
         digest = hashlib.sha256(path.read_bytes()).hexdigest()
         lines.append(f"{digest}  {relative}")
     checksum_file.write_text("\n".join(lines) + "\n", encoding="utf-8")

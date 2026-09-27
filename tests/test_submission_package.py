@@ -6,6 +6,8 @@ from pathlib import Path
 import subprocess
 import sys
 
+from pypdf import PdfWriter
+
 from tools.submission_package.builder import build_review_package, write_checksums
 from tools.submission_package.verifier import verify_package
 
@@ -56,6 +58,24 @@ def add_required_documents(package: Path) -> None:
         json.dumps({"package_status": "review_ready_missing_external_artifacts"}),
     )
     write_checksums(package)
+
+
+def add_final_external_artifacts(package: Path, expected_pages: int) -> Path:
+    paper = package / "paper" / "paper.pdf"
+    paper.parent.mkdir(parents=True, exist_ok=True)
+    writer = PdfWriter()
+    writer.add_blank_page(width=595, height=842)
+    with paper.open("wb") as stream:
+        writer.write(stream)
+
+    token = package / "AgenticReviewer" / "paperReview-AccessToken.txt"
+    write(token, "local-access-token")
+    manifest_path = package / "submission_manifest.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    manifest["external_artifacts"] = {"paper/paper.pdf": {"pages": expected_pages}}
+    manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+    write_checksums(package)
+    return token
 
 
 def test_builder_uses_allowlist_and_creates_external_artifact_directories(tmp_path: Path) -> None:
@@ -110,6 +130,48 @@ def test_final_stage_requires_paper_and_access_token(tmp_path: Path) -> None:
         "missing required file: paper/paper.pdf",
         "missing required file: AgenticReviewer/paperReview-AccessToken.txt",
     ]
+
+
+def test_final_stage_rejects_pdf_page_count_mismatch(tmp_path: Path) -> None:
+    source = make_source(tmp_path)
+    package = tmp_path / "Prototype"
+    build_review_package(source, package)
+    add_required_documents(package)
+    add_final_external_artifacts(package, expected_pages=2)
+
+    result = verify_package(package, stage="final")
+
+    assert result["valid"] is False
+    assert "paper page count mismatch: expected 2, got 1" in result["errors"]
+
+
+def test_token_is_not_read_or_included_in_checksums(tmp_path: Path, monkeypatch) -> None:
+    source = make_source(tmp_path)
+    package = tmp_path / "Prototype"
+    build_review_package(source, package)
+    add_required_documents(package)
+    token = add_final_external_artifacts(package, expected_pages=1)
+
+    checksum_text = (package / "CHECKSUMS.sha256").read_text(encoding="utf-8")
+    assert "AgenticReviewer/paperReview-AccessToken.txt" not in checksum_text
+
+    original_read_bytes = Path.read_bytes
+    original_read_text = Path.read_text
+
+    def guarded_read_bytes(path: Path) -> bytes:
+        if path == token:
+            raise AssertionError("Token bytes must not be read during verification")
+        return original_read_bytes(path)
+
+    def guarded_read_text(path: Path, *args, **kwargs) -> str:
+        if path == token:
+            raise AssertionError("Token text must not be read during verification")
+        return original_read_text(path, *args, **kwargs)
+
+    monkeypatch.setattr(Path, "read_bytes", guarded_read_bytes)
+    monkeypatch.setattr(Path, "read_text", guarded_read_text)
+
+    assert verify_package(package, stage="final")["valid"] is True
 
 
 def test_verifier_rejects_excluded_content_and_secret_values(tmp_path: Path) -> None:

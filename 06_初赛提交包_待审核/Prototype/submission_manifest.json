@@ -25,7 +25,8 @@
     "AgenticReviewer/paperReview-AccessToken.txt": {
       "required_for_final": true,
       "status": "supplied_pending_manual_validation",
-      "requirements": "Must be valid and correspond to paper/paper.pdf; not verified locally"
+      "requirements": "Must be valid and correspond to paper/paper.pdf; not verified locally",
+      "integrity_handling": "local_secret_excluded_from_content_scan_and_checksums"
     }
   },
   "canonical_evidence": {

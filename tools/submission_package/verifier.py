@@ -24,6 +24,7 @@ EXTERNAL_ARTIFACTS = (
     "paper/paper.pdf",
     "AgenticReviewer/paperReview-AccessToken.txt",
 )
+LOCAL_SECRET_ARTIFACTS = {"AgenticReviewer/paperReview-AccessToken.txt"}
 REQUIRED_EVIDENCE = (
     "evidence/research_matrix_authorized",
     "evidence/context_engineering_seed43",
@@ -62,6 +63,9 @@ def _verify_checksums(package_root: Path, errors: list[str]) -> None:
         digest, rel = line.split(maxsplit=1)
         rel = rel.strip().lstrip("*")
         covered.add(rel)
+        if rel in LOCAL_SECRET_ARTIFACTS:
+            errors.append(f"local secret artifact must not be checksummed: {rel}")
+            continue
         target = package_root / rel
         if not target.resolve().is_relative_to(package_root.resolve()):
             errors.append(f"unsafe checksum path: {rel}")
@@ -75,6 +79,8 @@ def _verify_checksums(package_root: Path, errors: list[str]) -> None:
     for path in package_root.rglob("*"):
         if path.is_file() and path != checksum_file:
             rel = path.relative_to(package_root).as_posix()
+            if rel in LOCAL_SECRET_ARTIFACTS:
+                continue
             if rel not in covered:
                 errors.append(f"file not covered by checksums: {rel}")
 
@@ -97,12 +103,42 @@ def _scan_content(package_root: Path, errors: list[str]) -> None:
                 errors.append(f"excluded path present: {relative}")
         if not path.is_file() or path.stat().st_size > 2_000_000:
             continue
+        if relative in LOCAL_SECRET_ARTIFACTS:
+            continue
         try:
             text = path.read_text(encoding="utf-8")
         except (UnicodeDecodeError, OSError):
             continue
         if any(pattern.search(text) for pattern in SECRET_PATTERNS):
             errors.append(f"potential secret: {relative}")
+
+
+def _verify_final_external_artifacts(package_root: Path, errors: list[str]) -> None:
+    token = package_root / "AgenticReviewer" / "paperReview-AccessToken.txt"
+    if token.is_file() and token.stat().st_size == 0:
+        errors.append("empty required file: AgenticReviewer/paperReview-AccessToken.txt")
+
+    paper = package_root / "paper" / "paper.pdf"
+    if not paper.is_file():
+        return
+    try:
+        from pypdf import PdfReader
+
+        pages = len(PdfReader(paper).pages)
+    except Exception as exc:
+        errors.append(f"paper PDF is unreadable: {exc.__class__.__name__}")
+        return
+
+    try:
+        manifest = json.loads((package_root / "submission_manifest.json").read_text(encoding="utf-8"))
+        expected_pages = manifest["external_artifacts"]["paper/paper.pdf"]["pages"]
+    except (KeyError, TypeError, ValueError, OSError, json.JSONDecodeError):
+        errors.append("submission manifest missing paper page count")
+        return
+    if not isinstance(expected_pages, int) or expected_pages < 1:
+        errors.append("submission manifest has invalid paper page count")
+    elif pages != expected_pages:
+        errors.append(f"paper page count mismatch: expected {expected_pages}, got {pages}")
 
 
 def verify_package(package_root: Path, stage: str = "review") -> dict[str, object]:
@@ -123,6 +159,8 @@ def verify_package(package_root: Path, stage: str = "review") -> dict[str, objec
     missing_external = [rel for rel in EXTERNAL_ARTIFACTS if not (package_root / rel).is_file()]
     if stage == "final":
         errors.extend(f"missing required file: {rel}" for rel in missing_external)
+        if not missing_external:
+            _verify_final_external_artifacts(package_root, errors)
 
     _scan_content(package_root, errors)
     _verify_checksums(package_root, errors)

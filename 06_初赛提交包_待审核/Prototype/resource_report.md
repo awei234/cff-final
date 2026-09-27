@@ -62,7 +62,7 @@
 ### 论文生成过程：工具、磁盘与硬件
 
 - 去重后的工具调用为 311 次：Bash 177、Edit 65、Read 46、Write 17、WebFetch 2、WebSearch 1、Skill/Agent/AskUserQuestion 各 1；
-- 论文工程当时为 73 个文件、约 12.8 MiB；英文投稿 PDF 为 15 页、约 1.03 MiB；
+- 论文工程当时为 73 个文件、约 12.8 MiB；其中生成会话快照中的英文投稿 PDF 为 15 页、约 1.03 MiB。该快照不是本提交包当前的 `paper/paper.pdf`（后者为 27 页、约 1.61 MiB）；
 - 本机为 Intel Core i5-13420H、15.7 GB 内存、Windows 11；无独立 NVIDIA GPU，本地不做模型推理，显存使用为 0；
 - 远端模型 API 请求为 304 次，公网检索为 3 次；出网字节未记录，不作估算。
 

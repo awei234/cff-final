@@ -17,4 +17,4 @@
 python verify_submission.py --stage final
 ```
 
-本包不包含 API Key、运行态、会话历史、虚拟环境、依赖目录、缓存及应用运行日志；保留 provenance 所需的编译日志和实验 stdout/stderr。尚未生成 ZIP，供人工审核后再压缩。
+本包不包含 API Key、运行态、会话历史、虚拟环境、依赖目录、缓存及应用运行日志；保留 provenance 所需的编译日志和实验 stdout/stderr。评审 Token 仅作为本地交付工件存放，校验器只检查其存在与非空，不读取、不输出、不写入 Git。尚未生成 ZIP，供人工审核后再压缩。
