@@ -5,7 +5,7 @@
     "title": "基于 JiuwenSwarm 的 Agent 科研论文自动生成",
     "team_name": "Prototype"
   },
-  "package_status": "review_ready_missing_external_artifacts",
+  "package_status": "ready_for_final_verification",
   "prepared_date": "2026-09-27",
   "source": {
     "repository": "https://github.com/awei234/cff-final.git",
@@ -17,12 +17,15 @@
   "external_artifacts": {
     "paper/paper.pdf": {
       "required_for_final": true,
-      "status": "waiting_for_user",
-      "requirements": "English PDF using the ICLR template"
+      "status": "supplied_pending_manual_validation",
+      "requirements": "English PDF using the ICLR template",
+      "pages": 27,
+      "sha256": "ef61490d80e6da7e3635476a3cf59e2287792d3aa96af607871045bfc1b81b2c"
     },
     "AgenticReviewer/paperReview-AccessToken.txt": {
       "required_for_final": true,
-      "status": "waiting_for_user"
+      "status": "supplied_pending_manual_validation",
+      "requirements": "Must be valid and correspond to paper/paper.pdf; not verified locally"
     }
   },
   "canonical_evidence": {
@@ -72,7 +75,7 @@
     "authorized_release": "passed",
     "jit_comparison": "12/12 passed",
     "package_review_stage": "passed_structure_scan_and_checksums",
-    "package_final_stage": "blocked_waiting_for_external_artifacts"
+    "package_final_stage": "pending_fresh_final_verification"
   },
   "checksums": "CHECKSUMS.sha256",
   "zip_created": false

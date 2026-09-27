@@ -1,31 +1,20 @@
-# Prototype 初赛提交审核包
+# Prototype 初赛提交包
 
-本包实现基于 JiuwenSwarm 的可审计科研 Agent：公开资料检索、研究计划、执行证据、Claim–Evidence 账本、来源审核、四臂 UCR 对照和受约束 JIT Harness。
+本目录是基于 JiuwenSwarm 的可审计科研 Agent 初赛提交包，包含源码、论文、评审 Token、实验与 JIT Harness 证据。
 
-当前为人工审核阶段，尚缺正式 `paper/paper.pdf` 和 `AgenticReviewer/paperReview-AccessToken.txt`，不应直接上传或压缩。
+完整的目录映射、复现命令、审核边界及压缩前检查，请阅读 [提交说明](提交说明.md)。
 
-先阅读：
+建议审核顺序：
 
 1. `提交说明.md`
-2. `docs/architecture.md`
-3. `docs/module_call.md`
-4. `docs/innovation.md`
-5. `framework_contribution.md`
-6. `resource_report.md`
+2. `docs/architecture.md`、`docs/module_call.md`、`docs/innovation.md`
+3. `framework_contribution.md`、`resource_report.md`
+4. `审核清单.md`
 
-审核校验：
+最终结构与完整性校验：
 
 ```powershell
-python verify_submission.py --stage review
+python verify_submission.py --stage final
 ```
 
-核心证据：
-
-- `evidence/research_matrix_authorized/`
-- `evidence/context_engineering_seed43/`
-- `evidence/context_engineering_seed44/`
-- `evidence/jit_comparison_v2_final/`
-
-安全边界：排除 API Key、运行态、会话历史、虚拟环境、依赖目录、缓存及应用运行日志；保留 provenance 引用的编译日志和实验 stdout/stderr。未生成最终 ZIP。
-
-当前缺项与验证边界见 [审核清单](审核清单.md)。
+本包不包含 API Key、运行态、会话历史、虚拟环境、依赖目录、缓存及应用运行日志；保留 provenance 所需的编译日志和实验 stdout/stderr。尚未生成 ZIP，供人工审核后再压缩。
