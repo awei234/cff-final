@@ -1,0 +1,13 @@
+{
+  "schema_version": "4.0",
+  "topic_id": "memory-engine",
+  "provider": "deepseek",
+  "benchmark_label": "process_evidence_only",
+  "latex_compilation_status": "compiled_verified",
+  "latex_engine": "XeLaTeX MiKTeX 25.12",
+  "latex_command": "xelatex -interaction=nonstopmode -halt-on-error paper.tex",
+  "latex_return_code": 0,
+  "pdf_pages": 3,
+  "pdf_sha256": "B86933444894E3621160F28E29AC344DEEED6C0CB13AC3AA4B77CD115AD4EDBA",
+  "started_at_utc": "2026-09-24T02:22:33Z"
+}

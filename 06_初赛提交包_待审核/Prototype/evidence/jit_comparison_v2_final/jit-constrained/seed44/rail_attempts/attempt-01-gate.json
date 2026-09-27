@@ -1,0 +1,101 @@
+{
+  "arm": "jit-constrained",
+  "accepted": true,
+  "claims": [
+    {
+      "claim_id": "claim-001",
+      "text": "We ran the checksum script [op:run_success].",
+      "start": 0,
+      "end": 44,
+      "line": 1,
+      "claim_type": "execute",
+      "operation_id": "run_success"
+    },
+    {
+      "claim_id": "claim-002",
+      "text": "The observations file was inspected [op:inspect_existing].",
+      "start": 45,
+      "end": 103,
+      "line": 2,
+      "claim_type": "inspect",
+      "operation_id": "inspect_existing"
+    },
+    {
+      "claim_id": "claim-003",
+      "text": "We queried the local source record [op:query_available].",
+      "start": 104,
+      "end": 160,
+      "line": 3,
+      "claim_type": "query",
+      "operation_id": "query_available"
+    },
+    {
+      "claim_id": "claim-004",
+      "text": "We validated the control artifact [op:validate_success].",
+      "start": 161,
+      "end": 217,
+      "line": 4,
+      "claim_type": "validate",
+      "operation_id": "validate_success"
+    }
+  ],
+  "decisions": [
+    {
+      "claim_id": "claim-001",
+      "text": "We ran the checksum script [op:run_success].",
+      "start": 0,
+      "end": 44,
+      "line": 1,
+      "claim_type": "execute",
+      "operation_id": "run_success",
+      "status": "supported",
+      "evidence_event_ids": [
+        "seed44-01-run_success"
+      ],
+      "reason": "matching_successful_evidence"
+    },
+    {
+      "claim_id": "claim-002",
+      "text": "The observations file was inspected [op:inspect_existing].",
+      "start": 45,
+      "end": 103,
+      "line": 2,
+      "claim_type": "inspect",
+      "operation_id": "inspect_existing",
+      "status": "supported",
+      "evidence_event_ids": [
+        "seed44-04-inspect_existing"
+      ],
+      "reason": "matching_successful_evidence"
+    },
+    {
+      "claim_id": "claim-003",
+      "text": "We queried the local source record [op:query_available].",
+      "start": 104,
+      "end": 160,
+      "line": 3,
+      "claim_type": "query",
+      "operation_id": "query_available",
+      "status": "supported",
+      "evidence_event_ids": [
+        "seed44-06-query_available"
+      ],
+      "reason": "matching_successful_evidence"
+    },
+    {
+      "claim_id": "claim-004",
+      "text": "We validated the control artifact [op:validate_success].",
+      "start": 161,
+      "end": 217,
+      "line": 4,
+      "claim_type": "validate",
+      "operation_id": "validate_success",
+      "status": "supported",
+      "evidence_event_ids": [
+        "seed44-08-validate_success"
+      ],
+      "reason": "matching_successful_evidence"
+    }
+  ],
+  "revision_prompt": null
+}

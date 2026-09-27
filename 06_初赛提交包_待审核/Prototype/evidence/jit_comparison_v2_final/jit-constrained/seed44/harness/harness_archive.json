@@ -1,0 +1,39 @@
+{
+  "manifest": {
+    "memory_mode": "structured_evidence",
+    "planning_mode": "experiment_verify",
+    "enabled_tools": [
+      "retrieval",
+      "ucr",
+      "citation_rail"
+    ],
+    "max_provider_calls": 3,
+    "max_retries": 1,
+    "profile": "experiment_first",
+    "selection_reason": "deterministic selection for experiment_first"
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "fallback_reason": null
+  },
+  "metrics": {
+    "arm": "jit-constrained",
+    "seed": 44,
+    "model": "fixture-policy-v1",
+    "provider_call_count": 1,
+    "latency_seconds": 0.057885,
+    "cost": {
+      "value": 0.0,
+      "currency": "USD",
+      "status": "fixture_no_external_call"
+    }
+  },
+  "evidence": [
+    {
+      "artifact": "results.json",
+      "sha256": "81059f20e6f1067629910de7b2230ec5fd617d7ab82e56b91b9f0b8841aab74e"
+    }
+  ],
+  "archive_sha256": "ac973294bc0dca4d1fd3679e77b1f57ff8708e72137ac87fd3ca01a5be8d0730"
+}

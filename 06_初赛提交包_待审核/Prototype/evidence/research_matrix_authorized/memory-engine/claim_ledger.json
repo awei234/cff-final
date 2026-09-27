@@ -1,0 +1,307 @@
+{
+  "schema_version": "4.0",
+  "topic_id": "memory-engine",
+  "claims": [
+    {
+      "claim_id": "claim-001",
+      "text": "no-rail 对操作 run_success 的审计状态为 supported。",
+      "claim_type": "experiment_observation",
+      "status": "supported",
+      "evidence_refs": [
+        {
+          "artifact": "experiment_results.json",
+          "json_pointer": "/arms/0/decisions/0",
+          "sha256": "980199b53b867b3f1223dcf8eac4bd1104904823fbffe2ae679ce2e1b731f96d"
+        }
+      ],
+      "source_refs": [],
+      "support_reason": "matching_successful_evidence"
+    },
+    {
+      "claim_id": "claim-002",
+      "text": "no-rail 对操作 run_failed 的审计状态为 pending_human_review。",
+      "claim_type": "experiment_observation",
+      "status": "pending_human_review",
+      "evidence_refs": [
+        {
+          "artifact": "experiment_results.json",
+          "json_pointer": "/arms/0/decisions/1",
+          "sha256": "980199b53b867b3f1223dcf8eac4bd1104904823fbffe2ae679ce2e1b731f96d"
+        }
+      ],
+      "source_refs": [],
+      "support_reason": "matching_event_failed"
+    },
+    {
+      "claim_id": "claim-003",
+      "text": "no-rail 对操作 run_denied 的审计状态为 pending_human_review。",
+      "claim_type": "experiment_observation",
+      "status": "pending_human_review",
+      "evidence_refs": [
+        {
+          "artifact": "experiment_results.json",
+          "json_pointer": "/arms/0/decisions/2",
+          "sha256": "980199b53b867b3f1223dcf8eac4bd1104904823fbffe2ae679ce2e1b731f96d"
+        }
+      ],
+      "source_refs": [],
+      "support_reason": "matching_event_denied"
+    },
+    {
+      "claim_id": "claim-004",
+      "text": "no-rail 对操作 inspect_existing 的审计状态为 supported。",
+      "claim_type": "experiment_observation",
+      "status": "supported",
+      "evidence_refs": [
+        {
+          "artifact": "experiment_results.json",
+          "json_pointer": "/arms/0/decisions/3",
+          "sha256": "980199b53b867b3f1223dcf8eac4bd1104904823fbffe2ae679ce2e1b731f96d"
+        }
+      ],
+      "source_refs": [],
+      "support_reason": "matching_successful_evidence"
+    },
+    {
+      "claim_id": "claim-005",
+      "text": "no-rail 对操作 inspect_missing 的审计状态为 pending_human_review。",
+      "claim_type": "experiment_observation",
+      "status": "pending_human_review",
+      "evidence_refs": [
+        {
+          "artifact": "experiment_results.json",
+          "json_pointer": "/arms/0/decisions/4",
+          "sha256": "980199b53b867b3f1223dcf8eac4bd1104904823fbffe2ae679ce2e1b731f96d"
+        }
+      ],
+      "source_refs": [],
+      "support_reason": "matching_event_failed"
+    },
+    {
+      "claim_id": "claim-006",
+      "text": "no-rail 对操作 query_available 的审计状态为 supported。",
+      "claim_type": "experiment_observation",
+      "status": "supported",
+      "evidence_refs": [
+        {
+          "artifact": "experiment_results.json",
+          "json_pointer": "/arms/0/decisions/5",
+          "sha256": "980199b53b867b3f1223dcf8eac4bd1104904823fbffe2ae679ce2e1b731f96d"
+        }
+      ],
+      "source_refs": [],
+      "support_reason": "matching_successful_evidence"
+    },
+    {
+      "claim_id": "claim-007",
+      "text": "no-rail 对操作 query_unavailable 的审计状态为 pending_human_review。",
+      "claim_type": "experiment_observation",
+      "status": "pending_human_review",
+      "evidence_refs": [
+        {
+          "artifact": "experiment_results.json",
+          "json_pointer": "/arms/0/decisions/6",
+          "sha256": "980199b53b867b3f1223dcf8eac4bd1104904823fbffe2ae679ce2e1b731f96d"
+        }
+      ],
+      "source_refs": [],
+      "support_reason": "matching_event_failed"
+    },
+    {
+      "claim_id": "claim-008",
+      "text": "no-rail 对操作 validate_success 的审计状态为 supported。",
+      "claim_type": "experiment_observation",
+      "status": "supported",
+      "evidence_refs": [
+        {
+          "artifact": "experiment_results.json",
+          "json_pointer": "/arms/0/decisions/7",
+          "sha256": "980199b53b867b3f1223dcf8eac4bd1104904823fbffe2ae679ce2e1b731f96d"
+        }
+      ],
+      "source_refs": [],
+      "support_reason": "matching_successful_evidence"
+    },
+    {
+      "claim_id": "claim-009",
+      "text": "no-rail 对操作 validate_failed 的审计状态为 pending_human_review。",
+      "claim_type": "experiment_observation",
+      "status": "pending_human_review",
+      "evidence_refs": [
+        {
+          "artifact": "experiment_results.json",
+          "json_pointer": "/arms/0/decisions/8",
+          "sha256": "980199b53b867b3f1223dcf8eac4bd1104904823fbffe2ae679ce2e1b731f96d"
+        }
+      ],
+      "source_refs": [],
+      "support_reason": "matching_event_failed"
+    },
+    {
+      "claim_id": "claim-010",
+      "text": "prompt-only 对操作 run_success 的审计状态为 supported。",
+      "claim_type": "experiment_observation",
+      "status": "supported",
+      "evidence_refs": [
+        {
+          "artifact": "experiment_results.json",
+          "json_pointer": "/arms/1/decisions/0",
+          "sha256": "980199b53b867b3f1223dcf8eac4bd1104904823fbffe2ae679ce2e1b731f96d"
+        }
+      ],
+      "source_refs": [],
+      "support_reason": "matching_successful_evidence"
+    },
+    {
+      "claim_id": "claim-011",
+      "text": "prompt-only 对操作 inspect_existing 的审计状态为 supported。",
+      "claim_type": "experiment_observation",
+      "status": "supported",
+      "evidence_refs": [
+        {
+          "artifact": "experiment_results.json",
+          "json_pointer": "/arms/1/decisions/1",
+          "sha256": "980199b53b867b3f1223dcf8eac4bd1104904823fbffe2ae679ce2e1b731f96d"
+        }
+      ],
+      "source_refs": [],
+      "support_reason": "matching_successful_evidence"
+    },
+    {
+      "claim_id": "claim-012",
+      "text": "prompt-only 对操作 query_available 的审计状态为 supported。",
+      "claim_type": "experiment_observation",
+      "status": "supported",
+      "evidence_refs": [
+        {
+          "artifact": "experiment_results.json",
+          "json_pointer": "/arms/1/decisions/2",
+          "sha256": "980199b53b867b3f1223dcf8eac4bd1104904823fbffe2ae679ce2e1b731f96d"
+        }
+      ],
+      "source_refs": [],
+      "support_reason": "matching_successful_evidence"
+    },
+    {
+      "claim_id": "claim-013",
+      "text": "prompt-only 对操作 validate_success 的审计状态为 supported。",
+      "claim_type": "experiment_observation",
+      "status": "supported",
+      "evidence_refs": [
+        {
+          "artifact": "experiment_results.json",
+          "json_pointer": "/arms/1/decisions/3",
+          "sha256": "980199b53b867b3f1223dcf8eac4bd1104904823fbffe2ae679ce2e1b731f96d"
+        }
+      ],
+      "source_refs": [],
+      "support_reason": "matching_successful_evidence"
+    },
+    {
+      "claim_id": "claim-014",
+      "text": "full-rail 对操作 run_success 的审计状态为 supported。",
+      "claim_type": "experiment_observation",
+      "status": "supported",
+      "evidence_refs": [
+        {
+          "artifact": "experiment_results.json",
+          "json_pointer": "/arms/2/decisions/0",
+          "sha256": "980199b53b867b3f1223dcf8eac4bd1104904823fbffe2ae679ce2e1b731f96d"
+        }
+      ],
+      "source_refs": [],
+      "support_reason": "matching_successful_evidence"
+    },
+    {
+      "claim_id": "claim-015",
+      "text": "full-rail 对操作 inspect_existing 的审计状态为 supported。",
+      "claim_type": "experiment_observation",
+      "status": "supported",
+      "evidence_refs": [
+        {
+          "artifact": "experiment_results.json",
+          "json_pointer": "/arms/2/decisions/1",
+          "sha256": "980199b53b867b3f1223dcf8eac4bd1104904823fbffe2ae679ce2e1b731f96d"
+        }
+      ],
+      "source_refs": [],
+      "support_reason": "matching_successful_evidence"
+    },
+    {
+      "claim_id": "claim-016",
+      "text": "full-rail 对操作 query_available 的审计状态为 supported。",
+      "claim_type": "experiment_observation",
+      "status": "supported",
+      "evidence_refs": [
+        {
+          "artifact": "experiment_results.json",
+          "json_pointer": "/arms/2/decisions/2",
+          "sha256": "980199b53b867b3f1223dcf8eac4bd1104904823fbffe2ae679ce2e1b731f96d"
+        }
+      ],
+      "source_refs": [],
+      "support_reason": "matching_successful_evidence"
+    },
+    {
+      "claim_id": "claim-017",
+      "text": "full-rail 对操作 validate_success 的审计状态为 supported。",
+      "claim_type": "experiment_observation",
+      "status": "supported",
+      "evidence_refs": [
+        {
+          "artifact": "experiment_results.json",
+          "json_pointer": "/arms/2/decisions/3",
+          "sha256": "980199b53b867b3f1223dcf8eac4bd1104904823fbffe2ae679ce2e1b731f96d"
+        }
+      ],
+      "source_refs": [],
+      "support_reason": "matching_successful_evidence"
+    },
+    {
+      "claim_id": "claim-018",
+      "text": "资料背景：Does Memory Credit Travel? Paired Factorial Audits of LLM-Agent Memory 与主题相关。",
+      "claim_type": "background",
+      "status": "supported",
+      "evidence_refs": [],
+      "source_refs": [
+        {
+          "source_id": "crossref:10.2139/ssrn.7160321",
+          "sha256": "9740ca0cfe062c9384fb42b8c4acd00f7323809cb09511ede5cd2c124e5254ed"
+        }
+      ],
+      "support_reason": "用户已批准正式引用；来源与 Claim 绑定已保留。"
+    },
+    {
+      "claim_id": "claim-019",
+      "text": "资料背景：Hierarchies, Heterarchies, and Agent Memory 与主题相关。",
+      "claim_type": "background",
+      "status": "supported",
+      "evidence_refs": [],
+      "source_refs": [
+        {
+          "source_id": "crossref:10.59350/kyqvq-k4425",
+          "sha256": "1f29750af95db11c225bb016b05fefbc10b602552e1a0f56581836a602a55f7c"
+        }
+      ],
+      "support_reason": "用户已批准正式引用；来源与 Claim 绑定已保留。"
+    },
+    {
+      "claim_id": "claim-020",
+      "text": "资料背景：Hierarchies, Heterarchies, and Agent Memory 与主题相关。",
+      "claim_type": "background",
+      "status": "supported",
+      "evidence_refs": [],
+      "source_refs": [
+        {
+          "source_id": "crossref:10.59350/xn4yy-3ke56",
+          "sha256": "e6bbef597558033749ec4a063c870e627c1a5ced415fba161119d8a6cbf26075"
+        }
+      ],
+      "support_reason": "用户已批准正式引用；来源与 Claim 绑定已保留。"
+    }
+  ],
+  "rules": {
+    "experiment_claims_require_json_pointer": true,
+    "source_claims_require_approved_source": true
+  }
+}

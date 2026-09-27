@@ -1,0 +1,9 @@
+{
+  "workspace": [
+    {
+      "name": "agent-data.json",
+      "path": "agent/workspace/agent-data.json",
+      "isMarkdown": false
+    }
+  ]
+}

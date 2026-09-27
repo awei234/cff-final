@@ -1,0 +1,107 @@
+Metadata-Version: 2.4
+Name: jiuwenswarm
+Version: 0.2.4b4
+Summary: JiuwenSwarm
+License: Apache-2.0
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: <3.14,>=3.11
+License-File: LICENSE
+Requires-Dist: a2ui-agent-sdk==0.2.1
+Requires-Dist: chromadb>=1.5.0
+Requires-Dist: ruamel.yaml>=0.18.0
+Requires-Dist: lark-oapi>=1.5.3
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: openjiuwen[claude,codex] @ git+https://gitcode.com/openJiuwen/agent-core.git@develop
+Requires-Dist: pgvector>=0.4.2
+Requires-Dist: portalocker>=3.2.0
+Requires-Dist: websockets>=12.0
+Requires-Dist: psutil>=7.2.2
+Requires-Dist: aiosqlite>=0.22.1
+Requires-Dist: croniter>=2.0.0
+Requires-Dist: python-telegram-bot>=20.0
+Requires-Dist: discord.py>=2.4.0
+Requires-Dist: slack-bolt>=1.30.0
+Requires-Dist: dingtalk-stream>=0.24.3
+Requires-Dist: wecom-aibot-sdk>=1.0.5
+Requires-Dist: python-socks>=2.8.1
+Requires-Dist: greenlet>=3.3.2
+Requires-Dist: skillnet-ai==0.0.16
+Requires-Dist: mutagen>=1.47.0
+Requires-Dist: google-genai>=1.68.0
+Requires-Dist: opentelemetry-api>=1.28.0
+Requires-Dist: opentelemetry-sdk>=1.28.0
+Requires-Dist: opentelemetry-exporter-otlp-proto-grpc>=1.28.0
+Requires-Dist: opentelemetry-exporter-otlp-proto-http>=1.28.0
+Requires-Dist: sqlite-vec==0.1.6
+Requires-Dist: fastapi>=0.115
+Requires-Dist: uvicorn[standard]>=0.30
+Requires-Dist: python-multipart>=0.0.31
+Requires-Dist: lxml>=6.1.0
+Requires-Dist: pillow>=12.2.0
+Requires-Dist: pydantic>=2.0
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: httpx[socks]>=0.27
+Requires-Dist: json-repair>=0.30.0
+Requires-Dist: gitcode-api>=1.2.20
+Requires-Dist: faiss-cpu>=1.7.0
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: tree-sitter<0.26.0,>=0.25.0
+Requires-Dist: tree-sitter-bash<0.26.0,>=0.25.0
+Provides-Extra: harmony
+Requires-Dist: a2ui-agent-sdk==0.2.1; extra == "harmony"
+Requires-Dist: ruamel.yaml>=0.18.0; extra == "harmony"
+Requires-Dist: lark-oapi>=1.5.3; extra == "harmony"
+Requires-Dist: loguru>=0.7.3; extra == "harmony"
+Requires-Dist: openjiuwen @ git+https://gitcode.com/openJiuwen/agent-core.git@develop ; extra == "harmony"
+Requires-Dist: pgvector>=0.4.2; extra == "harmony"
+Requires-Dist: aiosqlite>=0.22.1; extra == "harmony"
+Requires-Dist: croniter>=2.0.0; extra == "harmony"
+Requires-Dist: python-telegram-bot>=20.0; extra == "harmony"
+Requires-Dist: discord.py>=2.4.0; extra == "harmony"
+Requires-Dist: slack-bolt>=1.30.0; extra == "harmony"
+Requires-Dist: dingtalk-stream>=0.24.3; extra == "harmony"
+Requires-Dist: wecom-aibot-sdk>=1.0.5; extra == "harmony"
+Requires-Dist: python-socks>=2.8.1; extra == "harmony"
+Requires-Dist: greenlet>=3.3.2; extra == "harmony"
+Requires-Dist: skillnet-ai==0.0.16; extra == "harmony"
+Requires-Dist: mutagen>=1.47.0; extra == "harmony"
+Requires-Dist: google-genai>=1.68.0; extra == "harmony"
+Requires-Dist: opentelemetry-api>=1.28.0; extra == "harmony"
+Requires-Dist: opentelemetry-sdk>=1.28.0; extra == "harmony"
+Requires-Dist: opentelemetry-exporter-otlp-proto-grpc>=1.28.0; extra == "harmony"
+Requires-Dist: opentelemetry-exporter-otlp-proto-http>=1.28.0; extra == "harmony"
+Requires-Dist: fastapi>=0.115; extra == "harmony"
+Requires-Dist: uvicorn[standard]>=0.30; extra == "harmony"
+Requires-Dist: httptools>=0.6.3; extra == "harmony"
+Requires-Dist: python-multipart>=0.0.31; extra == "harmony"
+Requires-Dist: lxml>=6.1.0; extra == "harmony"
+Requires-Dist: pillow>=12.2.0; extra == "harmony"
+Requires-Dist: pydantic>=2.0; extra == "harmony"
+Requires-Dist: pyyaml>=6.0; extra == "harmony"
+Requires-Dist: httpx[socks]>=0.27; extra == "harmony"
+Requires-Dist: json-repair>=0.30.0; extra == "harmony"
+Provides-Extra: a2a
+Requires-Dist: a2a-sdk[http-server]==1.0.0; extra == "a2a"
+Provides-Extra: ssh
+Requires-Dist: asyncssh<2.24,>=2.14.0; extra == "ssh"
+Provides-Extra: desktop
+Requires-Dist: pywebview>=5.4; extra == "desktop"
+Provides-Extra: dev
+Requires-Dist: pyinstaller>=6.0.0; extra == "dev"
+Requires-Dist: pywebview>=5.4; extra == "dev"
+Provides-Extra: tui
+Requires-Dist: jiuwenswarm-tui==0.2.4.beta4; extra == "tui"
+Provides-Extra: distribute
+Requires-Dist: openjiuwen[postgres,zmq]; extra == "distribute"
+Provides-Extra: shell-ast
+Provides-Extra: test
+Requires-Dist: a2a-sdk[http-server]==1.0.0; extra == "test"
+Requires-Dist: asyncssh<2.24,>=2.14.0; extra == "test"
+Requires-Dist: pytest>=8.3.5; extra == "test"
+Requires-Dist: pytest-asyncio>=1.0.0; extra == "test"
+Requires-Dist: pytest-html>=4.1.1; extra == "test"
+Requires-Dist: pytest-mock>=3.14.0; extra == "test"
+Requires-Dist: pytest-cov>=7.0.0; extra == "test"
+Requires-Dist: coverage>=7.7.1; extra == "test"
+Requires-Dist: pyyaml>=6.0; extra == "test"
+Dynamic: license-file

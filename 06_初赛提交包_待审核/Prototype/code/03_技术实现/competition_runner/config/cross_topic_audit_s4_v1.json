@@ -1,0 +1,52 @@
+{
+  "stage": "S4-01",
+  "audit_date": "2026-08-28",
+  "scope": "cross_topic_protocol_freeze_and_offline_preflight",
+  "source_commit": "2e449e989c6dd7d2bed4a9c4c7d089645be38502",
+  "protocol_sha256": "870D3CC01B827B63A70AFA577A287F4244CCC1CB905F762B9DD22EC1223BF0FA",
+  "manifest_file_sha256": "F82F65F5886BE4E5417DFD7C7801BBD6BFC9277762CB9F022E52922470850C72",
+  "preflight_file_sha256": "E1F3324507B45DDEF682A68CEABEA9BB7189FD6800F1771FE8F0A0D5FD667522",
+  "independent_checks": {
+    "topics": 3,
+    "providers": 3,
+    "tasks": 9,
+    "duplicate_task_ids": 0,
+    "missing_expected_tasks": 0,
+    "pending_authorization": 6,
+    "blocked_budget": 3,
+    "invalid_provider_statuses": 0,
+    "required_artifacts": 14,
+    "duplicate_artifacts": 0,
+    "formal_output_directory_created": false
+  },
+  "overwrite_test": {
+    "second_run_exit_code": 2,
+    "refusal_observed": true,
+    "manifest_unchanged": true,
+    "preflight_unchanged": true
+  },
+  "execution": {
+    "model_api_calls": 0,
+    "deepseek_api_calls": 0,
+    "live_results_created": 0
+  },
+  "verification": {
+    "cross_topic_tests": "5 passed",
+    "competition_runner": "57 passed",
+    "ucr_benchmark": "58 passed",
+    "jiuwenswarm_direct_deterministic": "14 passed",
+    "openjiuwen_0_1_16_native_runtime": "2 passed",
+    "python_compile": "passed",
+    "json_parse": "passed",
+    "git_diff_check": "passed",
+    "tracked_text_files_scanned": 431,
+    "exact_glm_key_occurrences": 0,
+    "exact_qwen_key_occurrences": 0,
+    "exact_deepseek_key_occurrences": 0
+  },
+  "interpretation_limits": [
+    "This step freezes and validates the protocol only; it does not complete cross-topic generation.",
+    "GLM and Qwen live tasks require separate explicit paid-call authorization.",
+    "DeepSeek remains blocked for budget and must not be called."
+  ]
+}

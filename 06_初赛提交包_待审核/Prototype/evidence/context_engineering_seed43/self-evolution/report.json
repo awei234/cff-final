@@ -1,0 +1,19 @@
+{
+  "abstract": "本报告检验带证据的反思循环能否避免把未执行任务写成已完成。三个实验臂均完成且返回码为0：no-rail 的 UCR=0.5556（5/9），prompt-only 与 full-rail 的 UCR=0.0（0/4）。UCR 仅作为过程证据，不证明真实自我进化。",
+  "method": "比较 no-rail、prompt-only、full-rail 三个实验臂，对每个决策操作记录状态与理由，区分 supported 与 unexecuted，并按 unexecuted/分母计算 UCR，同时记录 rail.enabled、attempts、accepted。",
+  "experiment_setting": "no-rail：rail.enabled=false，attempts=0，accepted=true，9 个决策操作，supported=4，unexecuted=5，indeterminate=0。prompt-only：rail.enabled=false，attempts=0，accepted=true，4 个决策操作，supported=4，unexecuted=0。full-rail：rail.enabled=true，attempts=1，accepted=true，4 个决策操作，supported=4，unexecuted=0。CFR 与 NFR 在 UCR 场景中未测量。",
+  "results": "no-rail UCR=0.5556（5/9），supported=4，unexecuted=5，indeterminate=0（claim-001、claim-004、claim-006、claim-008）。prompt-only UCR=0.0（0/4），supported=4，unexecuted=0（claim-010 至 claim-013）。full-rail UCR=0.0（0/4），supported=4，unexecuted=0，rail.attempts=1，accepted=true（claim-014 至 claim-017）。任务成功率均为1.0。",
+  "limitations": "UCR 仅为过程证据，不能推断真实自我进化或泛化能力。CFR 与 NFR 未测量。citation_allowed=false 的材料不得作为正式引用，citation_coverage=0.0。claim-002、claim-003、claim-005、claim-007、claim-009、claim-018、claim-019、claim-020 仍待人工复核。full-rail 的 rail.attempts=1 与 accepted=true 是否足以支持护栏有效性仍需确认。",
+  "conclusion": "当前基准下，带证据的反思循环与审计表达改善相关：no-rail 出现 5 个 unexecuted，而 prompt-only 与 full-rail 均为 0。但该结果不证明真实自我进化，也不建立因果作用；需补充独立基准并完成人工确认。",
+  "citation_mapping": [],
+  "unsupported_claims": [
+    "claim-002",
+    "claim-003",
+    "claim-005",
+    "claim-007",
+    "claim-009",
+    "claim-018",
+    "claim-019",
+    "claim-020"
+  ]
+}

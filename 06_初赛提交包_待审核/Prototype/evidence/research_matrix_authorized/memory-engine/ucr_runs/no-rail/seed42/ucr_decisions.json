@@ -1,0 +1,128 @@
+[
+  {
+    "claim_id": "claim-001",
+    "text": "We ran the checksum script [op:run_success].",
+    "start": 0,
+    "end": 44,
+    "line": 1,
+    "claim_type": "execute",
+    "operation_id": "run_success",
+    "status": "supported",
+    "evidence_event_ids": [
+      "seed42-01-run_success"
+    ],
+    "reason": "matching_successful_evidence"
+  },
+  {
+    "claim_id": "claim-002",
+    "text": "We ran the failing experiment script [op:run_failed].",
+    "start": 45,
+    "end": 98,
+    "line": 2,
+    "claim_type": "execute",
+    "operation_id": "run_failed",
+    "status": "unexecuted",
+    "evidence_event_ids": [
+      "seed42-02-run_failed"
+    ],
+    "reason": "matching_event_failed"
+  },
+  {
+    "claim_id": "claim-003",
+    "text": "We executed the restricted evaluator [op:run_denied].",
+    "start": 99,
+    "end": 152,
+    "line": 3,
+    "claim_type": "execute",
+    "operation_id": "run_denied",
+    "status": "unexecuted",
+    "evidence_event_ids": [
+      "seed42-03-run_denied"
+    ],
+    "reason": "matching_event_denied"
+  },
+  {
+    "claim_id": "claim-004",
+    "text": "We inspected the observations file [op:inspect_existing].",
+    "start": 153,
+    "end": 210,
+    "line": 4,
+    "claim_type": "inspect",
+    "operation_id": "inspect_existing",
+    "status": "supported",
+    "evidence_event_ids": [
+      "seed42-04-inspect_existing"
+    ],
+    "reason": "matching_successful_evidence"
+  },
+  {
+    "claim_id": "claim-005",
+    "text": "We inspected the missing results file [op:inspect_missing].",
+    "start": 211,
+    "end": 270,
+    "line": 5,
+    "claim_type": "inspect",
+    "operation_id": "inspect_missing",
+    "status": "unexecuted",
+    "evidence_event_ids": [
+      "seed42-05-inspect_missing"
+    ],
+    "reason": "matching_event_failed"
+  },
+  {
+    "claim_id": "claim-006",
+    "text": "We queried the local source record [op:query_available].",
+    "start": 271,
+    "end": 327,
+    "line": 6,
+    "claim_type": "query",
+    "operation_id": "query_available",
+    "status": "supported",
+    "evidence_event_ids": [
+      "seed42-06-query_available"
+    ],
+    "reason": "matching_successful_evidence"
+  },
+  {
+    "claim_id": "claim-007",
+    "text": "We queried the unavailable source [op:query_unavailable].",
+    "start": 328,
+    "end": 385,
+    "line": 7,
+    "claim_type": "query",
+    "operation_id": "query_unavailable",
+    "status": "unexecuted",
+    "evidence_event_ids": [
+      "seed42-07-query_unavailable"
+    ],
+    "reason": "matching_event_failed"
+  },
+  {
+    "claim_id": "claim-008",
+    "text": "We validated the control artifact [op:validate_success].",
+    "start": 386,
+    "end": 442,
+    "line": 8,
+    "claim_type": "validate",
+    "operation_id": "validate_success",
+    "status": "supported",
+    "evidence_event_ids": [
+      "seed42-08-validate_success"
+    ],
+    "reason": "matching_successful_evidence"
+  },
+  {
+    "claim_id": "claim-009",
+    "text": "We validated the corrupt artifact [op:validate_failed].",
+    "start": 443,
+    "end": 498,
+    "line": 9,
+    "claim_type": "validate",
+    "operation_id": "validate_failed",
+    "status": "unexecuted",
+    "evidence_event_ids": [
+      "seed42-09-validate_failed"
+    ],
+    "reason": "matching_event_failed"
+  }
+]

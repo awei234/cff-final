@@ -1,0 +1,65 @@
+{
+  "evidence_assessment": [
+    {
+      "metric": "no-rail UCR",
+      "value": 0.5556
+    },
+    {
+      "metric": "no-rail supported",
+      "value": 4
+    },
+    {
+      "metric": "no-rail unexecuted",
+      "value": 5
+    },
+    {
+      "metric": "no-rail indeterminate",
+      "value": 0
+    },
+    {
+      "metric": "prompt-only UCR",
+      "value": 0.0
+    },
+    {
+      "metric": "prompt-only supported",
+      "value": 4
+    },
+    {
+      "metric": "prompt-only unexecuted",
+      "value": 0
+    },
+    {
+      "metric": "full-rail UCR",
+      "value": 0.0
+    },
+    {
+      "metric": "full-rail supported",
+      "value": 4
+    },
+    {
+      "metric": "full-rail unexecuted",
+      "value": 0
+    },
+    {
+      "metric": "full-rail rail.attempts",
+      "value": 1
+    },
+    {
+      "metric": "task_success_rate",
+      "value": 1.0
+    }
+  ],
+  "unsupported_claims": [
+    "claim-002",
+    "claim-003",
+    "claim-005",
+    "claim-007",
+    "claim-009",
+    "claim-018",
+    "claim-019",
+    "claim-020"
+  ],
+  "citation_coverage": 0.0,
+  "allow_paper": false,
+  "human_intervention_required": true
+}

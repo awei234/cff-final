@@ -1,0 +1,14 @@
+[console_scripts]
+jiuwenbox = jiuwenbox.cli.jiuwenbox:main
+jiuwenbox-server = jiuwenbox.server.launcher:main
+jiuwenswarm = jiuwenswarm.cli.main:main
+jiuwenswarm-acp = jiuwenswarm.gateway.channel_manager.protocol.acp.acp_connect:main
+jiuwenswarm-acp-chat = jiuwenswarm.acp.cli:main
+jiuwenswarm-agentserver = jiuwenswarm.server.app_agentserver:main
+jiuwenswarm-app = jiuwenswarm.app:main
+jiuwenswarm-desktop = jiuwenswarm.channels.desktop.desktop_app:main
+jiuwenswarm-gateway = jiuwenswarm.gateway.app_gateway:main
+jiuwenswarm-init = jiuwenswarm.init_workspace:main
+jiuwenswarm-start = jiuwenswarm.start_services:main
+jiuwenswarm-stop = jiuwenswarm.debug_launcher:main
+jiuwenswarm-web = jiuwenswarm.channels.web.app_web:main

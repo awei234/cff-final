@@ -1,0 +1,67 @@
+{
+  "evidence_assessment": [
+    {
+      "metric": "UCR_no_rail",
+      "value": 0.5556
+    },
+    {
+      "metric": "UCR_prompt_only",
+      "value": 0.0
+    },
+    {
+      "metric": "UCR_full_rail",
+      "value": 0.0
+    },
+    {
+      "metric": "task_success_rate_no_rail",
+      "value": 1.0
+    },
+    {
+      "metric": "task_success_rate_prompt_only",
+      "value": 1.0
+    },
+    {
+      "metric": "task_success_rate_full_rail",
+      "value": 1.0
+    },
+    {
+      "metric": "rail_attempts_full_rail",
+      "value": 1
+    },
+    {
+      "metric": "supported_decisions_no_rail",
+      "value": 4
+    },
+    {
+      "metric": "unexecuted_decisions_no_rail",
+      "value": 5
+    },
+    {
+      "metric": "supported_decisions_prompt_only",
+      "value": 4
+    },
+    {
+      "metric": "supported_decisions_full_rail",
+      "value": 4
+    }
+  ],
+  "unsupported_claims": [
+    "claim-002",
+    "claim-003",
+    "claim-005",
+    "claim-007",
+    "claim-009"
+  ],
+  "citation_coverage": 1.0,
+  "allow_paper": true,
+  "human_intervention_required": false,
+  "claim_allowlist_path": "../最终论文允许使用的Claim清单.md",
+  "paper_eligible_claims": ["claim-001", "claim-004", "claim-006", "claim-008", "claim-010", "claim-011", "claim-012", "claim-013", "claim-014", "claim-015", "claim-016", "claim-017", "claim-018", "claim-019", "claim-020"],
+  "paper_excluded_claims": ["claim-002", "claim-003", "claim-005", "claim-007", "claim-009"],
+  "source_review": {
+    "decision": "approved_for_formal_citation",
+    "approved_claims": ["claim-018", "claim-019", "claim-020"],
+    "rationale": "User explicitly approved claim-018 through claim-020 and their bound Crossref sources for formal citation."
+  },
+  "review_decision_artifact": "../human_review_decisions.json"
+}
