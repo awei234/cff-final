@@ -8,6 +8,16 @@ import pytest
 import run_experiment
 
 
+def test_cli_exposes_jit_as_the_fourth_arm():
+    """Removing the fourth arm from the public runner would make it irreproducible."""
+    assert run_experiment.ARMS == (
+        "no-rail",
+        "prompt-only",
+        "full-rail",
+        "jit-constrained",
+    )
+
+
 def test_all_mode_rejects_the_whole_batch_before_any_run_is_written(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ):

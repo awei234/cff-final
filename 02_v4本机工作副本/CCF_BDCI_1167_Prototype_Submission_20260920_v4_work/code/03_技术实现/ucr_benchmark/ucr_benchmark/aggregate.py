@@ -7,7 +7,8 @@ from pathlib import Path
 from typing import Any, Sequence
 
 
-ARMS = ("no-rail", "prompt-only", "full-rail")
+LEGACY_ARMS = ("no-rail", "prompt-only", "full-rail")
+ARMS = (*LEGACY_ARMS, "jit-constrained")
 SEEDS = (42, 43, 44)
 
 
@@ -52,9 +53,14 @@ def aggregate_runs(
     selected_seeds = tuple(int(seed) for seed in seeds)
     if not selected_seeds or len(set(selected_seeds)) != len(selected_seeds):
         raise ValueError("seeds must be non-empty and unique")
+    has_complete_jit_arm = all(
+        (root / "jit-constrained" / f"seed{seed}" / "results.json").is_file()
+        for seed in selected_seeds
+    )
+    selected_arms = ARMS if has_complete_jit_arm else LEGACY_ARMS
     loaded = {
         (arm, seed): _load(root, arm, seed)
-        for arm in ARMS
+        for arm in selected_arms
         for seed in selected_seeds
     }
     summary: dict[str, Any] = {
@@ -66,7 +72,7 @@ def aggregate_runs(
         "paired_comparable_seed_counts": {},
     }
     values: dict[str, list[float | None]] = {}
-    for arm in ARMS:
+    for arm in selected_arms:
         arm_values: list[float | None] = []
         numerators: list[int] = []
         denominators: list[int] = []
@@ -118,7 +124,20 @@ def aggregate_runs(
                 ),
             },
         }
-    for left, right in (("prompt-only", "no-rail"), ("full-rail", "no-rail"), ("full-rail", "prompt-only")):
+    pairs = [
+        ("prompt-only", "no-rail"),
+        ("full-rail", "no-rail"),
+        ("full-rail", "prompt-only"),
+    ]
+    if has_complete_jit_arm:
+        pairs.extend(
+            [
+                ("jit-constrained", "no-rail"),
+                ("jit-constrained", "prompt-only"),
+                ("jit-constrained", "full-rail"),
+            ]
+        )
+    for left, right in pairs:
         key = f"{left}_minus_{right}"
         differences = [
             round(a - b, 4) if a is not None and b is not None else None

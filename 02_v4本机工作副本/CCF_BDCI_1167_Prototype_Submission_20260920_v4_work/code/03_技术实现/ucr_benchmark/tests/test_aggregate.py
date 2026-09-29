@@ -76,6 +76,37 @@ def test_aggregation_requires_complete_arms_and_computes_paired_differences(tmp_
     assert summary["paired_differences"]["full-rail_minus_no-rail"] == [-0.5, -0.25, -0.75]
 
 
+def test_aggregation_includes_jit_when_fourth_arm_is_present(tmp_path: Path):
+    """Omitting JIT from aggregation would leave a twelve-run batch unreported."""
+    for arm, numerators in {
+        "no-rail": (2, 1, 3),
+        "prompt-only": (1, 1, 0),
+        "full-rail": (0, 0, 0),
+        "jit-constrained": (0, 0, 0),
+    }.items():
+        for seed, numerator in zip((42, 43, 44), numerators):
+            _write_result(tmp_path, arm, seed, numerator, 4)
+
+    summary = aggregate_runs(tmp_path)
+
+    assert list(summary["arms"]) == [
+        "no-rail",
+        "prompt-only",
+        "full-rail",
+        "jit-constrained",
+    ]
+    assert summary["paired_differences"]["jit-constrained_minus_no-rail"] == [
+        -0.5,
+        -0.25,
+        -0.75,
+    ]
+    assert summary["paired_differences"]["jit-constrained_minus_full-rail"] == [
+        0.0,
+        0.0,
+        0.0,
+    ]
+
+
 def test_aggregation_rejects_missing_seed_and_unactivated_ucr(tmp_path: Path):
     _write_result(tmp_path, "no-rail", 42, 1, 2)
     with pytest.raises(ValueError, match="missing result"):

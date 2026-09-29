@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from ucr_benchmark.experiment import CommandModelAdapter, FixturePolicyAdapter, build_prompt, run_one, score_run
+from ucr_benchmark.experiment import ARMS, CommandModelAdapter, FixturePolicyAdapter, build_prompt, run_one, score_run
 
 
 def test_experiment_records_raw_inputs_outputs_trace_decisions_and_provenance(tmp_path: Path):
@@ -136,3 +136,63 @@ def test_fixture_full_rail_revises_after_format_feedback(tmp_path: Path):
     assert config["generation"]["contract_satisfied"] is True
     assert config["rail"]["accepted"] is True
     assert results["metrics"]["UCR"]["value"] == 0.0
+
+
+def test_jit_constrained_run_records_validated_policy_and_archive(tmp_path: Path):
+    """Dropping JIT integration must make the fourth arm lose its audit artifacts."""
+    run_dir = run_one("jit-constrained", 42, FixturePolicyAdapter(), tmp_path / "runs")
+
+    assert ARMS == ("no-rail", "prompt-only", "full-rail", "jit-constrained")
+    manifest = json.loads((run_dir / "harness_manifest.json").read_text(encoding="utf-8"))
+    validation = json.loads((run_dir / "harness_validation.json").read_text(encoding="utf-8"))
+    runtime = json.loads((run_dir / "runtime_metrics.json").read_text(encoding="utf-8"))
+    archive = json.loads((run_dir / "harness" / "harness_archive.json").read_text(encoding="utf-8"))
+    config = json.loads((run_dir / "config.json").read_text(encoding="utf-8"))
+
+    assert manifest == {
+        "memory_mode": "structured_evidence",
+        "planning_mode": "experiment_verify",
+        "enabled_tools": ["retrieval", "ucr", "citation_rail"],
+        "max_provider_calls": 3,
+        "max_retries": 1,
+        "profile": "experiment_first",
+        "selection_reason": "deterministic selection for experiment_first",
+    }
+    assert validation == {"valid": True, "errors": [], "fallback_reason": None}
+    assert config["rail"]["enabled"] is True
+    assert runtime["provider_call_count"] == 1
+    assert runtime["cost"]["value"] == 0.0
+    assert runtime["cost"]["status"] == "fixture_no_external_call"
+    assert runtime["latency_seconds"] >= 0
+    assert archive["manifest"] == manifest
+    assert archive["validation"] == validation
+    assert archive["metrics"]["arm"] == "jit-constrained"
+    assert len(archive["archive_sha256"]) == 64
+
+
+def test_jit_manifest_caps_provider_calls_before_execution(tmp_path: Path):
+    """Caller-supplied retry values must not expand the validated JIT budget."""
+
+    class NeverSatisfiesContract:
+        model_id = "never-satisfies-contract"
+
+        def __init__(self) -> None:
+            self.calls = 0
+
+        def generate(self, prompt, config):
+            self.calls += 1
+            return "No detectable completion sentence."
+
+    adapter = NeverSatisfiesContract()
+    run_dir = run_one(
+        "jit-constrained",
+        42,
+        adapter,
+        tmp_path / "runs",
+        max_generation_attempts=9,
+        max_rail_attempts=9,
+    )
+
+    runtime = json.loads((run_dir / "runtime_metrics.json").read_text(encoding="utf-8"))
+    assert adapter.calls == 2
+    assert runtime["provider_call_count"] == 2

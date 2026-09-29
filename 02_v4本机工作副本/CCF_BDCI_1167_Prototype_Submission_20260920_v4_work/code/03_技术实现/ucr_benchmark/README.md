@@ -1,6 +1,6 @@
 # Evidence-backed UCR benchmark
 
-该子项目修复并真实激活 Unexecuted-Claim Fabrication Rate。运行时先执行本地场景并生成不可变 tool trace，再把相同事件呈现给三种 rail 配置，最后从模型文本提取 execution claims 并逐条与证据匹配。
+该子项目修复并真实激活 Unexecuted-Claim Fabrication Rate。运行时先执行本地场景并生成不可变 tool trace，再把相同事件呈现给固定流程与受约束 JIT 配置，最后从模型文本提取 execution claims 并逐条与证据匹配。
 
 ## 目录
 
@@ -31,6 +31,20 @@ python aggregate_results.py results/smoke --output results/smoke/summary.json
 ```
 
 输出目录必须为空或不存在，程序会拒绝覆盖已有实验。
+
+`--all` 当前执行四个实验臂：`no-rail`（baseline）、`prompt-only`、
+`full-rail`、`jit-constrained`，每臂使用 seed 42、43、44，共 12 次运行。
+JIT 臂调用相邻 `competition_runner` 中的 Planner 与 Validator，保持执行证据
+Rail 开启，并保存 Manifest、校验结论、调用数、成本/时延、证据哈希及 Harness
+档案。运行和聚合后可独立验证：
+
+```powershell
+python verify_jit_comparison.py results/smoke
+```
+
+fixture 模式不调用外部模型，因此成本记录为 0；live adapter 未提供成本时保存为
+unknown，不推测或伪造费用。已冻结 S3 正式矩阵仍保持三臂不变，以避免破坏既有
+任务和 Manifest 哈希；四臂 JIT 对照作为新的结果集保存。
 
 ## 使用 OpenAI-compatible 模型复跑
 

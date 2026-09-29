@@ -9,6 +9,8 @@ import pytest
 
 BASE = Path(__file__).resolve().parents[1]
 PROJECT_ROOT = BASE.parents[1]
+WORK_COPY_ROOT = BASE.parents[2]
+JIT_RESULTS = WORK_COPY_ROOT / "demo_runs" / "jit_comparison_v2_final"
 
 
 def _sha256(path: Path) -> str:
@@ -45,14 +47,14 @@ def test_pytest_basetemp_does_not_require_an_untracked_parent_directory() -> Non
     ("arm", "seed"),
     [
         (arm, seed)
-        for arm in ("no-rail", "prompt-only", "full-rail")
+        for arm in ("no-rail", "prompt-only", "full-rail", "jit-constrained")
         for seed in (42, 43, 44)
     ],
 )
 def test_checked_out_model_output_preserves_provenance_bytes(
     arm: str, seed: int
 ) -> None:
-    run_dir = BASE / "results" / "after" / arm / f"seed{seed}"
+    run_dir = JIT_RESULTS / arm / f"seed{seed}"
     provenance = json.loads(
         (run_dir / "provenance.json").read_text(encoding="utf-8")
     )

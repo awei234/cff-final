@@ -10,7 +10,9 @@ from ucr_benchmark.schema import write_json
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Aggregate complete three-arm UCR results")
+    parser = argparse.ArgumentParser(
+        description="Aggregate complete UCR results (legacy three-arm or constrained-JIT four-arm)"
+    )
     parser.add_argument("results_root", type=Path)
     parser.add_argument("--output", type=Path)
     parser.add_argument(

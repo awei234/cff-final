@@ -22,7 +22,7 @@ def preflight_run_directories(pairs: list[tuple[str, int]], output_root: Path) -
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Run evidence-backed UCR experiments")
-    parser.add_argument("--all", action="store_true", help="run all three arms and seeds 42/43/44")
+    parser.add_argument("--all", action="store_true", help="run all four arms and seeds 42/43/44")
     parser.add_argument("--arm", choices=ARMS)
     parser.add_argument("--seed", type=int)
     parser.add_argument("--mode", choices=("fixture", "live"), default="fixture")

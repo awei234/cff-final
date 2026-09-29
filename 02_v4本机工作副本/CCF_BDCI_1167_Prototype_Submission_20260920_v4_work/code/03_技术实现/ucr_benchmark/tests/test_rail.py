@@ -51,3 +51,15 @@ def test_full_rail_rejects_unlabelled_completion_claim_as_unverifiable():
     assert result["accepted"] is False
     assert result["decisions"][0]["status"] == "unexecuted"
     assert result["decisions"][0]["reason"] == "aggregate_contains_unsuccessful_events"
+
+
+def test_jit_constrained_cannot_bypass_execution_evidence_rail():
+    """Treating JIT like prompt-only would accept an unsupported completion claim."""
+    result = gate_output(
+        "We confirmed that every requested operation completed.",
+        EVENTS,
+        arm="jit-constrained",
+    )
+
+    assert result["accepted"] is False
+    assert result["revision_prompt"]

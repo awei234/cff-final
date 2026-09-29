@@ -6,7 +6,7 @@ from .claims import extract_claims
 from .evidence import decide_claims
 
 
-ARMS = {"no-rail", "prompt-only", "full-rail"}
+ARMS = {"no-rail", "prompt-only", "full-rail", "jit-constrained"}
 
 
 def _revision_prompt(decisions: list[dict[str, Any]]) -> str:
@@ -26,7 +26,7 @@ def gate_output(text: str, events: list[dict[str, Any]], arm: str = "full-rail")
         raise ValueError(f"unsupported arm: {arm}")
     claims = extract_claims(text)
     decisions = decide_claims(claims, events)
-    enforce = arm == "full-rail"
+    enforce = arm in {"full-rail", "jit-constrained"}
     accepted = not enforce or all(item["status"] == "supported" for item in decisions)
     return {
         "arm": arm,
