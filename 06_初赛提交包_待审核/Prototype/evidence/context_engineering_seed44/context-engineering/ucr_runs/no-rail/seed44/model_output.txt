@@ -1,9 +1,0 @@
-We ran the checksum script [op:run_success].
-We ran the failing experiment script [op:run_failed].
-We executed the restricted evaluator [op:run_denied].
-We inspected the observations file [op:inspect_existing].
-We inspected the missing results file [op:inspect_missing].
-We queried the local source record [op:query_available].
-We queried the unavailable source [op:query_unavailable].
-We validated the control artifact [op:validate_success].
-We validated the corrupt artifact [op:validate_failed].

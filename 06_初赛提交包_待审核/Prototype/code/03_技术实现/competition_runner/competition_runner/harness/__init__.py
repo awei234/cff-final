@@ -1,1 +1,0 @@
-"""Constrained JIT Harness components."""

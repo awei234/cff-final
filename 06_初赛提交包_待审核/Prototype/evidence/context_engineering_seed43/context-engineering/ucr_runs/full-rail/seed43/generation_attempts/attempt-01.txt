@@ -1,2 +1,0 @@
-We ran the checksum script [op:run_success].
-We ran the failing experiment [op:run_failed].
