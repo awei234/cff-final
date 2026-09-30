@@ -33,11 +33,34 @@
   "paper": {
     "path": "paper/paper.tex",
     "pdf_path": "paper/paper.pdf",
+    "editable_source": "paper/paper.docx",
+    "editable_source_sha256": "eef7facb24302dc200c76f2535d87b52973d0a0c19057c51068834165f9e0b7a",
+    "source_format": "docx (Microsoft Word 2021 export)",
     "latex_compilation_status": "compiled_verified",
     "pdf_included": true,
-    "pdf_sha256": "a14f4e7cb4352566220a8ed8b140b273d02ea45eb827b3b1201df2bbc44e88cb",
-    "pdf_bytes": 88811,
-    "pdf_page_count": 2
+    "pdf_sha256": "26f9ed09df8964697bc5d10141a3c16c0ebd4e747b2419339be6fc5a93f5ad84",
+    "pdf_bytes": 1091495,
+    "pdf_page_count": 15,
+    "revision_note": "round-1 review-driven revision applied to paper/paper.docx; concise revision plus a slight line-spacing tightening to stay within the 15-page limit; PDF re-exported via Microsoft Word"
+  },
+  "paper_generated_v5": {
+    "note": "Regenerated through the JiuwenSwarm research-matrix pipeline; the original paper/paper.docx and paper/paper.pdf were NOT overwritten.",
+    "route": "english_latex",
+    "reference": "paper/paper.docx (imported CGA-Agent English paper)",
+    "title": "CGA-Agent: Structured Context Engineering and Claim-Evidence Guardrails for Trustworthy Multi-Agent LLM Systems",
+    "latex_source": "paper/paper.tex",
+    "latex_source_sha256": "76ec8bac29c2128f07a7f57a66b382d0fada563c3acb851ff05fabe2c5f76e4e",
+    "latex_source_bytes": 101725,
+    "pdf_path": "paper/paper_v5_en.pdf",
+    "pdf_sha256": "07e6fb0c65da9467d0b672fb83f3e0b2201afe3df378a178c23849bbdb16c3ee",
+    "pdf_bytes": 211703,
+    "pdf_page_count": 15,
+    "page_size": "A4 (595.28 x 841.89 pts)",
+    "compiled_with": "XeLaTeX (MiKTeX 25.12), two passes, no fatal error, Overfull \\hbox = 0",
+    "layout_note": "Tables and figures normalised to a single-column width (tables wrapped in \\resizebox{\\columnwidth}{!}; pgfplots axis width = \\columnwidth; TikZ figures wrapped in \\resizebox{\\columnwidth}{!}); the former placeholder Figure 4 was replaced by a vector bar chart drawn from the SR column of Table 5; two over-wide equations were split. No data, number, claim or reference was changed.",
+    "generated_at": "2026-09-30T17:15:06+08:00",
+    "source_pipeline_run": "demo_runs/research_matrix_v5_live",
+    "original_paper_preserved": true
   },
   "source_inventory": {
     "path": "code/",
@@ -82,6 +105,32 @@
     "latex_compilation_status": "compiled_verified",
     "pdf_included": true
   },
+  "matrix_v5_live": {
+    "path": "demo_runs/research_matrix_v5_live/",
+    "run_at": "2026-09-30T09:05:00+08:00",
+    "status": "completed_pending_human_review",
+    "valid": true,
+    "provider": "deepseek",
+    "model": "deepseek-chat",
+    "provider_calls": 9,
+    "prompt_tokens": 22568,
+    "completion_tokens": 4432,
+    "total_tokens": 27000,
+    "provider_latency_seconds": 28.749,
+    "wall_clock_seconds": 191.645,
+    "max_calls_per_topic": 3,
+    "max_total_calls": 9,
+    "topics": {
+      "context-engineering": {"provider_calls": 3, "retrieval_status": "partial_retrieval", "kept_sources": 10},
+      "memory-engine": {"provider_calls": 3, "retrieval_status": "retrieved", "kept_sources": 10},
+      "self-evolution": {"provider_calls": 3, "retrieval_status": "partial_retrieval", "kept_sources": 10}
+    },
+    "provider_trace_sha256": "754a647a92d696dbff871a0392034bb7c22ce8ceaf13abef8636edfa97403a67",
+    "matrix_execution_report_sha256": "944437505699e512b1465b15f25baade8de3f50b676d9ff19c2ce82584d9950f",
+    "matrix_verification_report_sha256": "432311c8236f81bba590c9e3f3897c14af00c1b512aa1822ab9f5331823e5bf3",
+    "unified_paper_tex_sha256": "98e714deb467f48312ca74f67888d2e43e84f65dc554559ac9158b1b1801438c",
+    "interpretation": "UCR 结果为 process_evidence_only；来源默认 citation_allowed=false，需人工审批后方可正式引用。"
+  },
   "server_runs": {
     "offline_mock": {
       "path": "server:/data/vergil-CCF/ccf/v4_server_workspace/demo_runs/research_matrix_v4_mock",
@@ -125,7 +174,10 @@
     "submission_ready only means technical structure/security checks passed; it does not mean the contest webpage was submitted.",
     "ZIP SHA-256 is recorded externally to avoid a self-referential manifest hash.",
     "The final v4 package excludes historical v3 runs, mock/retry runs, old PDFs, LaTeX temporary files, caches and bytecode.",
-    "UCR results are process_evidence_only and do not establish domain-science conclusions."
+    "UCR results are process_evidence_only and do not establish domain-science conclusions.",
+    "paper/paper.tex was regenerated as an English LaTeX source through the research-matrix pipeline; the original paper/paper.docx and paper/paper.pdf were preserved.",
+    "The regenerated English PDF is stored as paper/paper_v5_en.pdf to avoid overwriting the original paper/paper.pdf.",
+    "On 2026-09-30 17:15 (+08:00) paper/paper_v5_en.pdf was rebuilt (layout-only pass) so that every table and every figure is exactly one column wide; the placeholder Figure 4 was replaced by a vector bar chart of the Table 5 SR column, and two over-wide equations were split. No data, number, claim or reference was changed; the original paper/paper.docx and paper/paper.pdf remain untouched."
   ],
   "human_review_status": "pending",
   "matrix_status": "completed_pending_human_review",
@@ -160,6 +212,7 @@
     "pdf_included": true,
     "pdf_paths": [
       "paper/paper.pdf",
+      "paper/paper_v5_en.pdf",
       "demo_runs/research_matrix_v4/context-engineering/paper.pdf",
       "demo_runs/research_matrix_v4/memory-engine/paper.pdf",
       "demo_runs/research_matrix_v4/self-evolution/paper.pdf"

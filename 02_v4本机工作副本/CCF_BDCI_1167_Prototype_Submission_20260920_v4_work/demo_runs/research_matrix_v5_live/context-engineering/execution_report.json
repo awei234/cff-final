@@ -1,0 +1,15 @@
+{
+  "schema_version": "4.0",
+  "topic_id": "context-engineering",
+  "status": "completed_pending_human_review",
+  "stages": {
+    "retrieval": "partial_retrieval",
+    "experiment": "completed",
+    "plan": "completed",
+    "review": "completed",
+    "report": "completed"
+  },
+  "provider_calls": 3,
+  "human_review_required": true,
+  "errors": []
+}

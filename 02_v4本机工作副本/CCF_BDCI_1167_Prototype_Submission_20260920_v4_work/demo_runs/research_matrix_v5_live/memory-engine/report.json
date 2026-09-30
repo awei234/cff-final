@@ -1,0 +1,19 @@
+{
+  "abstract": "本报告检验结构化记忆记录是否有助于 Agent 保持审计上下文一致性。三臂实验（no-rail、prompt-only、full-rail）均完成且 return_code=0，任务成功率均为1.0。UCR 仅作为流程证据：no-rail=0.5556（5/9），prompt-only=0.0（0/4），full-rail=0.0（0/4）。CFR 与 NFR 在 UCR 场景中未测量。结论不证明领域效果，citation_allowed=false 的来源不得正式引用。",
+  "method": "在相同任务集上运行三个臂：no-rail（无轨）、prompt-only（仅提示）、full-rail（全轨，轨道启用且接受）。按操作记录审计状态（supported/unexecuted/indeterminate），据此计算 UCR 分子/分母，并记录任务成功率、轨道启用、尝试次数与接受状态。UCR 仅作 process_evidence_only 解读，不外推为领域效果。",
+  "experiment_setting": "三臂均 status=completed，return_code=0。no-rail：rail.enabled=false，attempts=0，accepted=true，UCR=0.5556（numerator=5，denominator=9，supported=4，unexecuted=5，indeterminate=0），task_success_rate=1.0。prompt-only：rail.enabled=false，attempts=0，accepted=true，UCR=0.0（0/4，supported=4，unexecuted=0），task_success_rate=1.0。full-rail：rail.enabled=true，attempts=1，accepted=true，UCR=0.0（0/4，supported=4，unexecuted=0），task_success_rate=1.0。CFR 与 NFR 均为 null，状态 not_measured_in_ucr_scenario。",
+  "results": "no-rail 的 supported 操作：run_success、inspect_existing、query_available、validate_success（claim-001、claim-004、claim-006、claim-008）；unexecuted 操作：run_failed、run_denied、inspect_missing、query_unavailable、validate_failed（claim-002、claim-003、claim-005、claim-007、claim-009，均 pending_human_review）。prompt-only 的 supported 操作：run_success、inspect_existing、query_available、validate_success（claim-010 至 claim-013）。full-rail 的 supported 操作：run_success、inspect_existing、query_available、validate_success（claim-014 至 claim-017）。三臂任务成功率均为1.0。UCR 差异仅反映流程审计覆盖，不构成领域效果证据。",
+  "limitations": "UCR 为 process_evidence_only，不能解释为领域效果或正式引用。CFR 与 NFR 在 UCR 场景中未测量（值为 null）。citation_coverage=0.0，allow_paper=false，human_intervention_required=true。citation_allowed=false 的来源（arxiv:2607.13157v1、crossref:10.2139/ssrn.7160321、crossref:10.59350/xn4yy-3ke56、crossref:10.2139/ssrn.6273819、crossref:10.59350/kyqvq-k4425、crossref:10.2139/ssrn.7019082、crossref:10.2139/ssrn.6986920、crossref:10.36227/techrxiv.176857932.25697838/v1）不得正式引用。背景类 claim-018、claim-019、claim-020 仍为 pending_human_review。",
+  "conclusion": "在当前基准下，结构化记忆记录（full-rail）与 prompt-only 的 UCR 均为0.0，no-rail 为0.5556，但该指标仅作流程证据，不证明领域效果（claim-001 至 claim-017）。三臂任务成功率均为1.0。结论需绑定 claim_id 与证据/来源引用，并等待人工确认 UCR 操作定义、是否补充 CFR/NFR 测量场景，以及 citation_allowed=false 来源不得正式引用。",
+  "citation_mapping": [],
+  "unsupported_claims": [
+    "claim-002",
+    "claim-003",
+    "claim-005",
+    "claim-007",
+    "claim-009",
+    "claim-018",
+    "claim-019",
+    "claim-020"
+  ]
+}

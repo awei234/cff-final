@@ -1,0 +1,128 @@
+{
+  "schema_version": "4.0",
+  "topic_id": "self-evolution",
+  "retrieval_status": "offline_mock",
+  "sources": [
+    {
+      "source_id": "offline:self-evolution:001",
+      "provider": "offline",
+      "title": "Self-improving language agents",
+      "authors": [
+        "offline-fixture"
+      ],
+      "published_at": "2026-01-01",
+      "url": "https://example.invalid/self-evolution/1",
+      "doi": null,
+      "abstract": "Offline evidence about agent self evolution and auditable agent workflows.",
+      "relevance_score": 0.13,
+      "relevance_reasons": [
+        "摘要命中: agent self evolution"
+      ],
+      "duplicate_group": null,
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-30T01:05:35Z",
+      "content_sha256": "a0976d7f7b17b0e3e6a87c9dd6b342aadee2141e8ce45e4b5b9d1c302dbf5d94"
+    },
+    {
+      "source_id": "offline:self-evolution:002",
+      "provider": "offline",
+      "title": "Continual improvement of agents",
+      "authors": [
+        "offline-fixture"
+      ],
+      "published_at": "2026-01-01",
+      "url": "https://example.invalid/self-evolution/2",
+      "doi": null,
+      "abstract": "Offline evidence about agent self evolution and auditable agent workflows.",
+      "relevance_score": 0.13,
+      "relevance_reasons": [
+        "摘要命中: agent self evolution"
+      ],
+      "duplicate_group": null,
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-30T01:05:35Z",
+      "content_sha256": "61f28a9af800cdf7ce24bb826362121e8ad2451df82fb2e4ca03c3793361d57f"
+    },
+    {
+      "source_id": "offline:self-evolution:003",
+      "provider": "offline",
+      "title": "Reflection in autonomous agents",
+      "authors": [
+        "offline-fixture"
+      ],
+      "published_at": "2026-01-01",
+      "url": "https://example.invalid/self-evolution/3",
+      "doi": null,
+      "abstract": "Offline evidence about agent self evolution and auditable agent workflows.",
+      "relevance_score": 0.13,
+      "relevance_reasons": [
+        "摘要命中: agent self evolution"
+      ],
+      "duplicate_group": null,
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-30T01:05:35Z",
+      "content_sha256": "64c2524ed8c0c7acceee2c50a0c59a57db5b0b0c06b8a1bdc189c73d90f3bcdf"
+    },
+    {
+      "source_id": "offline:self-evolution:004",
+      "provider": "offline",
+      "title": "Auditable agent adaptation",
+      "authors": [
+        "offline-fixture"
+      ],
+      "published_at": "2026-01-01",
+      "url": "https://example.invalid/self-evolution/4",
+      "doi": null,
+      "abstract": "Offline evidence about agent self evolution and auditable agent workflows.",
+      "relevance_score": 0.13,
+      "relevance_reasons": [
+        "摘要命中: agent self evolution"
+      ],
+      "duplicate_group": null,
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-30T01:05:35Z",
+      "content_sha256": "6110493432096a36d377228a8eebf5e5c707bba140521f8b26790bd1cda268af"
+    },
+    {
+      "source_id": "offline:self-evolution:005",
+      "provider": "offline",
+      "title": "Safety checks for improving agents",
+      "authors": [
+        "offline-fixture"
+      ],
+      "published_at": "2026-01-01",
+      "url": "https://example.invalid/self-evolution/5",
+      "doi": null,
+      "abstract": "Offline evidence about agent self evolution and auditable agent workflows.",
+      "relevance_score": 0.13,
+      "relevance_reasons": [
+        "摘要命中: agent self evolution"
+      ],
+      "duplicate_group": null,
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-30T01:05:35Z",
+      "content_sha256": "1f71e64990d86cd60b85894d73f75fb81ae5462fd97c4013070368ca6aa9d810"
+    }
+  ],
+  "deduplication": {
+    "candidate_count": 5,
+    "kept_count": 5,
+    "removed_duplicates": 0
+  },
+  "retrieved_at_utc": "2026-09-30T01:05:35Z"
+}

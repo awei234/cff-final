@@ -1,0 +1,51 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{geometry,booktabs,longtable,array,tabularx}
+\geometry{a4paper,margin=2.0cm}
+\setlength{\emergencystretch}{3em}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\title{JiuwenSwarm v4 可审计科研论文半流程报告}
+\author{JiuwenSwarm/UCR}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+本文汇总三个主题的科研半流程演示。系统检索公开资料元数据，执行 JiuwenSwarm/UCR 本地证据实验，生成研究计划和报告，并保存 Claim--Evidence 账本。本文不把流程基准包装成领域科学结论；正式引用、实验真实性、研究结论和最终提交资格仍需人工确认。
+\end{abstract}
+\section{统一边界}
+UCR 的标签是 \texttt{process\_evidence\_only}，它表示系统的流程证据和审计能力，不等于上下文工程、记忆引擎或自我进化的领域效果。所有来源默认处于待审核状态。当前 PDF 是由本机 XeLaTeX 编译生成的正式查看产物，源文件和实验记录同时保留在提交包中。
+\section{矩阵概览}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.42\textwidth}>{\raggedleft\arraybackslash}p{0.14\textwidth}@{}}
+\toprule
+主题 & 状态 & Provider 调用\\\\
+\midrule
+\endfirsthead
+\toprule
+主题 & 状态 & Provider 调用\\\\
+\midrule
+\endhead
+context-\allowbreak{}engineering & \texttt{\scriptsize completed\_\allowbreak{}pending\_\allowbreak{}human\_\allowbreak{}review} & 0 \\
+memory-\allowbreak{}engine & \texttt{\scriptsize completed\_\allowbreak{}pending\_\allowbreak{}human\_\allowbreak{}review} & 0 \\
+self-\allowbreak{}evolution & \texttt{\scriptsize completed\_\allowbreak{}pending\_\allowbreak{}human\_\allowbreak{}review} & 0 \\
+\bottomrule
+\end{longtable}
+\section{Agent 上下文工程}
+\textbf{摘要：}本文展示可审计的 JiuwenSwarm / UCR 流程基准，不把流程结果包装成领域科学结论。\\
+\textbf{结论：}v4 形成可重复、可审计的研究半流程闭环；最终研究结论仍需人工确认。\\
+\textbf{限制：}资料尚未完成人工引用审批；当前实验是流程证据基准，不足以证明三个主题的领域效果。
+\section{Agent 记忆引擎}
+\textbf{摘要：}本文展示可审计的 JiuwenSwarm / UCR 流程基准，不把流程结果包装成领域科学结论。\\
+\textbf{结论：}v4 形成可重复、可审计的研究半流程闭环；最终研究结论仍需人工确认。\\
+\textbf{限制：}资料尚未完成人工引用审批；当前实验是流程证据基准，不足以证明三个主题的领域效果。
+\section{Agent 自我进化}
+\textbf{摘要：}本文展示可审计的 JiuwenSwarm / UCR 流程基准，不把流程结果包装成领域科学结论。\\
+\textbf{结论：}v4 形成可重复、可审计的研究半流程闭环；最终研究结论仍需人工确认。\\
+\textbf{限制：}资料尚未完成人工引用审批；当前实验是流程证据基准，不足以证明三个主题的领域效果。
+\section{编译与审核说明}
+该统一报告和三个主题报告都需要人工阅读。编译命令为：
+\begin{verbatim}
+xelatex -interaction=nonstopmode -halt-on-error paper.tex
+xelatex -interaction=nonstopmode -halt-on-error paper.tex
+\end{verbatim}
+最终状态保持为 \texttt{prepared\_not\_uploaded}。
+\end{document}

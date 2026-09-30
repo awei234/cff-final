@@ -1,0 +1,42 @@
+[
+  {
+    "anchor": 23,
+    "edit": "insert 1.2.5 (heading + 1 compact paragraph)"
+  },
+  {
+    "anchor": 74,
+    "edit": "insert 3.2 operational-definition caveat"
+  },
+  {
+    "anchor": 95,
+    "edit": "insert 3.5 information-gain caveat"
+  },
+  {
+    "anchor": 120,
+    "edit": "insert 3.7 claim-extraction-quality caveat"
+  },
+  {
+    "anchor": 133,
+    "edit": "insert 3.9 arbitration operational details"
+  },
+  {
+    "anchor": 140,
+    "edit": "insert 4.1 CE-Bench construction note"
+  },
+  {
+    "anchor": 145,
+    "edit": "append 4.2 circularity disclosure"
+  },
+  {
+    "anchor": 190,
+    "edit": "insert 5.2 evaluation-level limitations"
+  },
+  {
+    "anchor": 193,
+    "edit": "insert 5.3 additional future work"
+  },
+  {
+    "anchor": 237,
+    "edit": "append references [35]-[40]"
+  }
+]

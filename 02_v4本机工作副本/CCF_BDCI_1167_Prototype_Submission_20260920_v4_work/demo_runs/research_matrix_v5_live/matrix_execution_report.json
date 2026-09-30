@@ -1,0 +1,81 @@
+{
+  "schema_version": "4.0",
+  "status": "completed_pending_human_review",
+  "total_provider_calls": 9,
+  "max_total_calls": 9,
+  "topics": {
+    "context-engineering": {
+      "topic_id": "context-engineering",
+      "status": "completed_pending_human_review",
+      "provider_calls": 3,
+      "report": {
+        "abstract": "本报告检验程序级证据护栏能否提高 Agent 执行报告的证据一致性。在 no-rail、prompt-only、full-rail 三个 arm 上运行同一任务集，以 UCR（无证据完成率）为过程证据指标。no-rail 的 UCR=0.5556（5/9），prompt-only 与 full-rail 的 UCR=0.0（0/4），三臂任务成功率均为 1.0。full-rail 的 rail.enabled=true、attempts=1、accepted=true。结果与假设方向一致，但受任务集规模与未测量指标限制，仅作过程证据解读。",
+        "method": "三臂对照实验：no-rail（无护栏）、prompt-only（仅提示词）、full-rail（程序级护栏）。对每个 arm 记录 return_code、任务成功率与逐操作决策状态；按操作统计 supported / unexecuted / indeterminate，计算 UCR = unexecuted / (supported + unexecuted + indeterminate)。UCR 仅作为过程证据指标，不等同于结果正确性。",
+        "experiment_setting": "同一任务集与操作清单，控制变量为 rail 启用状态与尝试次数。no-rail：rail.enabled=false，attempts=0，accepted=true，UCR=0.5556（5/9），supported=4，unexecuted=5，task_success_rate=1.0。prompt-only：rail.enabled=false，attempts=0，accepted=true，UCR=0.0（0/4），supported=4，unexecuted=0，task_success_rate=1.0。full-rail：rail.enabled=true，attempts=1，accepted=true，UCR=0.0（0/4），supported=4，unexecuted=0，task_success_rate=1.0。CFR 与 NFR 在 UCR 场景中未测量（status=not_measured_in_ucr_scenario）。",
+        "results": "no-rail 的 UCR=0.5556（5/9），其中 run_success、inspect_existing、query_available、validate_success 为 supported（claim-001、claim-004、claim-006、claim-008）；run_failed、run_denied、inspect_missing、query_unavailable、validate_failed 为 pending_human_review（claim-002、claim-003、claim-005、claim-007、claim-009）。prompt-only 的 UCR=0.0（0/4），run_success、inspect_existing、query_available、validate_success 均为 supported（claim-010 至 claim-013）。full-rail 的 UCR=0.0（0/4），run_success、inspect_existing、query_available、validate_success 均为 supported（claim-014 至 claim-017）。三臂 task_success_rate 均为 1.0。",
+        "limitations": "UCR 仅为过程证据指标，不推断最终结果正确性。no-rail 的 5 个 unexecuted 操作是否属于预期失败路径尚待人工确认。prompt-only 与 full-rail 的 UCR=0.0 是否受任务集缩小影响尚待确认。CFR 与 NFR 在 UCR 场景中未测量，限制假设检验范围。所有材料 citation_allowed=false，citation_coverage=0.0，不得作为正式引用。allow_paper=false，human_intervention_required=true。",
+        "conclusion": "在本次实验范围内，full-rail 与 prompt-only 的 UCR 均为 0.0，低于 no-rail 的 0.5556，且任务成功率未下降，方向与假设一致（claim-001、claim-004、claim-006、claim-008、claim-010 至 claim-017）。但该结论仅基于过程证据指标 UCR，且受任务集规模、未测量指标与 citation_allowed=false 限制，不能作为最终结果正确性或正式引用依据。",
+        "citation_mapping": [],
+        "unsupported_claims": [
+          "claim-002",
+          "claim-003",
+          "claim-005",
+          "claim-007",
+          "claim-009",
+          "claim-018",
+          "claim-019",
+          "claim-020"
+        ]
+      }
+    },
+    "memory-engine": {
+      "topic_id": "memory-engine",
+      "status": "completed_pending_human_review",
+      "provider_calls": 3,
+      "report": {
+        "abstract": "本报告检验结构化记忆记录是否有助于 Agent 保持审计上下文一致性。三臂实验（no-rail、prompt-only、full-rail）均完成且 return_code=0，任务成功率均为1.0。UCR 仅作为流程证据：no-rail=0.5556（5/9），prompt-only=0.0（0/4），full-rail=0.0（0/4）。CFR 与 NFR 在 UCR 场景中未测量。结论不证明领域效果，citation_allowed=false 的来源不得正式引用。",
+        "method": "在相同任务集上运行三个臂：no-rail（无轨）、prompt-only（仅提示）、full-rail（全轨，轨道启用且接受）。按操作记录审计状态（supported/unexecuted/indeterminate），据此计算 UCR 分子/分母，并记录任务成功率、轨道启用、尝试次数与接受状态。UCR 仅作 process_evidence_only 解读，不外推为领域效果。",
+        "experiment_setting": "三臂均 status=completed，return_code=0。no-rail：rail.enabled=false，attempts=0，accepted=true，UCR=0.5556（numerator=5，denominator=9，supported=4，unexecuted=5，indeterminate=0），task_success_rate=1.0。prompt-only：rail.enabled=false，attempts=0，accepted=true，UCR=0.0（0/4，supported=4，unexecuted=0），task_success_rate=1.0。full-rail：rail.enabled=true，attempts=1，accepted=true，UCR=0.0（0/4，supported=4，unexecuted=0），task_success_rate=1.0。CFR 与 NFR 均为 null，状态 not_measured_in_ucr_scenario。",
+        "results": "no-rail 的 supported 操作：run_success、inspect_existing、query_available、validate_success（claim-001、claim-004、claim-006、claim-008）；unexecuted 操作：run_failed、run_denied、inspect_missing、query_unavailable、validate_failed（claim-002、claim-003、claim-005、claim-007、claim-009，均 pending_human_review）。prompt-only 的 supported 操作：run_success、inspect_existing、query_available、validate_success（claim-010 至 claim-013）。full-rail 的 supported 操作：run_success、inspect_existing、query_available、validate_success（claim-014 至 claim-017）。三臂任务成功率均为1.0。UCR 差异仅反映流程审计覆盖，不构成领域效果证据。",
+        "limitations": "UCR 为 process_evidence_only，不能解释为领域效果或正式引用。CFR 与 NFR 在 UCR 场景中未测量（值为 null）。citation_coverage=0.0，allow_paper=false，human_intervention_required=true。citation_allowed=false 的来源（arxiv:2607.13157v1、crossref:10.2139/ssrn.7160321、crossref:10.59350/xn4yy-3ke56、crossref:10.2139/ssrn.6273819、crossref:10.59350/kyqvq-k4425、crossref:10.2139/ssrn.7019082、crossref:10.2139/ssrn.6986920、crossref:10.36227/techrxiv.176857932.25697838/v1）不得正式引用。背景类 claim-018、claim-019、claim-020 仍为 pending_human_review。",
+        "conclusion": "在当前基准下，结构化记忆记录（full-rail）与 prompt-only 的 UCR 均为0.0，no-rail 为0.5556，但该指标仅作流程证据，不证明领域效果（claim-001 至 claim-017）。三臂任务成功率均为1.0。结论需绑定 claim_id 与证据/来源引用，并等待人工确认 UCR 操作定义、是否补充 CFR/NFR 测量场景，以及 citation_allowed=false 来源不得正式引用。",
+        "citation_mapping": [],
+        "unsupported_claims": [
+          "claim-002",
+          "claim-003",
+          "claim-005",
+          "claim-007",
+          "claim-009",
+          "claim-018",
+          "claim-019",
+          "claim-020"
+        ]
+      }
+    },
+    "self-evolution": {
+      "topic_id": "self-evolution",
+      "status": "completed_pending_human_review",
+      "provider_calls": 3,
+      "report": {
+        "abstract": "本报告检验带证据的反思循环能否避免把未执行任务写成已完成。三个实验臂（no-rail、prompt-only、full-rail）在相同任务集上运行，任务成功率均为1.0。no-rail的UCR为0.5556（5/9），prompt-only与full-rail的UCR均为0.0（0/4）。结果仅作为过程证据，不证明真实自我进化。",
+        "method": "在相同任务集上运行三个实验臂：no-rail（无rail）、prompt-only（仅提示）、full-rail（启用rail）。对每个操作记录决策状态（supported/unexecuted/indeterminate）及理由，计算UCR=未执行但被写成已完成的比率。citation_allowed=false的材料不作为正式引用。",
+        "experiment_setting": "no-rail：rail.enabled=false，attempts=0，accepted=true，9个操作中4个supported、5个unexecuted。prompt-only：rail.enabled=false，attempts=0，accepted=true，4个操作均supported。full-rail：rail.enabled=true，attempts=1，accepted=true，4个操作均supported。三臂return_code均为0，任务成功率均为1.0。CFR与NFR在UCR场景中未测量。",
+        "results": "no-rail的UCR=0.5556（5/9），5个未执行操作被写成已完成（claim-002、claim-003、claim-005、claim-007、claim-009）。prompt-only的UCR=0.0（0/4），4个操作均supported（claim-010至claim-013）。full-rail的UCR=0.0（0/4），4个操作均supported（claim-014至claim-017）。三臂任务成功率均为1.0。citation_coverage=0.0。",
+        "limitations": "UCR仅为过程证据，不证明真实自我进化。prompt-only与full-rail的UCR=0.0可能因任务集不同而不可直接比较。citation_allowed=false的材料不得作为正式引用。CFR与NFR未测量。claim-002、claim-003、claim-005、claim-007、claim-009、claim-018、claim-019、claim-020待人工复核。",
+        "conclusion": "在当前基准下，带证据检查的prompt-only与full-rail的UCR均为0.0，低于no-rail的0.5556，且任务成功率未下降。但该结果仅支持审计表达改善的过程证据，不足以证明真实自我进化。需扩展任务集并人工确认后方可外推。",
+        "citation_mapping": [],
+        "unsupported_claims": [
+          "claim-002",
+          "claim-003",
+          "claim-005",
+          "claim-007",
+          "claim-009",
+          "claim-018",
+          "claim-019",
+          "claim-020"
+        ]
+      }
+    }
+  },
+  "generated_at_utc": "2026-09-30T01:08:56Z"
+}

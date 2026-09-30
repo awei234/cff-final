@@ -1,0 +1,36 @@
+{
+  "experiment": "ucr-activation-v1",
+  "task": "T4-UCR",
+  "arm": "prompt-only",
+  "seed": 42,
+  "model": "fixture-policy-v1",
+  "metrics": {
+    "UCR": {
+      "value": 0.0,
+      "numerator": 0,
+      "denominator": 4,
+      "supported": 4,
+      "unexecuted": 0,
+      "indeterminate": 0,
+      "activated": true,
+      "status": "measured",
+      "reason": null
+    },
+    "CFR": {
+      "value": null,
+      "status": "not_measured_in_ucr_scenario"
+    },
+    "NFR": {
+      "value": null,
+      "status": "not_measured_in_ucr_scenario"
+    },
+    "task_success_rate": {
+      "value": 1.0
+    }
+  },
+  "rail": {
+    "enabled": false,
+    "attempts": 0,
+    "accepted": true
+  }
+}

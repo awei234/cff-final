@@ -1,0 +1,31 @@
+{
+  "research_question": "结构化记忆记录是否有助于 Agent 保持审计上下文一致？",
+  "hypothesis": "结构化记录可能改善流程可追溯性，但当前基准不证明领域效果。",
+  "variables": [
+    "arm",
+    "seed",
+    "supported_claims",
+    "blocked_claims"
+  ],
+  "experiment_plan": [
+    "执行 UCR 三种 arm",
+    "保存轨迹、Rail 事件、命令和哈希",
+    "比较证据决策"
+  ],
+  "success_criteria": [
+    "三种 arm 独立完成",
+    "每个实验 claim 有 JSON Pointer",
+    "失败不写成成功"
+  ],
+  "expected_evidence": [
+    "experiment_results.json",
+    "tool_trace.jsonl",
+    "rail_events.jsonl",
+    "claim_ledger.json"
+  ],
+  "human_confirmation_items": [
+    "研究问题是否值得研究",
+    "实验是否真实反映系统行为",
+    "最终结论是否超过证据范围"
+  ]
+}

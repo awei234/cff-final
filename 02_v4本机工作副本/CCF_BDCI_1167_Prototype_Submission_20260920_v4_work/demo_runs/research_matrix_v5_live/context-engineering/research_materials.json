@@ -1,0 +1,288 @@
+{
+  "schema_version": "4.0",
+  "topic_id": "context-engineering",
+  "retrieval_status": "partial_retrieval",
+  "sources": [
+    {
+      "source_id": "arxiv:2609.00749v1",
+      "provider": "arxiv",
+      "title": "ContextPipe: Database-Inspired Context Assembly for Long-Horizon Agents",
+      "authors": [
+        "Peng Xu",
+        "Zuyu Zhang",
+        "Yuze Sun",
+        "Feng Tian",
+        "Long Wang",
+        "Chen Zhang"
+      ],
+      "published_at": "2026-09-01T05:27:38Z",
+      "url": "https://arxiv.org/abs/2609.00749v1",
+      "doi": null,
+      "abstract": "Long-horizon large language model (LLM) agents require context assembly: the runtime must decide what to include in each prompt, in what order, and when to compact history under a hard context-window budget and a byte-sensitive prompt cache. In production agentic systems, this logic is scattered across prompt builders, ad hoc compaction routines, cache-break workarounds, and per-provider shims. We argue that context assembly is structurally isomorphic to query execution in a relational database: both execute under a hard budget, exploit a tiered cache, and leverage statistics. We adopt this discipline in ContextPipe: a five-phase pipeline (Plan Bind Optimize Execute Feedback) backed by a structured data-source catalog, a deterministic cache-aware optimizer, and an EXPLAIN ANALYZE trace. We show that context in ContextPipe is auditable, replayable, and failure-isolated. A preliminary evaluation using the SWE-bench Pro Qutebrowser subset shows that, compared with the append-only context construction policy, ContextPipe reduces total token volume by 31%, LLM calls by 23%, and response time by 9%, at the cost of a lower KV cache-hit ratio.",
+      "relevance_score": 0.07,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "arxi",
+      "version_group": "arxi",
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-30T01:06:45Z",
+      "content_sha256": "dad9d421c833217e8191f8a100146ade4c140ceff61ed0086d687ed66d37ca9b"
+    },
+    {
+      "source_id": "crossref:10.2139/ssrn.6506600",
+      "provider": "crossref",
+      "title": "Context Engineering: A Principal-Agent Theory of AI-Augmented Knowledge Work",
+      "authors": [
+        "Savva"
+      ],
+      "published_at": "2026",
+      "url": "https://doi.org/10.2139/ssrn.6506600",
+      "doi": "10.2139/ssrn.6506600",
+      "abstract": "Generative AI can improve knowledge work, but its performance depends on the context a worker providesproblem framing, information selection, constraints, and evaluative judgment. Because supplying this context is costly, imperfectly observable, and expertise-dependent, AI creates new moral hazard and screening problems for firms. We develop a principal-agent model in which an agent allocates effort between direct task execution and context engineering for AI. The model introduces a task-level parameter-the context engineering burden-that captures how much expertise, as opposed to effort alone, is needed to make AI effective on a given task. As AI capability rises, agents reallocate effort from direct execution toward context engineering. Lower-expertise agents shift more because their opportunity cost of direct work is lower, giving them a comparative advantage in AI-mediated production-but their limited expertise constrains the context they provide, producing AI-mediated output of lower expected value than expert output, a phenomenon we call rational AI slop. The context engineering burden then determines whether AI compresses or amplifies skill differences. In low-burden tasks, where effort alone can generate adequate context, AI narrows performance gaps. In high-burden tasks, where expertise is central to context quality, AI widens them. We test this framework through a blinded coding exercise: across task settings drawn from the empirical literature, a burden score built from independent large-language-model ratings correctly orders all 25 of 25 compression-versus-amplification comparisons. Under adverse selection on expertise, AI makes low-type contracts less distorted in low-burden tasks and more distorted in high-burden tasks. The framework also yields implications for process investment and governance. The model reconciles conflicting empirical evidence on AI in knowledge work by showing that its impact depends on the context engineering burden of the task. Firms should invest in tools and workflows that reduce this burden, and recognise that AI is more likely to broaden the effective talent pool in low-burden tasks than in high-burden tasks, where expertise remains central to performance.",
+      "relevance_score": 0.07,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.2139/ssrn.6506600",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-30T01:06:45Z",
+      "content_sha256": "d210f687abd9c2baae641770773c0ef735798398d4e8ebb45a6507ad42ab8b2c"
+    },
+    {
+      "source_id": "crossref:10.37547/tajet/volume08issue03-12",
+      "provider": "crossref",
+      "title": "Architectural Principles for Multi-Agent Systems Based on The Model Context Protocol",
+      "authors": [
+        "Zuykov"
+      ],
+      "published_at": "2026-3-31",
+      "url": "https://doi.org/10.37547/tajet/volume08issue03-12",
+      "doi": "10.37547/tajet/volume08issue03-12",
+      "abstract": "The article examines the architectural role of the Model Context Protocol in the design of multi-agent systems intended to support robust coordination between cognitive and infrastructural components. The relevance of the study is determined by the rapid transition from isolated LLM interactions to distributed agentic environments, in which direct coupling between agents and external APIs, data sources, and tools increases system interdependence, complicates maintenance, and weakens governability. The purpose of the article is to provide a conceptual substantiation of the architectural principles of multi-agent systems based on MCP and to identify their significance for scalability, interoperability, security, and maintainability. The scientific novelty of the study lies in interpreting MCP not merely as an auxiliary integration protocol, but as an autonomous architectural layer that establishes a formalized topology of interaction among hosts, clients, and servers. The principal findings demonstrate that the use of MCP ensures a strict separation of concerns, declarative context management, modular composability, and governance-by-design in capability access. The article concludes that such an approach enhances observability, reduces integration fragility, and creates the foundation for the evolutionary development of multi-agent solutions while preserving control and auditability. The article will be useful for researchers, AI system architects, developers of agentic platforms, and specialists in enterprise digital infrastructure.",
+      "relevance_score": 0.07,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.37547/tajet/volume08issue03-12",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-30T01:06:45Z",
+      "content_sha256": "be66430f94ba8a38dfa6dde2879c15a4ffbed63d30cfbb9cb768163978ea4b89"
+    },
+    {
+      "source_id": "crossref:10.4018/978-1-60566-618-1.ch002",
+      "provider": "crossref",
+      "title": "Context-Aware Service Provisioning in Next-Generation Networks",
+      "authors": [
+        "Podobnik",
+        "Trzec",
+        "Jezic"
+      ],
+      "published_at": "2009",
+      "url": "https://doi.org/10.4018/978-1-60566-618-1.ch002",
+      "doi": "10.4018/978-1-60566-618-1.ch002",
+      "abstract": "This paper presents an application of multi-agent system in ubiquitous computing scenarios characteristic of next-generation networks. Next-generation networks will create environments populated with a vast number of consumers, which will possess diverse types of context-aware devices. In such environments the consumer should be able to access all the available services anytime, from any place, and by using any of its communication-enabled devices. Consequently, next-generation networks will require efficient mechanisms which can match consumers’ demands (requested services) to network-operators’ supplies (available services). The authors propose an agent approach for enabling autonomous coordination between all the entities across the telecom value chain, thus enabling automated context-aware service provisioning for the consumers. Furthermore, the authors hope that the proposed service discovery model will not only be interesting from a scientific point of view, but also amenable to real-world applications.",
+      "relevance_score": 0.07,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.4018/978-1-60566-618-1.ch002",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-30T01:06:45Z",
+      "content_sha256": "1dc41da2fa89ffa2267b15166d68fe91586f106a99bc4f93ead26ab203a2f5b7"
+    },
+    {
+      "source_id": "crossref:10.4018/9781605666181.ch002",
+      "provider": "crossref",
+      "title": "Context-Aware Service Provisioning in Next-Generation Networks",
+      "authors": [
+        "Podobnik",
+        "Trzec",
+        "Jezic"
+      ],
+      "published_at": "",
+      "url": "https://doi.org/10.4018/9781605666181.ch002",
+      "doi": "10.4018/9781605666181.ch002",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.4018/9781605666181.ch002",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-30T01:06:45Z",
+      "content_sha256": "b242f45990c5edb4eccd6ea1f16c0656cd7f2be6d104d07538d85c056a3947e2"
+    },
+    {
+      "source_id": "crossref:10.1109/sose67019.2025.00013",
+      "provider": "crossref",
+      "title": "Demonstrating Multi-Agent Collaboration via Agent-to-Agent and Model Context Protocols: An IT Incident Response Case Study",
+      "authors": [
+        "Tupe",
+        "Thube"
+      ],
+      "published_at": "2025-7-21",
+      "url": "https://doi.org/10.1109/sose67019.2025.00013",
+      "doi": "10.1109/sose67019.2025.00013",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1109/sose67019.2025.00013",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-30T01:06:45Z",
+      "content_sha256": "d0098ef44e4572c3aadc12bc38dd471ea4c98a6ccaf9f208d2aee950943f654f"
+    },
+    {
+      "source_id": "crossref:10.1049/ic:20040358",
+      "provider": "crossref",
+      "title": "Context-sensitive access control for open mobile agent systems",
+      "authors": [
+        "Julien"
+      ],
+      "published_at": "2004",
+      "url": "https://doi.org/10.1049/ic:20040358",
+      "doi": "10.1049/ic:20040358",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1049/ic:20040358",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-30T01:06:45Z",
+      "content_sha256": "1aec56ec0c71d1ac98820698929af1f3e1d636a7dcc1c45b55186503c29231e3"
+    },
+    {
+      "source_id": "crossref:10.1007/3-540-70657-7_7",
+      "provider": "crossref",
+      "title": "UML Class Diagrams Revisited in the Context of Agent-Based Systems",
+      "authors": [
+        "Bauer"
+      ],
+      "published_at": "2002",
+      "url": "https://doi.org/10.1007/3-540-70657-7_7",
+      "doi": "10.1007/3-540-70657-7_7",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1007/3-540-70657-7_7",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-30T01:06:45Z",
+      "content_sha256": "9cacebf25f05fdc6d3c70f0b824c6852e36e2c075137af1d304b29fe93e38481"
+    },
+    {
+      "source_id": "crossref:10.1007/978-3-540-24620-6_1",
+      "provider": "crossref",
+      "title": "Using UML in the Context of Agent-Oriented Software Engineering: State of the Art",
+      "authors": [
+        "Bauer",
+        "Müller"
+      ],
+      "published_at": "2004",
+      "url": "https://doi.org/10.1007/978-3-540-24620-6_1",
+      "doi": "10.1007/978-3-540-24620-6_1",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1007/978-3-540-24620-6_1",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-30T01:06:45Z",
+      "content_sha256": "797ce1c393f71b1580c4d89450080c5f97a19f566ae843adaed42f0d81566e02"
+    },
+    {
+      "source_id": "crossref:10.1109/icse.2001.919110",
+      "provider": "crossref",
+      "title": "Engineering mobile-agent applications via context-dependent coordination",
+      "authors": [
+        "Cabri",
+        "Leonardi",
+        "Zambenelli"
+      ],
+      "published_at": "",
+      "url": "https://doi.org/10.1109/icse.2001.919110",
+      "doi": "10.1109/icse.2001.919110",
+      "abstract": "",
+      "relevance_score": 0.02,
+      "relevance_reasons": [
+        "未命中核心关键词，仅作为低相关候选"
+      ],
+      "duplicate_group": "doi:10.1109/icse.2001.919110",
+      "version_group": null,
+      "citation_allowed": false,
+      "human_review_status": "pending",
+      "status": "retrieved",
+      "retrieved_at_utc": "2026-09-30T01:06:45Z",
+      "content_sha256": "b1d19f697c59d8d8e3176215a3ee434578426894f1a55ed423b6664cd0a1d584"
+    }
+  ],
+  "deduplication": {
+    "candidate_count": 20,
+    "kept_count": 10,
+    "removed_duplicates": 9
+  },
+  "failures": [
+    {
+      "provider": "openalex",
+      "query": "agent context engineering",
+      "status": 429,
+      "error": "http_429"
+    },
+    {
+      "provider": "arxiv",
+      "query": "agent context engineering",
+      "status": 0,
+      "error": "TimeoutError"
+    },
+    {
+      "provider": "openalex",
+      "query": "context management agent",
+      "status": 429,
+      "error": "http_429"
+    },
+    {
+      "provider": "arxiv",
+      "query": "context management agent",
+      "status": 0,
+      "error": "TimeoutError"
+    },
+    {
+      "provider": "openalex",
+      "query": "long context agent",
+      "status": 429,
+      "error": "http_429"
+    }
+  ],
+  "retrieved_at_utc": "2026-09-30T01:06:45Z"
+}

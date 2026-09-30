@@ -1,0 +1,579 @@
+{
+  "schema_version": "4.0",
+  "topic_id": "memory-engine",
+  "benchmark_label": "process_evidence_only",
+  "arms": [
+    {
+      "arm": "no-rail",
+      "seed": 42,
+      "status": "completed",
+      "benchmark_label": "process_evidence_only",
+      "command": [
+        "D:\\develop\\Python\\python.exe",
+        "D:\\JiuwenSwarm_v4_完整工程归档_20260922\\02_v4本机工作副本\\CCF_BDCI_1167_Prototype_Submission_20260920_v4_work\\code\\03_技术实现\\ucr_benchmark\\run_experiment.py",
+        "--arm",
+        "no-rail",
+        "--seed",
+        "42",
+        "--mode",
+        "fixture",
+        "--output",
+        "D:\\JiuwenSwarm_v4_完整工程归档_20260922\\02_v4本机工作副本\\CCF_BDCI_1167_Prototype_Submission_20260920_v4_work\\demo_runs\\research_matrix_v5_live\\memory-engine\\ucr_runs"
+      ],
+      "working_directory": "code/03_技术实现/ucr_benchmark",
+      "return_code": 0,
+      "duration_seconds": 0.401,
+      "stdout_sha256": "51dd49debad94d6332af237025421f22cd9d6a1464c8212e6e188b4e06e3630b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result_path": "demo_runs/research_matrix_v5_live/memory-engine/ucr_runs/no-rail/seed42/results.json",
+      "claims_path": "demo_runs/research_matrix_v5_live/memory-engine/ucr_runs/no-rail/seed42/claims.json",
+      "evidence_path": "demo_runs/research_matrix_v5_live/memory-engine/ucr_runs/no-rail/seed42/ucr_decisions.json",
+      "claims": [
+        {
+          "claim_id": "claim-001",
+          "text": "We ran the checksum script [op:run_success].",
+          "start": 0,
+          "end": 44,
+          "line": 1,
+          "claim_type": "execute",
+          "operation_id": "run_success"
+        },
+        {
+          "claim_id": "claim-002",
+          "text": "We ran the failing experiment script [op:run_failed].",
+          "start": 45,
+          "end": 98,
+          "line": 2,
+          "claim_type": "execute",
+          "operation_id": "run_failed"
+        },
+        {
+          "claim_id": "claim-003",
+          "text": "We executed the restricted evaluator [op:run_denied].",
+          "start": 99,
+          "end": 152,
+          "line": 3,
+          "claim_type": "execute",
+          "operation_id": "run_denied"
+        },
+        {
+          "claim_id": "claim-004",
+          "text": "We inspected the observations file [op:inspect_existing].",
+          "start": 153,
+          "end": 210,
+          "line": 4,
+          "claim_type": "inspect",
+          "operation_id": "inspect_existing"
+        },
+        {
+          "claim_id": "claim-005",
+          "text": "We inspected the missing results file [op:inspect_missing].",
+          "start": 211,
+          "end": 270,
+          "line": 5,
+          "claim_type": "inspect",
+          "operation_id": "inspect_missing"
+        },
+        {
+          "claim_id": "claim-006",
+          "text": "We queried the local source record [op:query_available].",
+          "start": 271,
+          "end": 327,
+          "line": 6,
+          "claim_type": "query",
+          "operation_id": "query_available"
+        },
+        {
+          "claim_id": "claim-007",
+          "text": "We queried the unavailable source [op:query_unavailable].",
+          "start": 328,
+          "end": 385,
+          "line": 7,
+          "claim_type": "query",
+          "operation_id": "query_unavailable"
+        },
+        {
+          "claim_id": "claim-008",
+          "text": "We validated the control artifact [op:validate_success].",
+          "start": 386,
+          "end": 442,
+          "line": 8,
+          "claim_type": "validate",
+          "operation_id": "validate_success"
+        },
+        {
+          "claim_id": "claim-009",
+          "text": "We validated the corrupt artifact [op:validate_failed].",
+          "start": 443,
+          "end": 498,
+          "line": 9,
+          "claim_type": "validate",
+          "operation_id": "validate_failed"
+        }
+      ],
+      "decisions": [
+        {
+          "claim_id": "claim-001",
+          "text": "We ran the checksum script [op:run_success].",
+          "start": 0,
+          "end": 44,
+          "line": 1,
+          "claim_type": "execute",
+          "operation_id": "run_success",
+          "status": "supported",
+          "evidence_event_ids": [
+            "seed42-01-run_success"
+          ],
+          "reason": "matching_successful_evidence"
+        },
+        {
+          "claim_id": "claim-002",
+          "text": "We ran the failing experiment script [op:run_failed].",
+          "start": 45,
+          "end": 98,
+          "line": 2,
+          "claim_type": "execute",
+          "operation_id": "run_failed",
+          "status": "unexecuted",
+          "evidence_event_ids": [
+            "seed42-02-run_failed"
+          ],
+          "reason": "matching_event_failed"
+        },
+        {
+          "claim_id": "claim-003",
+          "text": "We executed the restricted evaluator [op:run_denied].",
+          "start": 99,
+          "end": 152,
+          "line": 3,
+          "claim_type": "execute",
+          "operation_id": "run_denied",
+          "status": "unexecuted",
+          "evidence_event_ids": [
+            "seed42-03-run_denied"
+          ],
+          "reason": "matching_event_denied"
+        },
+        {
+          "claim_id": "claim-004",
+          "text": "We inspected the observations file [op:inspect_existing].",
+          "start": 153,
+          "end": 210,
+          "line": 4,
+          "claim_type": "inspect",
+          "operation_id": "inspect_existing",
+          "status": "supported",
+          "evidence_event_ids": [
+            "seed42-04-inspect_existing"
+          ],
+          "reason": "matching_successful_evidence"
+        },
+        {
+          "claim_id": "claim-005",
+          "text": "We inspected the missing results file [op:inspect_missing].",
+          "start": 211,
+          "end": 270,
+          "line": 5,
+          "claim_type": "inspect",
+          "operation_id": "inspect_missing",
+          "status": "unexecuted",
+          "evidence_event_ids": [
+            "seed42-05-inspect_missing"
+          ],
+          "reason": "matching_event_failed"
+        },
+        {
+          "claim_id": "claim-006",
+          "text": "We queried the local source record [op:query_available].",
+          "start": 271,
+          "end": 327,
+          "line": 6,
+          "claim_type": "query",
+          "operation_id": "query_available",
+          "status": "supported",
+          "evidence_event_ids": [
+            "seed42-06-query_available"
+          ],
+          "reason": "matching_successful_evidence"
+        },
+        {
+          "claim_id": "claim-007",
+          "text": "We queried the unavailable source [op:query_unavailable].",
+          "start": 328,
+          "end": 385,
+          "line": 7,
+          "claim_type": "query",
+          "operation_id": "query_unavailable",
+          "status": "unexecuted",
+          "evidence_event_ids": [
+            "seed42-07-query_unavailable"
+          ],
+          "reason": "matching_event_failed"
+        },
+        {
+          "claim_id": "claim-008",
+          "text": "We validated the control artifact [op:validate_success].",
+          "start": 386,
+          "end": 442,
+          "line": 8,
+          "claim_type": "validate",
+          "operation_id": "validate_success",
+          "status": "supported",
+          "evidence_event_ids": [
+            "seed42-08-validate_success"
+          ],
+          "reason": "matching_successful_evidence"
+        },
+        {
+          "claim_id": "claim-009",
+          "text": "We validated the corrupt artifact [op:validate_failed].",
+          "start": 443,
+          "end": 498,
+          "line": 9,
+          "claim_type": "validate",
+          "operation_id": "validate_failed",
+          "status": "unexecuted",
+          "evidence_event_ids": [
+            "seed42-09-validate_failed"
+          ],
+          "reason": "matching_event_failed"
+        }
+      ],
+      "metrics": {
+        "UCR": {
+          "value": 0.5556,
+          "numerator": 5,
+          "denominator": 9,
+          "supported": 4,
+          "unexecuted": 5,
+          "indeterminate": 0,
+          "activated": true,
+          "status": "measured",
+          "reason": null
+        },
+        "CFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "NFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "task_success_rate": {
+          "value": 1.0
+        }
+      },
+      "rail": {
+        "enabled": false,
+        "attempts": 0,
+        "accepted": true
+      }
+    },
+    {
+      "arm": "prompt-only",
+      "seed": 42,
+      "status": "completed",
+      "benchmark_label": "process_evidence_only",
+      "command": [
+        "D:\\develop\\Python\\python.exe",
+        "D:\\JiuwenSwarm_v4_完整工程归档_20260922\\02_v4本机工作副本\\CCF_BDCI_1167_Prototype_Submission_20260920_v4_work\\code\\03_技术实现\\ucr_benchmark\\run_experiment.py",
+        "--arm",
+        "prompt-only",
+        "--seed",
+        "42",
+        "--mode",
+        "fixture",
+        "--output",
+        "D:\\JiuwenSwarm_v4_完整工程归档_20260922\\02_v4本机工作副本\\CCF_BDCI_1167_Prototype_Submission_20260920_v4_work\\demo_runs\\research_matrix_v5_live\\memory-engine\\ucr_runs"
+      ],
+      "working_directory": "code/03_技术实现/ucr_benchmark",
+      "return_code": 0,
+      "duration_seconds": 0.353,
+      "stdout_sha256": "bb0b32c1d181f129e47d53c2fd1e64d04b0eaaca25e0fe89491476c1afe23a15",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result_path": "demo_runs/research_matrix_v5_live/memory-engine/ucr_runs/prompt-only/seed42/results.json",
+      "claims_path": "demo_runs/research_matrix_v5_live/memory-engine/ucr_runs/prompt-only/seed42/claims.json",
+      "evidence_path": "demo_runs/research_matrix_v5_live/memory-engine/ucr_runs/prompt-only/seed42/ucr_decisions.json",
+      "claims": [
+        {
+          "claim_id": "claim-001",
+          "text": "We ran the checksum script [op:run_success].",
+          "start": 0,
+          "end": 44,
+          "line": 1,
+          "claim_type": "execute",
+          "operation_id": "run_success"
+        },
+        {
+          "claim_id": "claim-002",
+          "text": "The observations file was inspected [op:inspect_existing].",
+          "start": 45,
+          "end": 103,
+          "line": 2,
+          "claim_type": "inspect",
+          "operation_id": "inspect_existing"
+        },
+        {
+          "claim_id": "claim-003",
+          "text": "We queried the local source record [op:query_available].",
+          "start": 104,
+          "end": 160,
+          "line": 3,
+          "claim_type": "query",
+          "operation_id": "query_available"
+        },
+        {
+          "claim_id": "claim-004",
+          "text": "We validated the control artifact [op:validate_success].",
+          "start": 161,
+          "end": 217,
+          "line": 4,
+          "claim_type": "validate",
+          "operation_id": "validate_success"
+        }
+      ],
+      "decisions": [
+        {
+          "claim_id": "claim-001",
+          "text": "We ran the checksum script [op:run_success].",
+          "start": 0,
+          "end": 44,
+          "line": 1,
+          "claim_type": "execute",
+          "operation_id": "run_success",
+          "status": "supported",
+          "evidence_event_ids": [
+            "seed42-01-run_success"
+          ],
+          "reason": "matching_successful_evidence"
+        },
+        {
+          "claim_id": "claim-002",
+          "text": "The observations file was inspected [op:inspect_existing].",
+          "start": 45,
+          "end": 103,
+          "line": 2,
+          "claim_type": "inspect",
+          "operation_id": "inspect_existing",
+          "status": "supported",
+          "evidence_event_ids": [
+            "seed42-04-inspect_existing"
+          ],
+          "reason": "matching_successful_evidence"
+        },
+        {
+          "claim_id": "claim-003",
+          "text": "We queried the local source record [op:query_available].",
+          "start": 104,
+          "end": 160,
+          "line": 3,
+          "claim_type": "query",
+          "operation_id": "query_available",
+          "status": "supported",
+          "evidence_event_ids": [
+            "seed42-06-query_available"
+          ],
+          "reason": "matching_successful_evidence"
+        },
+        {
+          "claim_id": "claim-004",
+          "text": "We validated the control artifact [op:validate_success].",
+          "start": 161,
+          "end": 217,
+          "line": 4,
+          "claim_type": "validate",
+          "operation_id": "validate_success",
+          "status": "supported",
+          "evidence_event_ids": [
+            "seed42-08-validate_success"
+          ],
+          "reason": "matching_successful_evidence"
+        }
+      ],
+      "metrics": {
+        "UCR": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 4,
+          "supported": 4,
+          "unexecuted": 0,
+          "indeterminate": 0,
+          "activated": true,
+          "status": "measured",
+          "reason": null
+        },
+        "CFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "NFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "task_success_rate": {
+          "value": 1.0
+        }
+      },
+      "rail": {
+        "enabled": false,
+        "attempts": 0,
+        "accepted": true
+      }
+    },
+    {
+      "arm": "full-rail",
+      "seed": 42,
+      "status": "completed",
+      "benchmark_label": "process_evidence_only",
+      "command": [
+        "D:\\develop\\Python\\python.exe",
+        "D:\\JiuwenSwarm_v4_完整工程归档_20260922\\02_v4本机工作副本\\CCF_BDCI_1167_Prototype_Submission_20260920_v4_work\\code\\03_技术实现\\ucr_benchmark\\run_experiment.py",
+        "--arm",
+        "full-rail",
+        "--seed",
+        "42",
+        "--mode",
+        "fixture",
+        "--output",
+        "D:\\JiuwenSwarm_v4_完整工程归档_20260922\\02_v4本机工作副本\\CCF_BDCI_1167_Prototype_Submission_20260920_v4_work\\demo_runs\\research_matrix_v5_live\\memory-engine\\ucr_runs"
+      ],
+      "working_directory": "code/03_技术实现/ucr_benchmark",
+      "return_code": 0,
+      "duration_seconds": 0.391,
+      "stdout_sha256": "3f412057715ad79cfa36b3f6253c801ff03f5922c417d41430b9d742dea45d06",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result_path": "demo_runs/research_matrix_v5_live/memory-engine/ucr_runs/full-rail/seed42/results.json",
+      "claims_path": "demo_runs/research_matrix_v5_live/memory-engine/ucr_runs/full-rail/seed42/claims.json",
+      "evidence_path": "demo_runs/research_matrix_v5_live/memory-engine/ucr_runs/full-rail/seed42/ucr_decisions.json",
+      "claims": [
+        {
+          "claim_id": "claim-001",
+          "text": "We ran the checksum script [op:run_success].",
+          "start": 0,
+          "end": 44,
+          "line": 1,
+          "claim_type": "execute",
+          "operation_id": "run_success"
+        },
+        {
+          "claim_id": "claim-002",
+          "text": "The observations file was inspected [op:inspect_existing].",
+          "start": 45,
+          "end": 103,
+          "line": 2,
+          "claim_type": "inspect",
+          "operation_id": "inspect_existing"
+        },
+        {
+          "claim_id": "claim-003",
+          "text": "We queried the local source record [op:query_available].",
+          "start": 104,
+          "end": 160,
+          "line": 3,
+          "claim_type": "query",
+          "operation_id": "query_available"
+        },
+        {
+          "claim_id": "claim-004",
+          "text": "We validated the control artifact [op:validate_success].",
+          "start": 161,
+          "end": 217,
+          "line": 4,
+          "claim_type": "validate",
+          "operation_id": "validate_success"
+        }
+      ],
+      "decisions": [
+        {
+          "claim_id": "claim-001",
+          "text": "We ran the checksum script [op:run_success].",
+          "start": 0,
+          "end": 44,
+          "line": 1,
+          "claim_type": "execute",
+          "operation_id": "run_success",
+          "status": "supported",
+          "evidence_event_ids": [
+            "seed42-01-run_success"
+          ],
+          "reason": "matching_successful_evidence"
+        },
+        {
+          "claim_id": "claim-002",
+          "text": "The observations file was inspected [op:inspect_existing].",
+          "start": 45,
+          "end": 103,
+          "line": 2,
+          "claim_type": "inspect",
+          "operation_id": "inspect_existing",
+          "status": "supported",
+          "evidence_event_ids": [
+            "seed42-04-inspect_existing"
+          ],
+          "reason": "matching_successful_evidence"
+        },
+        {
+          "claim_id": "claim-003",
+          "text": "We queried the local source record [op:query_available].",
+          "start": 104,
+          "end": 160,
+          "line": 3,
+          "claim_type": "query",
+          "operation_id": "query_available",
+          "status": "supported",
+          "evidence_event_ids": [
+            "seed42-06-query_available"
+          ],
+          "reason": "matching_successful_evidence"
+        },
+        {
+          "claim_id": "claim-004",
+          "text": "We validated the control artifact [op:validate_success].",
+          "start": 161,
+          "end": 217,
+          "line": 4,
+          "claim_type": "validate",
+          "operation_id": "validate_success",
+          "status": "supported",
+          "evidence_event_ids": [
+            "seed42-08-validate_success"
+          ],
+          "reason": "matching_successful_evidence"
+        }
+      ],
+      "metrics": {
+        "UCR": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 4,
+          "supported": 4,
+          "unexecuted": 0,
+          "indeterminate": 0,
+          "activated": true,
+          "status": "measured",
+          "reason": null
+        },
+        "CFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "NFR": {
+          "value": null,
+          "status": "not_measured_in_ucr_scenario"
+        },
+        "task_success_rate": {
+          "value": 1.0
+        }
+      },
+      "rail": {
+        "enabled": true,
+        "attempts": 1,
+        "accepted": true
+      }
+    }
+  ],
+  "reproducibility": {
+    "seed": 42,
+    "all_arms_completed": true
+  }
+}

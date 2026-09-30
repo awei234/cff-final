@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "record_type": "paper_artifact_provenance",
+  "scope": "paper/paper.pdf",
+  "artifact": {
+    "path": "paper/paper.pdf",
+    "file_size_bytes": 1077001,
+    "sha256": "ae42e590da8430c5a3c947b125c4040d460b6d5d60c32a3fefc78d56c3d4681f",
+    "page_count": 15,
+    "file_mtime": "2026-09-26 23:14:59.949961000 +0800",
+    "pdf_metadata": {
+      "producer": "Microsoft® Word 2021",
+      "creator": "Microsoft® Word 2021",
+      "author": "python-docx",
+      "creation_date": "2026-09-26 23:14:59 +0800",
+      "mod_date": "2026-09-26 23:14:59 +0800",
+      "page_size": "595.32 x 841.92 pts (A4)"
+    }
+  },
+  "provenance": {
+    "generation_mode": "imported_not_generated",
+    "source": "user_supplied",
+    "role": "user_provided_final_paper",
+    "imported_at": "2026-09-29T23:18:14+08:00",
+    "detected_at": "2026-09-29T23:18:14+08:00",
+    "generated_by_this_pipeline": false
+  },
+  "generation_fields": {
+    "model": null,
+    "provider": null,
+    "pipeline_run_id": null,
+    "generation_stage": "not_recorded",
+    "source_document_format": "not_recorded"
+  },
+  "integrity": {
+    "pdf_unmodified_by_this_task": true,
+    "paper_tex_present": false,
+    "paper_tex_note": "paper/paper.tex is absent in the working tree (git status ' D'); HEAD retains a different Chinese JiuwenSwarm source of 7051 bytes. Reconstruction of paper.tex from paper.pdf was cancelled by the user."
+  },
+  "historical_pipeline_reference": {
+    "not_attributable_to_current_pdf": true,
+    "path": "demo_runs/research_matrix_live_20260924_authorized/",
+    "provider_trace_file": "demo_runs/research_matrix_live_20260924_authorized/provider_trace.jsonl",
+    "provider_trace_sha256": "632df4c2bb7dc83bb4318abd1da5ddae003828d244548cee55c9d7bfbf4e0831",
+    "provider_trace_entries": 9,
+    "model": "deepseek-chat",
+    "generated_at_utc": "2026-09-24T02:23:07Z"
+  },
+  "notes": [
+    "paper/paper.pdf was supplied by the user and is NOT produced by this project's XeLaTeX pipeline.",
+    "Its content (English paper 'CGA-Agent: Structured Context Engineering and Claim-Evidence Guardrails for Trustworthy Multi-Agent LLM Systems') differs from the JiuwenSwarm paper recorded under demo_runs/.",
+    "No model, provider, token, retrieval or latency value is attributed to this PDF.",
+    "paper/paper.pdf was not modified by this task."
+  ]
+}

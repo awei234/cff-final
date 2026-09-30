@@ -133,14 +133,14 @@ def provider(stage,prompt,index):
  base=os.environ.get("DEEPSEEK_BASE_URL","https://api.deepseek.com").rstrip("/");model=os.environ.get("DEEPSEEK_MODEL","deepseek-chat");body=json.dumps({"model":model,"messages":[{"role":"system","content":"Return exactly one valid compact JSON object. No Markdown fences. Do not add commentary. Keep each string under 500 characters. Never invent evidence."},{"role":"user","content":prompt}],"temperature":.1,"max_tokens":3500},ensure_ascii=False).encode();req=urllib.request.Request(base+"/chat/completions",data=body,headers={"Content-Type":"application/json","Authorization":"Bearer "+key},method="POST");t=time.monotonic()
  try:
   with urllib.request.urlopen(req,timeout=120) as r:raw=r.read()
-  payload=json.loads(raw.decode());text=(((payload.get("choices") or [{}])[0].get("message") or {}).get("content") or "").strip()
+  payload=json.loads(raw.decode());text=(((payload.get("choices") or [{}])[0].get("message") or {}).get("content") or "").strip();usage=payload.get("usage") or {}
   if "```" in text:raise ValueError("markdown code fence")
   obj=json.loads(text)
   required={"plan":{"research_question","hypothesis","variables","experiment_plan","success_criteria","expected_evidence","human_confirmation_items"},"review":{"evidence_assessment","unsupported_claims","citation_coverage","allow_paper","human_intervention_required"},"report":{"abstract","method","experiment_setting","results","limitations","conclusion","citation_mapping","unsupported_claims"}}[stage]
   if isinstance(obj,dict) and not required.intersection(obj):
    for v in obj.values():
     if isinstance(v,dict) and required.intersection(v): obj=v;break
-  return obj,{"stage":stage,"call_index":index,"model":model,"prompt_sha256":sha(prompt),"response_sha256":sha(text),"duration_seconds":round(time.monotonic()-t,3),"status":"ok","response_keys":sorted(obj.keys()) if isinstance(obj,dict) else []}
+  return obj,{"stage":stage,"call_index":index,"model":model,"prompt_sha256":sha(prompt),"response_sha256":sha(text),"duration_seconds":round(time.monotonic()-t,3),"status":"ok","prompt_tokens":usage.get("prompt_tokens"),"completion_tokens":usage.get("completion_tokens"),"total_tokens":usage.get("total_tokens"),"response_keys":sorted(obj.keys()) if isinstance(obj,dict) else []}
  except Exception as e:raise RuntimeError(f"provider_{type(e).__name__}: {str(e)[:200]}")
 def prompt(stage,tid,mat,ex,plan,review,l):
   materials=[{k:s.get(k) for k in ("source_id","title","url","relevance_score","citation_allowed")} for s in mat.get("sources",[])[:8]]

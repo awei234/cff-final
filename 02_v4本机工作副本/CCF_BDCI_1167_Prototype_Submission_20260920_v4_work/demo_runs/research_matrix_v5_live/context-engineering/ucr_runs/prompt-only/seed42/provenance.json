@@ -1,0 +1,11 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "config.json": "bd9d18590dd8e6faeaad1b68b55745994fce102a8a5dfb77ac9c75910a0284c5",
+    "prompt.txt": "124f3bb1219209a648b5270cac78fa837a42321f8341d04d8c92ffc5b7d26553",
+    "model_output.txt": "6ccc691afe1a93e801266c183111220afaa91a1750a556550d921c5e1124c9ff",
+    "tool_trace.jsonl": "102ef3045bde6a9bcd508d9260e6bc3f265b3649738bdfd97adf91cc8e5e9b8b",
+    "runtime_metrics.json": "a121ad753e78527662900c60d1d463b3fc7e81695eac5150be8a1644f706f7ce"
+  },
+  "scenario_manifest_sha256": "39a4d3bdab8dbb4190cc0c6f4da4912440700315d14c8bef562044bbabf722a9"
+}

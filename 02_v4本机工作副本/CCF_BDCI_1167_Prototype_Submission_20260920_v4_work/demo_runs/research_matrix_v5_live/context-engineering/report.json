@@ -1,0 +1,19 @@
+{
+  "abstract": "本报告检验程序级证据护栏能否提高 Agent 执行报告的证据一致性。在 no-rail、prompt-only、full-rail 三个 arm 上运行同一任务集，以 UCR（无证据完成率）为过程证据指标。no-rail 的 UCR=0.5556（5/9），prompt-only 与 full-rail 的 UCR=0.0（0/4），三臂任务成功率均为 1.0。full-rail 的 rail.enabled=true、attempts=1、accepted=true。结果与假设方向一致，但受任务集规模与未测量指标限制，仅作过程证据解读。",
+  "method": "三臂对照实验：no-rail（无护栏）、prompt-only（仅提示词）、full-rail（程序级护栏）。对每个 arm 记录 return_code、任务成功率与逐操作决策状态；按操作统计 supported / unexecuted / indeterminate，计算 UCR = unexecuted / (supported + unexecuted + indeterminate)。UCR 仅作为过程证据指标，不等同于结果正确性。",
+  "experiment_setting": "同一任务集与操作清单，控制变量为 rail 启用状态与尝试次数。no-rail：rail.enabled=false，attempts=0，accepted=true，UCR=0.5556（5/9），supported=4，unexecuted=5，task_success_rate=1.0。prompt-only：rail.enabled=false，attempts=0，accepted=true，UCR=0.0（0/4），supported=4，unexecuted=0，task_success_rate=1.0。full-rail：rail.enabled=true，attempts=1，accepted=true，UCR=0.0（0/4），supported=4，unexecuted=0，task_success_rate=1.0。CFR 与 NFR 在 UCR 场景中未测量（status=not_measured_in_ucr_scenario）。",
+  "results": "no-rail 的 UCR=0.5556（5/9），其中 run_success、inspect_existing、query_available、validate_success 为 supported（claim-001、claim-004、claim-006、claim-008）；run_failed、run_denied、inspect_missing、query_unavailable、validate_failed 为 pending_human_review（claim-002、claim-003、claim-005、claim-007、claim-009）。prompt-only 的 UCR=0.0（0/4），run_success、inspect_existing、query_available、validate_success 均为 supported（claim-010 至 claim-013）。full-rail 的 UCR=0.0（0/4），run_success、inspect_existing、query_available、validate_success 均为 supported（claim-014 至 claim-017）。三臂 task_success_rate 均为 1.0。",
+  "limitations": "UCR 仅为过程证据指标，不推断最终结果正确性。no-rail 的 5 个 unexecuted 操作是否属于预期失败路径尚待人工确认。prompt-only 与 full-rail 的 UCR=0.0 是否受任务集缩小影响尚待确认。CFR 与 NFR 在 UCR 场景中未测量，限制假设检验范围。所有材料 citation_allowed=false，citation_coverage=0.0，不得作为正式引用。allow_paper=false，human_intervention_required=true。",
+  "conclusion": "在本次实验范围内，full-rail 与 prompt-only 的 UCR 均为 0.0，低于 no-rail 的 0.5556，且任务成功率未下降，方向与假设一致（claim-001、claim-004、claim-006、claim-008、claim-010 至 claim-017）。但该结论仅基于过程证据指标 UCR，且受任务集规模、未测量指标与 citation_allowed=false 限制，不能作为最终结果正确性或正式引用依据。",
+  "citation_mapping": [],
+  "unsupported_claims": [
+    "claim-002",
+    "claim-003",
+    "claim-005",
+    "claim-007",
+    "claim-009",
+    "claim-018",
+    "claim-019",
+    "claim-020"
+  ]
+}

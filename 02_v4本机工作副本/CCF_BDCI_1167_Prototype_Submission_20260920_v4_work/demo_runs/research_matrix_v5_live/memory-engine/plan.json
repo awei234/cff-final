@@ -1,0 +1,38 @@
+{
+  "research_question": "结构化记忆记录是否有助于 Agent 保持审计上下文一致？",
+  "hypothesis": "结构化记录可能改善流程可追溯性，但当前基准不证明领域效果。",
+  "variables": [
+    "记忆记录结构（无轨/仅提示/全轨）",
+    "审计上下文一致性（UCR）",
+    "任务成功率",
+    "轨道启用状态"
+  ],
+  "experiment_plan": [
+    "在相同任务集上运行 no-rail、prompt-only、full-rail 三个臂。",
+    "记录每个臂的 UCR 分子/分母、支持/未执行/不确定操作数。",
+    "记录轨道启用、尝试次数与接受状态。",
+    "比较各臂 UCR 与任务成功率，仅作流程证据解读。",
+    "不将 UCR 外推为领域效果或正式引用。"
+  ],
+  "success_criteria": [
+    "三臂均完成且 return_code=0。",
+    "UCR 按支持/未执行/不确定操作计数计算。",
+    "任务成功率被记录。",
+    "结论明确标注 UCR 为 process_evidence_only。",
+    "不产生 citation_allowed=false 的正式引用。"
+  ],
+  "expected_evidence": [
+    "no-rail UCR=0.5556（5/9，支持4，未执行5）。",
+    "prompt-only UCR=0.0（0/4，支持4，未执行0）。",
+    "full-rail UCR=0.0（0/4，支持4，未执行0），轨道启用且接受。",
+    "三臂任务成功率均为1.0。",
+    "CFR 与 NFR 在 UCR 场景中未测量。"
+  ],
+  "human_confirmation_items": [
+    "确认 UCR 仅作为流程证据，不解释为领域效果。",
+    "确认 citation_allowed=false 的来源不得正式引用。",
+    "确认是否需要补充 CFR/NFR 测量场景。",
+    "确认结构化记忆记录的操作定义与审计上下文一致性指标。",
+    "确认结论需绑定 claim_id 与证据/来源引用。"
+  ]
+}

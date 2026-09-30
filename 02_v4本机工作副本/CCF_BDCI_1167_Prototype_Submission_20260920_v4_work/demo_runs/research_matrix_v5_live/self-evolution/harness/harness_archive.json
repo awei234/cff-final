@@ -1,0 +1,33 @@
+{
+  "manifest": {
+    "memory_mode": "structured_evidence",
+    "planning_mode": "sequential_verify",
+    "enabled_tools": [
+      "retrieval",
+      "ucr",
+      "citation_rail"
+    ],
+    "max_provider_calls": 3,
+    "max_retries": 1,
+    "profile": "evidence_first",
+    "selection_reason": "deterministic selection for evidence_first"
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "fallback_reason": null
+  },
+  "metrics": {
+    "seed": 42,
+    "arm_count": 3,
+    "cost": null,
+    "latency_seconds": 1.107
+  },
+  "evidence": [
+    {
+      "artifact": "experiment_results.json",
+      "sha256": "c10a211c8bf9da30e8a8c4d04b950bda7758a04b86dd9a081ae32117fd0e0f06"
+    }
+  ],
+  "archive_sha256": "5ff9a51fcf2c1133eebcea8a5610f2a56c8560cb54d1801800192a5f5870ba57"
+}

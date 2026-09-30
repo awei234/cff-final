@@ -1,0 +1,16 @@
+{
+  "evidence_assessment": [
+    {
+      "metric": "supported",
+      "value": 12
+    },
+    {
+      "metric": "blocked",
+      "value": 0
+    }
+  ],
+  "unsupported_claims": [],
+  "citation_coverage": 0.0,
+  "allow_paper": true,
+  "human_intervention_required": true
+}

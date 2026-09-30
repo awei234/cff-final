@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "record_type": "generation_usage",
+  "scope": "paper/paper.tex + paper/paper_v5_en.pdf",
+  "generation_mode": "generated_by_pipeline",
+  "pipeline": "JiuwenSwarm research-matrix v4 (run_research_matrix.py)",
+  "run_dir": "demo_runs/research_matrix_v5_live",
+  "provider": "deepseek",
+  "model": "deepseek-chat",
+  "provider_calls": 9,
+  "prompt_tokens": 22568,
+  "completion_tokens": 4432,
+  "total_tokens": 27000,
+  "cost": null,
+  "currency": null,
+  "measurement_source": "demo_runs/research_matrix_v5_live/provider_trace.jsonl (usage field captured by provider())",
+  "recorded_at": "2026-09-30T09:14:56+08:00",
+  "calls": [
+    {"call_index": 1, "topic_id": "context-engineering", "stage": "plan", "prompt_tokens": 1616, "completion_tokens": 552, "total_tokens": 2168, "duration_seconds": 3.569},
+    {"call_index": 2, "topic_id": "context-engineering", "stage": "review", "prompt_tokens": 2984, "completion_tokens": 173, "total_tokens": 3157, "duration_seconds": 2.138},
+    {"call_index": 3, "topic_id": "context-engineering", "stage": "report", "prompt_tokens": 3154, "completion_tokens": 924, "total_tokens": 4078, "duration_seconds": 4.436},
+    {"call_index": 4, "topic_id": "memory-engine", "stage": "plan", "prompt_tokens": 1606, "completion_tokens": 403, "total_tokens": 2009, "duration_seconds": 2.939},
+    {"call_index": 5, "topic_id": "memory-engine", "stage": "review", "prompt_tokens": 2826, "completion_tokens": 177, "total_tokens": 3003, "duration_seconds": 1.843},
+    {"call_index": 6, "topic_id": "memory-engine", "stage": "report", "prompt_tokens": 3000, "completion_tokens": 987, "total_tokens": 3987, "duration_seconds": 4.924},
+    {"call_index": 7, "topic_id": "self-evolution", "stage": "plan", "prompt_tokens": 1578, "completion_tokens": 426, "total_tokens": 2004, "duration_seconds": 3.388},
+    {"call_index": 8, "topic_id": "self-evolution", "stage": "review", "prompt_tokens": 2818, "completion_tokens": 171, "total_tokens": 2989, "duration_seconds": 1.826},
+    {"call_index": 9, "topic_id": "self-evolution", "stage": "report", "prompt_tokens": 2986, "completion_tokens": 619, "total_tokens": 3605, "duration_seconds": 3.686}
+  ],
+  "notes": [
+    "Token counts are real values captured from the DeepSeek response usage field (provider() was extended for this run).",
+    "cost is null because no pricing was recorded; no value was estimated.",
+    "These values belong to the v5_live run and are NOT the earlier historical run."
+  ]
+}

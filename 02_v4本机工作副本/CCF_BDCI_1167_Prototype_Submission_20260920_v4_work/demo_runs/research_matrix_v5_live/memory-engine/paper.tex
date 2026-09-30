@@ -1,0 +1,107 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{geometry,booktabs,longtable,array,tabularx,enumitem}
+\geometry{a4paper,margin=2.0cm}
+\setlength{\emergencystretch}{3em}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.08}
+\setlist[itemize]{leftmargin=1.5em,itemsep=0.15em,topsep=0.25em}
+\title{JiuwenSwarm v4：Agent 记忆引擎}
+\author{JiuwenSwarm/UCR 可审计科研半流程}
+\date{}
+\begin{document}
+\maketitle
+\section{重要边界}
+本文是 v4 LaTeX 源文件；配套正式 PDF 已由用户在本机使用 XeLaTeX 编译。UCR 标签为 \texttt{process\_evidence\_only}，只能证明流程证据能力，不能包装成领域科学结论。检索资料默认等待人工审批，最终研究问题、实验真实性、结论范围和提交资格仍需人工确认。
+\section{研究问题与计划}
+\textbf{问题：}结构化记忆记录是否有助于 Agent 保持审计上下文一致？\\
+\textbf{假设：}结构化记录可能改善流程可追溯性，但当前基准不证明领域效果。
+\begin{itemize}
+\item 三臂均完成且 return\_\allowbreak{}code=0。
+\item UCR 按支持 / 未执行 / 不确定操作计数计算。
+\item 任务成功率被记录。
+\item 结论明确标注 UCR 为 process\_\allowbreak{}evidence\_\allowbreak{}only。
+\item 不产生 citation\_\allowbreak{}allowed=false 的正式引用。
+\end{itemize}
+\section{方法}
+在相同任务集上运行三个臂：no-\allowbreak{}rail（无轨）、prompt-\allowbreak{}only（仅提示）、full-\allowbreak{}rail（全轨，轨道启用且接受）。按操作记录审计状态（supported / unexecuted / indeterminate），据此计算 UCR 分子 / 分母，并记录任务成功率、轨道启用、尝试次数与接受状态。UCR 仅作 process\_\allowbreak{}evidence\_\allowbreak{}only 解读，不外推为领域效果。
+\subsection{实验设置}
+三臂均 status=completed，return\_\allowbreak{}code=0。no-\allowbreak{}rail：rail.enabled=false，attempts=0，accepted=true，UCR=0.5556（numerator=5，denominator=9，supported=4，unexecuted=5，indeterminate=0），task\_\allowbreak{}success\_\allowbreak{}rate=1.0。prompt-\allowbreak{}only：rail.enabled=false，attempts=0，accepted=true，UCR=0.0（0 / 4，supported=4，unexecuted=0），task\_\allowbreak{}success\_\allowbreak{}rate=1.0。full-\allowbreak{}rail：rail.enabled=true，attempts=1，accepted=true，UCR=0.0（0 / 4，supported=4，unexecuted=0），task\_\allowbreak{}success\_\allowbreak{}rate=1.0。CFR 与 NFR 均为 null，状态 not\_\allowbreak{}measured\_\allowbreak{}in\_\allowbreak{}ucr\_\allowbreak{}scenario。
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.18\textwidth}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedleft\arraybackslash}p{0.16\textwidth}>{\raggedleft\arraybackslash}p{0.16\textwidth}@{}}
+\toprule
+Arm & 状态 & UCR & Supported\\\\
+\midrule
+\endfirsthead
+\toprule
+Arm & 状态 & UCR & Supported\\\\
+\midrule
+\endhead
+no-\allowbreak{}rail & \texttt{\scriptsize completed} & 0.5556 & 4 \\
+prompt-\allowbreak{}only & \texttt{\scriptsize completed} & 0.0 & 4 \\
+full-\allowbreak{}rail & \texttt{\scriptsize completed} & 0.0 & 4 \\
+\bottomrule
+\end{longtable}
+\section{实验结果}
+no-\allowbreak{}rail 的 supported 操作：run\_\allowbreak{}success、inspect\_\allowbreak{}existing、query\_\allowbreak{}available、validate\_\allowbreak{}success（claim-\allowbreak{}001、claim-\allowbreak{}004、claim-\allowbreak{}006、claim-\allowbreak{}008）；unexecuted 操作：run\_\allowbreak{}failed、run\_\allowbreak{}denied、inspect\_\allowbreak{}missing、query\_\allowbreak{}unavailable、validate\_\allowbreak{}failed（claim-\allowbreak{}002、claim-\allowbreak{}003、claim-\allowbreak{}005、claim-\allowbreak{}007、claim-\allowbreak{}009，均 pending\_\allowbreak{}human\_\allowbreak{}review）。prompt-\allowbreak{}only 的 supported 操作：run\_\allowbreak{}success、inspect\_\allowbreak{}existing、query\_\allowbreak{}available、validate\_\allowbreak{}success（claim-\allowbreak{}010 至 claim-\allowbreak{}013）。full-\allowbreak{}rail 的 supported 操作：run\_\allowbreak{}success、inspect\_\allowbreak{}existing、query\_\allowbreak{}available、validate\_\allowbreak{}success（claim-\allowbreak{}014 至 claim-\allowbreak{}017）。三臂任务成功率均为1.0。UCR 差异仅反映流程审计覆盖，不构成领域效果证据。
+\section{Claim--Evidence 账本}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.18\textwidth}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.30\textwidth}@{}}
+\toprule
+Claim ID & 状态 & 类型\\\\
+\midrule
+\endfirsthead
+\toprule
+Claim ID & 状态 & 类型\\\\
+\midrule
+\endhead
+\texttt{\scriptsize claim-\allowbreak{}001} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}002} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}003} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}004} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}005} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}006} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}007} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}008} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}009} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}010} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}011} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}012} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}013} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}014} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}015} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}016} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}017} & \texttt{\scriptsize supported} & experiment\_\allowbreak{}observation \\
+\texttt{\scriptsize claim-\allowbreak{}018} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & background \\
+\texttt{\scriptsize claim-\allowbreak{}019} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & background \\
+\texttt{\scriptsize claim-\allowbreak{}020} & \texttt{\scriptsize pending\_\allowbreak{}human\_\allowbreak{}review} & background \\
+\bottomrule
+\end{longtable}
+\section{检索资料与人工审批}
+候选资料数：10。只有人工批准后才允许正式引用。
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.54\textwidth}>{\raggedleft\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.20\textwidth}@{}}
+\toprule
+Source ID & relevance & review\\\\
+\midrule
+\endfirsthead
+\toprule
+Source ID & relevance & review\\\\
+\midrule
+\endhead
+\texttt{\scriptsize arxiv:\allowbreak{}2607.13157v1} & 0.4 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize crossref:\allowbreak{}10.2139 / ssrn.7160321} & 0.32 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize crossref:\allowbreak{}10.59350 / xn4yy-\allowbreak{}3ke56} & 0.32 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize crossref:\allowbreak{}10.2139 / ssrn.6273819} & 0.32 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize crossref:\allowbreak{}10.59350 / kyqvq-\allowbreak{}k4425} & 0.32 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize crossref:\allowbreak{}10.2139 / ssrn.7019082} & 0.15 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize crossref:\allowbreak{}10.2139 / ssrn.6986920} & 0.07 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize crossref:\allowbreak{}10.36227 / techrxiv.176857932.25697838 / v1} & 0.07 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize openalex:\allowbreak{}W4226365369} & 0.02 & \texttt{\scriptsize pending} \\
+\texttt{\scriptsize openalex:\allowbreak{}W4384071683} & 0.02 & \texttt{\scriptsize pending} \\
+\bottomrule
+\end{longtable}
+\section{限制}
+UCR 为 process\_\allowbreak{}evidence\_\allowbreak{}only，不能解释为领域效果或正式引用。CFR 与 NFR 在 UCR 场景中未测量（值为 null）。citation\_\allowbreak{}coverage=0.0，allow\_\allowbreak{}paper=false，human\_\allowbreak{}intervention\_\allowbreak{}required=true。citation\_\allowbreak{}allowed=false 的来源（arxiv:2607.13157v1、crossref:10.2139 / ssrn.7160321、crossref:10.59350 / xn4yy-\allowbreak{}3ke56、crossref:10.2139 / ssrn.6273819、crossref:10.59350 / kyqvq-\allowbreak{}k4425、crossref:10.2139 / ssrn.7019082、crossref:10.2139 / ssrn.6986920、crossref:10.36227 / techrxiv.176857932.25697838 / v1）不得正式引用。背景类 claim-\allowbreak{}018、claim-\allowbreak{}019、claim-\allowbreak{}020 仍为 pending\_\allowbreak{}human\_\allowbreak{}review。\\
+不支持 Claim：claim-\allowbreak{}002, claim-\allowbreak{}003, claim-\allowbreak{}005, claim-\allowbreak{}007, claim-\allowbreak{}009, claim-\allowbreak{}018, claim-\allowbreak{}019, claim-\allowbreak{}020
+\section{结论}
+在当前基准下，结构化记忆记录（full-\allowbreak{}rail）与 prompt-\allowbreak{}only 的 UCR 均为0.0，no-\allowbreak{}rail 为0.5556，但该指标仅作流程证据，不证明领域效果（claim-\allowbreak{}001 至 claim-\allowbreak{}017）。三臂任务成功率均为1.0。结论需绑定 claim\_\allowbreak{}id 与证据 / 来源引用，并等待人工确认 UCR 操作定义、是否补充 CFR / NFR 测量场景，以及 citation\_\allowbreak{}allowed=false 来源不得正式引用。
+\section{人工确认}
+研究问题、实验真实性、结论范围和最终提交都需要人工确认。
+\end{document}
